@@ -88,7 +88,7 @@
         android:id="@+id/button"
         android:layout_width="231dp"
         android:layout_height="56dp"
-        android:text="Verify & Proceed"
+        android:text="Verify and Proceed"
         tools:layout_editor_absoluteX="90dp"
         tools:layout_editor_absoluteY="626dp" />
 

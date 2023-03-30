@@ -12,6 +12,12 @@
         android:theme="@style/Theme.AMANID"
         tools:targetApi="31">
         <activity
+            android:name=".getStarted_page4"
+            android:exported="false" />
+        <activity
+            android:name=".getStrated_page3"
+            android:exported="false" />
+        <activity
             android:name=".getStated_2"
             android:exported="false" />
         <activity

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".getStarted_page4">
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="290dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="36dp"
+        android:text="Get Strated"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="343dp"
+        android:layout_height="127dp"
+        android:layout_marginBottom="156dp"
+        android:text="Transfer money easily to friends and families on your contact list using AmanID"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="321dp"
+        android:layout_height="102dp"
+        android:ellipsize="middle"
+        android:text="Send Money With AmanID"
+        android:textColor="#4051AF"
+        android:textSize="34sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="370dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_8129" />
+</androidx.constraintlayout.widget.ConstraintLayout>
