@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="227dp"
-        android:layout_height="232dp"
-        app:srcCompat="@drawable/screen_shot_1444_09_08_at_2_58_31_am"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="98dp" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -99,5 +91,15 @@
         android:text="Verify & Proceed"
         tools:layout_editor_absoluteX="90dp"
         tools:layout_editor_absoluteY="626dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="306dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_8125" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
