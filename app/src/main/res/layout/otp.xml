@@ -88,18 +88,16 @@
         android:id="@+id/button"
         android:layout_width="231dp"
         android:layout_height="56dp"
-        android:text="Verify and Proceed"
+        android:text="Verify & Proceed"
         tools:layout_editor_absoluteX="90dp"
         tools:layout_editor_absoluteY="626dp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="306dp"
-        android:layout_height="338dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_8125" />
+        android:id="@+id/imageView5"
+        android:layout_width="298dp"
+        android:layout_height="258dp"
+        app:srcCompat="@drawable/otp"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="51dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
