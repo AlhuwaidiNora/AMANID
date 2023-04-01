@@ -88,10 +88,12 @@
         android:id="@+id/button"
         android:layout_width="231dp"
         android:layout_height="56dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/custom_button"
         android:text="Verify and Proceed"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="626dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView5"

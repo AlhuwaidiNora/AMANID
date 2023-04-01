@@ -12,6 +12,15 @@
         android:theme="@style/Theme.AMANID"
         tools:targetApi="31">
         <activity
+            android:name=".done_page"
+            android:exported="false" />
+        <activity
+            android:name=".createPasssword_page"
+            android:exported="false" />
+        <activity
+            android:name=".Idnumber_page"
+            android:exported="false" />
+        <activity
             android:name=".fingerPrint_page"
             android:exported="false" />
         <activity
