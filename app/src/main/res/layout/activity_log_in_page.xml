@@ -39,6 +39,7 @@
         android:id="@+id/login_button"
         android:layout_width="235dp"
         android:layout_height="43dp"
+        android:background="@drawable/custom_button"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Enter the OTP sent to"
         tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="435dp" />
+        tools:layout_editor_absoluteY="435dp"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -88,7 +88,8 @@
         android:id="@+id/button"
         android:layout_width="231dp"
         android:layout_height="56dp"
-        android:text="Verify & Proceed"
+        android:background="@drawable/custom_button"
+        android:text="Verify and Proceed"
         tools:layout_editor_absoluteX="90dp"
         tools:layout_editor_absoluteY="626dp" />
 
