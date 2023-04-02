@@ -79,7 +79,7 @@
         android:layout_height="49dp"
         android:gravity="center"
         android:text="term of use"
-        android:textColor="#3F51B5"
+        android:textColor="#407AFD"
         tools:layout_editor_absoluteX="237dp"
         tools:layout_editor_absoluteY="200dp" />
 
