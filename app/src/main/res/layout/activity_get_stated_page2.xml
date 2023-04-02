@@ -6,45 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".getStated_2">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="576dp" />
+
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="321dp"
-        android:layout_height="102dp"
+        android:layout_width="379dp"
+        android:layout_height="94dp"
         android:ellipsize="middle"
-        android:text=" Spend and Save                    With AmanID    "
+        android:foregroundGravity="center_vertical|center"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Spend & save with AmanID"
         android:textColor="#4051AF"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.532" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="343dp"
-        android:layout_height="127dp"
-        android:text=" With spare, ypu can for bills, food, entertainment,utilities and still save"
+        android:layout_width="339dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:text="With AmanID, you can for bills,"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="290dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="76dp"
-        android:background="@drawable/custom_button"
-        android:text="Get Strated"
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="339dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:text="food, entertainment, utilities"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="339dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:text="and still save"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.249" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -52,6 +77,7 @@
         android:layout_height="227dp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_8123_2" />

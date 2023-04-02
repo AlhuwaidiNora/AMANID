@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="Enter the OTP sent to"
         tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="435dp"/>
+        tools:layout_editor_absoluteY="435dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -88,19 +88,18 @@
         android:id="@+id/button"
         android:layout_width="231dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/custom_button"
         android:text="Verify and Proceed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="626dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="298dp"
-        android:layout_height="258dp"
-        app:srcCompat="@drawable/otp"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="51dp" />
+        android:id="@+id/imageView"
+        android:layout_width="306dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_8125" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

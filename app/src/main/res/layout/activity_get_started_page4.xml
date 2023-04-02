@@ -16,16 +16,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="343dp"
         android:layout_height="127dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginBottom="188dp"
+        android:gravity="center_horizontal"
         android:text="Transfer money easily to friends and families on your contact list using AmanID"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,24 +34,26 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="321dp"
-        android:layout_height="102dp"
+        android:layout_width="403dp"
+        android:layout_height="119dp"
         android:ellipsize="middle"
+        android:gravity="center"
         android:text="Send Money With AmanID"
         android:textColor="#4051AF"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="370dp"
         android:layout_height="219dp"
         android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintStart_toStartOf="parent"

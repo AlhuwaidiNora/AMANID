@@ -7,38 +7,39 @@
     tools:context=".getStrated_page3">
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="290dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/custom_button"
-        android:text="Get Strated"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=">"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="576dp" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="343dp"
-        android:layout_height="127dp"
-        android:layout_marginBottom="156dp"
+        android:layout_width="340dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="252dp"
+        android:gravity="center"
         android:text=" AmanId is East to use and all your transactions are securedf"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="321dp"
-        android:layout_height="102dp"
+        android:layout_width="405dp"
+        android:layout_height="86dp"
         android:ellipsize="middle"
-        android:text=" AmanID Is Easy and Secure"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center|center_horizontal"
+        android:text="AmanID Is Easy & Secure"
         android:textColor="#4051AF"
-        android:textSize="34sp"
+        android:textSize="30sp"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
