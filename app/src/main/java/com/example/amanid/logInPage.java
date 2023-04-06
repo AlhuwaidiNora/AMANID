@@ -9,6 +9,6 @@ public class logInPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_in_page);
+        setContentView(R.layout.intro_page1);
     }
 }
