@@ -41,7 +41,7 @@
         android:ellipsize="middle"
         android:foregroundGravity="center_vertical"
         android:gravity="center|center_horizontal"
-        android:text="AmanID Is Easy and Secure"
+        android:text="AmanID Is Easy And Secure"
         android:textColor="#4051AF"
         android:textSize="30sp"
         app:autoSizeTextType="none"
