@@ -1,5 +1,5 @@
-
 package com.example.amanid;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,17 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-public class intro_option_page5 extends AppCompatActivity {
-    Button SignUpButton;
+public class Idnumber_page6 extends AppCompatActivity {
+    Button button3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro_option_page5);
-        SignUpButton = findViewById(R.id.SignUpButton);
-        SignUpButton.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_idnumber_page6);
+        button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(intro_option_page5.this, Idnumber_page6.class);
+                Intent intent = new Intent(Idnumber_page6.this, fingerPrint_page7.class);
                 startActivity(intent);
             }
         });
