@@ -5,19 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
-public class login_page extends AppCompatActivity {
- Button button8;
+public class fingerPrint_plus extends AppCompatActivity {
+    ImageView imageView2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
-        button8 = findViewById(R.id.button8);
-        button8.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_finger_print_plus);
+      imageView2 = findViewById(R.id.imageView2);
+        imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(login_page.this,fingerPrint_plus.class);
+                Intent intent = new Intent(fingerPrint_plus.this, done_page9.class);
                 startActivity(intent);
             }
         });
