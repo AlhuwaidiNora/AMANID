@@ -19,7 +19,7 @@ public class IntroPage1 extends AppCompatActivity {
     }
 
     public void nextPage(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, intro_option_page5.class);
         startActivity(intent);
     }
 }

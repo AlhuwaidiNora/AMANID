@@ -18,13 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_page1);
 
-        // Wait for a few seconds, and then start the getStated_2 activity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.this, getStarted_page2.class);
                 startActivity(intent);
-                finish(); // Close the current activity
+                finish();
             }
         }, DELAY);
     }
