@@ -22,14 +22,15 @@ public class login_page extends AppCompatActivity {
         initial();
 
         }
-
     private void initial() {
         button8.setOnClickListener(new View.OnClickListener() {
                                        @Override
                                        public void onClick(View v) {
                                            loginWithid(editTextid_login.getText().toString(), edit_pass.getText().toString());
-
+                                           Intent intent = new Intent(login_page.this, fingerPrint_page7.class);
+                                           startActivity(intent);
                                        }
+
 
                                        private void loginWithid(String num, String pass) {
                                            if (num.length() > 10 && pass.length() > 6) {
