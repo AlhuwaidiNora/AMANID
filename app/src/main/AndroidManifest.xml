@@ -12,6 +12,8 @@
         android:theme="@style/Theme.AMANID"
         tools:targetApi="31">
         <activity android:name=".getStarted_page2" />
+        <activity android:name=".intro_option_page5" />
+
         <activity
             android:name=".login_page"
             android:exported="false" />
@@ -33,9 +35,7 @@
         <activity
             android:name=".getStrated_page3"
             android:exported="false" />
-        <activity
-            android:name=".IntroOption"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
