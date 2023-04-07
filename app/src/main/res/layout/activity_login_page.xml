@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/edit_pass"
         android:layout_width="327dp"
         android:layout_height="36dp"
         android:layout_marginBottom="240dp"
@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editTextid_login"
         android:layout_width="329dp"
         android:layout_height="38dp"
         android:layout_marginBottom="300dp"
