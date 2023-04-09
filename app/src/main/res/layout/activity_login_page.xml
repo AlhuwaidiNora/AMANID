@@ -59,7 +59,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="352dp"
-        android:text=" This would be securely used to virify your Identity."
+        android:text="This would be securely used to virify your Identity."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.299"
