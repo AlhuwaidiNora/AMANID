@@ -10,19 +10,21 @@
         android:id="@+id/button8"
         android:layout_width="127dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/custom_button"
         android:drawableTop="@drawable/baseline_fingerprint_24"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent" />
+
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:id="@+id/progress"/>
+
     <EditText
         android:id="@+id/edit_pass"
         android:layout_width="327dp"
@@ -98,12 +100,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Dont have an Account?"
+        android:textColor="#651616"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="SignUp"
+        android:textColor="#FF018786"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="239dp"
         android:layout_height="314dp"
         app:srcCompat="@drawable/img_8125"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

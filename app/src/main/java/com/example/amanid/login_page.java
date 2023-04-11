@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,12 +36,20 @@ public class login_page extends AppCompatActivity {
         edit_pass = findViewById(R.id.edit_pass);
         editTextid_login = findViewById(R.id.editTextid_login);
         progresseBar = findViewById(R.id.progress);
-                mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         initial();
 
     }
 
+
     private void initial() {
+        TextView btn=findViewById(R.id.textViewSignUp);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login_page.this,Idnumber_page6.class));
+            }
+        });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +60,7 @@ public class login_page extends AppCompatActivity {
 
     private void loginWithid(String num, String pass) {
         if (num.length() >= 10 && pass.length() > 6) {
+
              progresseBar.setVisibility(View.VISIBLE);
             mAuth.createUserWithEmailAndPassword(num, pass)
 
