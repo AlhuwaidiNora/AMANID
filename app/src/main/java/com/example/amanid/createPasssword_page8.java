@@ -31,8 +31,9 @@ public class createPasssword_page8 extends AppCompatActivity {
                startActivity(intent);
 
                     } else {
-                        if (pass1.length() <6 && pass2.length() < 6) {
+                        if (pass1.length() <6 || pass2.length() < 6) {
                             editTextTextPersonName2.setError(" Error must enter 6 number");
+                            editTextTextPersonName4.setError(" Error must enter 6 number");
                         }
 
                     }
