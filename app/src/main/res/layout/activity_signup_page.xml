@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup_page">
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="231dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/custom_button"
+        android:text="Verify and Proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="250dp"
+        android:layout_height="162dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_8261" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="74dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
+        android:text="term of use"
+        android:textColor="#407AFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:text=" I have read and agree to the "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="317dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="340dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:ems="10"
+        android:hint=" Enter your password "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="317dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="284dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:ems="10"
+        android:hint=" Confirm your password "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/nationalIdentityNumberText4"
+        android:layout_width="313dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="27dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="Creat  your password"
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextid_login2" />
+
+    <TextView
+        android:id="@+id/nationalIdentityNumberText5"
+        android:layout_width="313dp"
+        android:layout_height="35dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text=" Qoustion?"
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662" />
+
+    <EditText
+        android:id="@+id/editTextid_login2"
+        android:layout_width="329dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="444dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_perm_identity_24"
+        android:ems="10"
+        android:hint="Enter your ID Number "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <EditText
+        android:id="@+id/editTextid_login3"
+        android:layout_width="329dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="184dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_question_mark_24"
+        android:ems="10"
+        android:hint=" What is your favorite name ?"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/nationalIdentityNumberText3"
+        android:layout_width="313dp"
+        android:layout_height="35dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="National Identity/Iqama Number"
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" know more"
+        android:textColor="#B11616"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toStartOf="@+id/nationalIdentityNumberText5"
+        tools:layout_editor_absoluteY="468dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
