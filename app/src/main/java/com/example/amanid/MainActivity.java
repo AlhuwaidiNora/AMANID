@@ -23,13 +23,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_page1);
 
-        FirebaseOptions options = new FirebaseOptions.Builder()
-                .setProjectId("your-project-id")
-                .setApplicationId("your-application-id")
-                .setApiKey("your-api-key")
-                .setDatabaseUrl("your-database-url")
-                .build();
-        FirebaseApp.initializeApp(this, options);
+        // Check if the Firebase app already exists
+        if(FirebaseApp.getApps(this).isEmpty()) {
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                    .setProjectId("your-project-id")
+                    .setApplicationId("your-application-id")
+                    .setApiKey("your-api-key")
+                    .setDatabaseUrl("your-database-url")
+                    .build();
+            FirebaseApp.initializeApp(this, options);
+        }
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -39,5 +42,4 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, DELAY);
-    }
-}
+    }}
