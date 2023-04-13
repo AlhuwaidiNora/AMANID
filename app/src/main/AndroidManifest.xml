@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AMANID"
         tools:targetApi="31">
         <activity
+            android:name=".AmanIDInterface"
+            android:exported="false" />
+        <activity
             android:name=".SuccessfulLogin"
             android:exported="false" />
         <activity
