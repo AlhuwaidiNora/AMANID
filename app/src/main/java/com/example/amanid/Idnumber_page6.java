@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Idnumber_page6 extends AppCompatActivity {
     Button button3;
-     private EditText editTextid;
+    private EditText editTextid;
     private FirebaseAuth mAuth;
 
     @Override
