@@ -14,7 +14,7 @@ public class getStarted_page4 extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getStarted_page4.this, Idnumber_page6.class);
+                Intent intent = new Intent(getStarted_page4.this, signup_page.class);
                 startActivity(intent);
             }
         });

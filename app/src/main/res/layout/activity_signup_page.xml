@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextpass"
         android:layout_width="317dp"
         android:layout_height="40dp"
         android:layout_marginBottom="340dp"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editTextpass2"
         android:layout_width="317dp"
         android:layout_height="40dp"
         android:layout_marginBottom="284dp"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextid_login2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextid_signup" />
 
     <TextView
         android:id="@+id/nationalIdentityNumberText5"
@@ -120,7 +120,7 @@
         app:layout_constraintVertical_bias="0.662" />
 
     <EditText
-        android:id="@+id/editTextid_login2"
+        android:id="@+id/editTextid_signup"
         android:layout_width="329dp"
         android:layout_height="38dp"
         android:layout_marginBottom="444dp"
@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <EditText
-        android:id="@+id/editTextid_login3"
+        android:id="@+id/editTextid_qhint"
         android:layout_width="329dp"
         android:layout_height="38dp"
         android:layout_marginBottom="184dp"
