@@ -27,4 +27,14 @@
     <string name="title_activity_aman_idnavigation">AmanIDNavigation</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
+
+        <string-array name="hint_questions">
+            <item>What is your favorite color?</item>
+            <item>What is your mother is middle name?</item>
+            <item>What was the name of your first pet?</item>
+            <item>What is your favorite book?</item>
+            <item>What is your favorite movie?</item>
+            <item>What is your favorite food?</item>
+        </string-array>
+    </resources>
+
