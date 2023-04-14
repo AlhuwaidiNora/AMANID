@@ -28,6 +28,9 @@
             android:name=".done_page9"
             android:exported="false" />
         <activity
+            android:name=".signup_page"
+            android:exported="false" />
+        <activity
             android:name=".createPasssword_page8"
             android:exported="false" />
         <activity
