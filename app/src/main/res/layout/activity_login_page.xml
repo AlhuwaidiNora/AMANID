@@ -36,16 +36,16 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextid_login"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintTop_toBottomOf="@+id/hint_answer_edit_text"
+        app:layout_constraintVertical_bias="0.238" />
 
     <EditText
         android:id="@+id/editTextid_login"
         android:layout_width="347dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="448dp"
+        android:layout_marginBottom="388dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
         android:ems="10"
@@ -53,7 +53,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.023" />
@@ -65,10 +65,10 @@
         android:text="This would be securely used to virify your Identity."
         app:layout_constraintBottom_toTopOf="@+id/editTextid_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.341"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nationalIdentityNumberText2"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/nationalIdentityNumberText2"
@@ -91,15 +91,12 @@
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:text="Dont have an Account?"
         android:textColor="#651616"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
-        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintVertical_bias="0.724" />
+        tools:layout_editor_absoluteY="563dp" />
 
     <TextView
         android:id="@+id/textView19"
@@ -107,25 +104,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Forget your password?"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
+
 
     <TextView
         android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
         android:text="SignUp"
         android:textColor="#FF018786"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintHorizontal_bias="0.669"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
-
+        tools:layout_editor_absoluteY="563dp" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -138,22 +132,22 @@
 
     <Spinner
         android:id="@+id/hint_questions_spinner"
-        android:layout_width="295dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="196dp"
+        android:layout_width="326dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="228dp"
         android:entries="@array/hint_questions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextid_login" />
 
     <EditText
         android:id="@+id/hint_answer_edit_text"
-        android:layout_width="281dp"
-        android:layout_height="46dp"
+        android:layout_width="339dp"
+        android:layout_height="44dp"
         android:hint="Enter your answer"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/button8"
