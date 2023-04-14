@@ -4,13 +4,16 @@
     <item android:title="home"
         android:icon="@drawable/baseline_home_24"
         android:id="@+id/home"/>
-    <item android:title="home"
+
+    <item android:title="explore"
         android:icon="@drawable/baseline_explore_24"
         android:id="@+id/explore"/>
-    <item android:title="explpre"
+
+    <item android:title="payments"
         android:icon="@drawable/baseline_payments_24"
         android:id="@+id/payments"/>
-    <item android:title="payments"
+
+    <item android:title="transfer"
         android:icon="@drawable/baseline_transfer_24"
         android:id="@+id/transfer"/>
 </menu>
