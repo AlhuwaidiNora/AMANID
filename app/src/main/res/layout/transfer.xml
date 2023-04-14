@@ -38,11 +38,15 @@
         android:id="@+id/textView20"
         android:layout_width="129dp"
         android:layout_height="32dp"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="Enter Amount"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="211dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
 
     <EditText
         android:id="@+id/editTextNumber"
@@ -50,34 +54,65 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="284dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="To"
-        tools:layout_editor_absoluteX="197dp"
-        tools:layout_editor_absoluteY="344dp" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button14"
-        android:layout_width="41dp"
-        android:layout_height="43dp"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
         android:background="#00FFFFFF"
+        android:ellipsize="none"
         android:gravity="center"
         app:icon="@drawable/baseline_perm_identity_24"
         app:iconTint="#6C6C6C"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
 
-    <TextView
-        android:id="@+id/textView23"
+    <EditText
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="401dp" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <Button
+        android:id="@+id/transferbutton"
+        android:layout_width="144dp"
+        android:layout_height="55dp"
+        android:background="@drawable/custom_button"
+        android:text="Transfer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
