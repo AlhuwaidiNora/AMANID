@@ -153,15 +153,15 @@
         android:layout_marginBottom="22dp"
         android:text=" know more"
         android:textColor="#B11616"
-        app:layout_constraintBottom_toTopOf="@+id/editTextid_qhint"
+        app:layout_constraintBottom_toTopOf="@+id/hint_answer_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/hint_answer_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/hint_answer_edit_texts"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/hint_answer_edit_text"
+        android:id="@+id/hint_answer_edit_texts"
         android:layout_width="339dp"
         android:layout_height="44dp"
         android:hint="Enter your answer"

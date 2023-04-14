@@ -38,7 +38,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
 
-        hintAnswerEditText = findViewById(R.id.hint_answer_edit_text);
+        hintAnswerEditText = findViewById(R.id.hint_answer_edit_texts);
 
         hintQuestionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -56,8 +56,8 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         editTextpass2 = findViewById(R.id.editTextpass2);
-        editTextid_qhint = findViewById(R.id.editTextid_qhint);
-        hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
+        editTextid_qhint = findViewById(R.id.hint_answer_edit_texts);
+        hint_answer_edit_text = findViewById(R.id.hint_answer_edit_texts);
         button9 = findViewById(R.id.button9);
         button9.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v) {
@@ -67,11 +67,11 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                 String pass = editTextpass.getText().toString();
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = editTextid_qhint.getText().toString();
-                HelperClass helperClass = new HelperClass(idnum , pass , pass2 ,qhint);
+                HelperClass helperClass = new HelperClass(idnum, pass, pass2, qhint);
                 reference.child(idnum).setValue(helperClass);
-                Toast.makeText(signup_page.this, "you have signup successfully!",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(signup_page.this,done_page9.class);
-
+                Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(signup_page.this, done_page9.class);
+                startActivity(intent);
             }});
 
         btn.setOnClickListener(new View.OnClickListener() {
