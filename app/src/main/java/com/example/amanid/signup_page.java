@@ -72,8 +72,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                 Toast.makeText(signup_page.this, "you have signup successfully!",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(signup_page.this,done_page9.class);
 
-            }
-        });
+            }});
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
