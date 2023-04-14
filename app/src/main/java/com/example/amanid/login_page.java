@@ -85,7 +85,7 @@ public class login_page extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(login_page.this, Idnumber_page6.class));
+                startActivity(new Intent(login_page.this, signup_page.class));
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
