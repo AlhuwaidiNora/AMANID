@@ -1,4 +1,5 @@
 package com.example.amanid;
+
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 
@@ -14,7 +15,7 @@ public class know_more_about_qhint extends AppCompatActivity {
         setContentView(R.layout.activity_know_more_about_qhint);
 
         String[] hintQuestions = getResources().getStringArray(R.array.hint_questions);
-        Spinner hintQuestionsSpinner = findViewById(R.id.activity_know_more_about_qhint);
+        Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, hintQuestions);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);

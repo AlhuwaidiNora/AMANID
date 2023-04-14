@@ -6,30 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".login_page">
 
-    <EditText
-        android:id="@+id/editTextid_login4"
-        android:layout_width="329dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="248dp"
-        android:background="@drawable/edit_text"
-        android:drawableLeft="@drawable/baseline_question_mark_24"
-        android:ems="10"
-        android:hint=" What is your favorite name ?"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.023" />
-
     <Button
         android:id="@+id/button8"
         android:layout_width="127dp"
         android:layout_height="45dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/custom_button"
-        android:drawableTop="@drawable/baseline_fingerprint_24"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,14 +38,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/editTextid_login"
         app:layout_constraintVertical_bias="0.023" />
+
 
     <EditText
         android:id="@+id/editTextid_login"
         android:layout_width="329dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="448dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
         android:ems="10"
@@ -71,7 +54,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.023" />
@@ -80,14 +63,14 @@
         android:id="@+id/textView18"
         android:layout_width="294dp"
         android:layout_height="43dp"
-        android:layout_marginTop="12dp"
         android:layout_marginBottom="352dp"
         android:text="This would be securely used to virify your Identity."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nationalIdentityNumberText" />
+        app:layout_constraintTop_toBottomOf="@+id/nationalIdentityNumberText2"
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
         android:id="@+id/nationalIdentityNumberText2"
@@ -104,7 +87,7 @@
         app:layout_constraintHorizontal_bias="0.316"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.339" />
 
     <TextView
         android:id="@+id/textView19"
@@ -112,41 +95,82 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Forget your password?"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
+        app:layout_constraintVertical_bias="0.898" />
 
     <TextView
+        android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="Dont have an Account?"
         android:textColor="#651616"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
+        app:layout_constraintVertical_bias="0.599" />
 
     <TextView
         android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="208dp"
         android:text="SignUp"
         android:textColor="#FF018786"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="239dp"
-        android:layout_height="314dp"
+        android:layout_width="230dp"
+        android:layout_height="236dp"
         app:srcCompat="@drawable/img_8125"
         tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="6dp" />
+        tools:layout_editor_absoluteY="6dp" /><![CDATA[
+
+    " />
+
+
+
+
+
+
+
+    ]]>
+
+    <Spinner
+        android:id="@+id/hint_questions_spinner"
+        android:layout_width="295dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="196dp"
+        android:entries="@array/hint_questions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <EditText
+        android:id="@+id/hint_answer_edit_text"
+        android:layout_width="281dp"
+        android:layout_height="46dp"
+        android:hint="Enter your answer"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_questions_spinner"
+        app:layout_constraintVertical_bias="0.051" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,12 +24,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_8127" />
     <Spinner
-        android:id="@+id/activity_know_more_about_qhint"
+        android:id="@+id/hint_questions_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/imageView11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <EditText
+        android:id="@+id/hint_answer_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hint answer"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/hint_questions_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
