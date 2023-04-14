@@ -10,12 +10,11 @@
         android:id="@+id/button8"
         android:layout_width="127dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/custom_button"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
@@ -24,10 +23,11 @@
         android:visibility="gone"
         android:id="@+id/progress"/>
 
+
     <EditText
         android:id="@+id/edit_pass"
-        android:layout_width="327dp"
-        android:layout_height="36dp"
+        android:layout_width="355dp"
+        android:layout_height="34dp"
         android:layout_marginBottom="200dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_lock_24"
@@ -39,13 +39,12 @@
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextid_login"
-        app:layout_constraintVertical_bias="0.023" />
-
+        app:layout_constraintVertical_bias="0.075" />
 
     <EditText
         android:id="@+id/editTextid_login"
-        android:layout_width="329dp"
-        android:layout_height="38dp"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="448dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
@@ -63,14 +62,13 @@
         android:id="@+id/textView18"
         android:layout_width="294dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="352dp"
         android:text="This would be securely used to virify your Identity."
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextid_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nationalIdentityNumberText2"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <TextView
         android:id="@+id/nationalIdentityNumberText2"
@@ -84,23 +82,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Forget your password?"
-        app:layout_constraintBottom_toTopOf="@+id/textView25"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.076" />
 
     <TextView
         android:id="@+id/textView25"
@@ -111,40 +96,45 @@
         android:textColor="#651616"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toStartOf="@+id/textViewSignUp"
-        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintVertical_bias="0.599" />
+        app:layout_constraintVertical_bias="0.724" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Forget your password?"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pass"
+        app:layout_constraintVertical_bias="0.994" />
 
     <TextView
         android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="212dp"
         android:text="SignUp"
         android:textColor="#FF018786"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_pass" />
 
+
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="230dp"
-        android:layout_height="236dp"
-        app:srcCompat="@drawable/img_8125"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="6dp" /><![CDATA[
-
-    " />
-
-
-
-
-
-
-
-    ]]>
+        android:layout_width="206dp"
+        android:layout_height="185dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_8125" />
 
     <Spinner
         android:id="@+id/hint_questions_spinner"
@@ -158,7 +148,7 @@
         app:layout_constraintHorizontal_bias="0.267"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_pass"
-        app:layout_constraintVertical_bias="0.268" />
+        app:layout_constraintVertical_bias="0.504" />
 
     <EditText
         android:id="@+id/hint_answer_edit_text"
@@ -171,6 +161,6 @@
         app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hint_questions_spinner"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
