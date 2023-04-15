@@ -91,14 +91,15 @@ public class login_page extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Object num;
-                Object pass;
-                if (!validateidnum()| !validatepass()){
+
+                if (!validateidnum()| !validatepass()|  validateqhint ()){
 
 
                 }else {
                     checkUser();
+
                 }
+
 
             }
         });
@@ -115,8 +116,8 @@ public class login_page extends AppCompatActivity {
             // Sign in success, update UI with the signed-in user's information
             //       FirebaseUser user = mAuth.getCurrentUser();
             //   updateUI(user);
-            Intent intent = new Intent(login_page.this, fingerPrint_plus.class);
-            startActivity(intent);
+          //  Intent intent = new Intent(login_page.this, fingerPrint_plus.class);
+           // startActivity(intent);
         } else {
 
             if (editTextid_login.length() < 10) {
@@ -149,6 +150,17 @@ public class login_page extends AppCompatActivity {
         }
 
     }
+    public Boolean validateqhint () {
+        String val = hint_answer_edit_text.getText().toString();
+        if (val.isEmpty()) {
+            hint_answer_edit_text.setError(" cannot be empty");
+            return false;
+        } else {
+            editTextid_login.setError(null);
+            return true;
+        }
+
+    }
 
 
 
@@ -165,19 +177,16 @@ public class login_page extends AppCompatActivity {
                             if (snapshot.exists()) {
                                 editTextid_login.setError(null);
                                 String passwordFromDB = snapshot.child(username).child("password").getValue(String.class);
-                               String qhintFromDB = snapshot.child(username).child("qhint").getValue(String.class);
-                                if (passwordFromDB.equals(userpass)&&qhintFromDB.equals(qhint)) {
+                                String qhintFromDB = snapshot.child(username).child("qhint").getValue(String.class);
+                                if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
                                     editTextid_login.setError(null);
-                                    Intent intent = new Intent(login_page.this, navigation_menu.class);
-                                }
-
-
-
-                                  else {
+                                        Intent intent = new Intent(login_page.this,SuccessfulLogin.class);
+                                        startActivity(intent);
+                                } else {
                                     edit_pass.setError(" Invslid Credentials");
                                     edit_pass.requestFocus();
                                     hint_answer_edit_text.setError(" wrong answer");
-                                     hint_answer_edit_text.requestFocus();
+                                    hint_answer_edit_text.requestFocus();
                                 }
 
                             } else {
@@ -194,6 +203,7 @@ public class login_page extends AppCompatActivity {
 
                         }
                     });
+
                 }
 
 
