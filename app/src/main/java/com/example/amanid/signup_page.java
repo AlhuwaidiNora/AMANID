@@ -71,11 +71,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                 reference.child(idnum).setValue(helperClass);
                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(signup_page.this, done_page9.class);
-
                 startActivity(intent);
-                database = FirebaseDatabase.getInstance("https://amanid-9f955-default-rtdb.firebaseio.com/");
-                reference = database.getReference("users");
-
             }});
 
         btn.setOnClickListener(new View.OnClickListener() {

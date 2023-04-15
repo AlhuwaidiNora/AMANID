@@ -1,10 +1,10 @@
 package com.example.amanid;
 
 public class HelperClass {
-    String idnum;
+    String indium;
     String pass;
     String pass2;
-    String qhint;
+    String hint;
 
     public String getPass() {
         return pass;
@@ -16,12 +16,12 @@ public class HelperClass {
 
 
 
-    public String getQhint() {
-        return qhint;
+    public String gethint() {
+        return hint;
     }
 
-    public void setQhint(String qhint) {
-        this.qhint = qhint;
+    public void sethint(String hint) {
+        this.hint = hint;
     }
 
 
@@ -35,19 +35,19 @@ public class HelperClass {
     }
 
 
-    public String getIdnum() {
-        return idnum;
+    public String getindium() {
+        return indium;
     }
 
-    public void setIdnum(String idnum) {
-        this.idnum = idnum;
+    public void setindium(String indium) {
+        this.indium = indium;
     }
 
     public HelperClass(String idnum , String pass , String pass2, String qhint) {
-        this.idnum = idnum;
+        this.indium = idnum;
         this.pass2 = pass2;
         this.pass =pass;
-        this.qhint = qhint;
+        this.hint = qhint;
     }
 
 
