@@ -157,11 +157,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/editTextid_qhint"
+        app:layout_constraintTop_toBottomOf="@+id/hintAnswerEditText"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextid_qhint"
+        android:id="@+id/hintAnswerEditText"
         android:layout_width="339dp"
         android:layout_height="44dp"
         android:hint="Enter your answer"

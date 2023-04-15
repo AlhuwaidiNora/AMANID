@@ -1,19 +1,15 @@
 package com.example.amanid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.ArrayAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +34,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
 
-        hintAnswerEditText = findViewById(R.id.hint_answer_edit_texts);
+        hintAnswerEditText = findViewById(R.id.hintAnswerEditText);
 
         hintQuestionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -56,21 +52,24 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         editTextpass2 = findViewById(R.id.editTextpass2);
-        editTextid_qhint = findViewById(R.id.hint_answer_edit_texts);
-        hint_answer_edit_text = findViewById(R.id.hint_answer_edit_texts);
+        editTextid_qhint = findViewById(R.id. hintAnswerEditText);
+        hint_answer_edit_text = findViewById(R.id.hintAnswerEditText);
         button9 = findViewById(R.id.button9);
         button9.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v) {
                 database = FirebaseDatabase.getInstance();
                 reference = database.getReference("users");
+
                 String idnum = editTextid_signup.getText().toString();
                 String pass = editTextpass.getText().toString();
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = editTextid_qhint.getText().toString();
+
                 HelperClass helperClass = new HelperClass(idnum, pass, pass2, qhint);
                 reference.child(idnum).setValue(helperClass);
+
                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(signup_page.this, done_page9.class);
+                Intent intent = new Intent(signup_page.this, login_page.class);
                 startActivity(intent);
             }});
 

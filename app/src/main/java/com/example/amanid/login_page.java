@@ -164,11 +164,14 @@ public class login_page extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if (snapshot.exists()) {
                                 editTextid_login.setError(null);
-                                String passwordFromDB = snapshot.child(username).child("password").getValue(String.class);
+                                String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
                                String qhintFromDB = snapshot.child(username).child("qhint").getValue(String.class);
                                 if (passwordFromDB.equals(userpass)&&qhintFromDB.equals(qhint)) {
                                     editTextid_login.setError(null);
-                                    Intent intent = new Intent(login_page.this, navigation_menu.class);
+                                    String idnumFromDB = snapshot.child(username).child("idnum").getValue(String.class);
+                                    Intent intent = new Intent(login_page.this, SuccessfulLogin.class);
+                                    startActivity(intent);
+
                                 }
 
 
@@ -194,6 +197,7 @@ public class login_page extends AppCompatActivity {
 
                         }
                     });
+
                 }
 
 
