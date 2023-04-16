@@ -174,7 +174,7 @@ public class login_page extends AppCompatActivity {
                         startActivity(intent);
 
                     } else {
-                        edit_pass.setError(" Invslid Credentials");
+                        edit_pass.setError(" Invalid Credentials");
                         edit_pass.requestFocus();
                         hint_answer_edit_text.setError(" wrong answer");
                         hint_answer_edit_text.requestFocus();
