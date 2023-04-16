@@ -37,7 +37,7 @@ import java.util.Objects;
 
 public class login_page extends AppCompatActivity {
     Spinner hintQuestionsSpinner;
-    EditText hintAnswerEditText;
+
     EditText hint_answer_edit_text;
     String selectedHintQuestion;
 
@@ -57,7 +57,7 @@ public class login_page extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
 
-        hintAnswerEditText = findViewById(R.id.hint_answer_edit_text);
+        hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
 
         hintQuestionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -74,10 +74,9 @@ public class login_page extends AppCompatActivity {
         button8 = findViewById(R.id.button8);
         edit_pass = findViewById(R.id.edit_pass);
         editTextid_login = findViewById(R.id.editTextid_login);
-        progressBar = findViewById(R.id.progress);
         hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
         initial();
-        
+
     }
 
     private void initial() {
@@ -85,19 +84,20 @@ public class login_page extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(login_page.this,signup_page.class));
+                startActivity(new Intent(login_page.this, signup_page.class));
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Object num;
-                Object pass;
-                if (!validateidnum()| !validatepass()){
 
 
-                }else {
+                if (!validateidnum() | !validatepass()) {
+
+
+                } else {
                     checkUser();
+
                 }
 
             }
@@ -127,7 +127,8 @@ public class login_page extends AppCompatActivity {
             }
         }
     }
-    public Boolean validateidnum () {
+
+    public Boolean validateidnum() {
         String val = editTextid_login.getText().toString();
         if (val.isEmpty()) {
             editTextid_login.setError(" id number cannot be empty");
@@ -138,7 +139,8 @@ public class login_page extends AppCompatActivity {
         }
 
     }
-    public Boolean validatepass () {
+
+    public Boolean validatepass() {
         String val = edit_pass.getText().toString();
         if (val.isEmpty()) {
             edit_pass.setError(" password cannot be empty");
@@ -151,57 +153,51 @@ public class login_page extends AppCompatActivity {
     }
 
 
+    public void checkUser() {
+        String username = editTextid_login.getText().toString().trim();
+        String userpass = edit_pass.getText().toString().trim();
+        String qhint = hint_answer_edit_text.getText().toString().trim();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        Query checkUserDatabase = reference.orderByChild("username").equalTo(username);
 
-                public void checkUser(){
-                    String username = editTextid_login.getText().toString().trim();
-                    String userpass = edit_pass.getText().toString().trim();
-                    String qhint = hint_answer_edit_text.getText().toString().trim();
-                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-                    Query    checkUserDatabase = reference.orderByChild("username").equalTo(username);
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    editTextid_login.setError(null);
+                    String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
+                    String qhintFromDB = snapshot.child(username).child("qhint").getValue(String.class);
+                    if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
+                        editTextid_login.setError(null);
+                        String idnumFromDB = snapshot.child(username).child("idnum").getValue(String.class);
+                        Intent intent = new Intent(login_page.this, SuccessfulLogin.class);
+                        startActivity(intent);
 
-                    checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if (snapshot.exists()) {
-                                editTextid_login.setError(null);
-                                String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
-                               String qhintFromDB = snapshot.child(username).child("qhint").getValue(String.class);
-                                if (passwordFromDB.equals(userpass)&&qhintFromDB.equals(qhint)) {
-                                    editTextid_login.setError(null);
-                                    String idnumFromDB = snapshot.child(username).child("idnum").getValue(String.class);
-                                    Intent intent = new Intent(login_page.this, SuccessfulLogin.class);
-                                    startActivity(intent);
+                    } else {
+                        edit_pass.setError(" Invslid Credentials");
+                        edit_pass.requestFocus();
+                        hint_answer_edit_text.setError(" wrong answer");
+                        hint_answer_edit_text.requestFocus();
+                    }
 
-                                }
-
-
-
-                                  else {
-                                    edit_pass.setError(" Invslid Credentials");
-                                    edit_pass.requestFocus();
-                                    hint_answer_edit_text.setError(" wrong answer");
-                                     hint_answer_edit_text.requestFocus();
-                                }
-
-                            } else {
-                                editTextid_login.setError(" User dose not exist");
-                                editTextid_login.requestFocus();
-                            }
-                        }
-
-
-
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
+                } else {
+                    editTextid_login.setError(" User dose not exist");
+                    editTextid_login.requestFocus();
                 }
+            }
 
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
 }
+
+
+
 
 
 
