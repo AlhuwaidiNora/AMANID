@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_New_User">
+
+    <Button
+        android:id="@+id/icon"
+        android:layout_width="84dp"
+        android:layout_height="61dp"
+        android:background="#00FFFFFF"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:textColorHint="#C1B9B9"
+        app:icon="@drawable/baseline_person_add_alt_1_24"
+        app:iconSize="?android:attr/windowTitleSize"
+        app:iconTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:background="@drawable/custom_button"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <TextView
+        android:id="@+id/msg4"
+        android:layout_width="155dp"
+        android:layout_height="26dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Short Name"
+        android:textColor="#656363"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463" />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="302dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="452dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_perm_identity_24"
+        android:ems="10"
+        android:hint="+966"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <EditText
+        android:id="@+id/editText_phone3"
+        android:layout_width="302dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="316dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_perm_identity_24"
+        android:ems="10"
+        android:hint=" "
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/msg3"
+        android:layout_width="277dp"
+        android:layout_height="21dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="left"
+        android:text="Add new user by phone number"
+        android:textColor="#656363"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <TextView
+        android:id="@+id/Newuser"
+        android:layout_width="237dp"
+        android:layout_height="55dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center|left"
+        android:text="New User"
+        android:textColor="#393737"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+</androidx.constraintlayout.widget.ConstraintLayout>
