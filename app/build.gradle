@@ -1,4 +1,5 @@
 plugins {
+
     id 'com.android.application'
     id 'com.google.gms.google-services'
 }
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.amanid"
-        minSdk 24
+        minSdk 19
         targetSdk 33
         versionCode 1
         versionName "1.0"

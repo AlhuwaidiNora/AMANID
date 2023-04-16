@@ -27,7 +27,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
 
     String selectedHintQuestion;
  FirebaseDatabase database;
- DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-9f955-default-rtdb.firebaseio.com/");
+ DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
