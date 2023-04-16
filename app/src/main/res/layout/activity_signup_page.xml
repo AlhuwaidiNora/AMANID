@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="250dp"
-        android:layout_height="162dp"
+        android:layout_width="245dp"
+        android:layout_height="140dp"
         android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -31,16 +31,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_8261" />
 
+
     <TextView
         android:id="@+id/textView29"
         android:layout_width="74dp"
         android:layout_height="49dp"
+        android:layout_marginBottom="28dp"
         android:gravity="center"
         android:text="term of use"
         android:textColor="#407AFD"
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.792"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hint_answer_edit_text"
         app:layout_constraintVertical_bias="0.215" />
@@ -49,27 +51,28 @@
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="136dp"
         android:text=" I have read and agree to the "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintHorizontal_bias="0.231"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hint_answer_edit_text"
         app:layout_constraintVertical_bias="0.747" />
-
 
     <TextView
         android:id="@+id/nationalIdentityNumberText4"
         android:layout_width="313dp"
         android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="sans-serif"
         android:gravity="left"
         android:text="Creat  your password"
         android:textAlignment="center"
         android:textColor="#070707"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextpass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +82,7 @@
         android:id="@+id/editTextpass"
         android:layout_width="317dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="464dp"
+        android:layout_marginBottom="372dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_lock_24"
         android:ems="10"
@@ -96,7 +99,7 @@
         android:id="@+id/editTextpass2"
         android:layout_width="317dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="416dp"
+        android:layout_marginBottom="320dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_lock_24"
         android:ems="10"
@@ -113,7 +116,7 @@
         android:id="@+id/editTextid_signup"
         android:layout_width="329dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="580dp"
+        android:layout_marginBottom="480dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
         android:ems="10"
@@ -121,11 +124,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.023" />
-
 
     <TextView
         android:id="@+id/nationalIdentityNumberText3"
@@ -139,36 +141,33 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.244" />
 
     <TextView
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="22dp"
         android:text=" know more"
         android:textColor="#B11616"
-        app:layout_constraintBottom_toTopOf="@+id/hint_answer_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/hintAnswerEditText"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:layout_editor_absoluteY="432dp" />
 
     <EditText
         android:id="@+id/hintAnswerEditText"
         android:layout_width="339dp"
         android:layout_height="44dp"
+        android:layout_marginTop="12dp"
         android:hint="Enter your answer"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hint_questions_spinner"
         app:layout_constraintVertical_bias="0.0" />
@@ -177,13 +176,10 @@
         android:id="@+id/hint_questions_spinner"
         android:layout_width="326dp"
         android:layout_height="37dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginTop="40dp"
         android:entries="@array/hint_questions"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.329"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextpass2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
