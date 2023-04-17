@@ -1,12 +1,13 @@
 package com.example.amanid;
 
-import com.example.amanid.databinding.ActivityNavigationMenuBinding;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import  android.widget.Button;
 import android.os.Bundle;
+
+import com.example.amanid.databinding.ActivityNavigationMenuBinding;
 
 public class navigation_menu extends AppCompatActivity {
     public ActivityNavigationMenuBinding binding;
@@ -48,3 +49,4 @@ public class navigation_menu extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 }
+
