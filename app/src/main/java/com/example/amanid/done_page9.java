@@ -18,7 +18,7 @@ public class done_page9 extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(done_page9.this, intro_option_page5.class);
+                Intent intent = new Intent(done_page9.this, login_page.class);
                 startActivity(intent);
             }
         });
