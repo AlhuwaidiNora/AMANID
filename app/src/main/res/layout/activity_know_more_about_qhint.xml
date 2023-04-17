@@ -17,21 +17,50 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="373dp"
-        android:layout_height="275dp"
+        android:layout_width="699dp"
+        android:layout_height="347dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_8127" />
+        app:srcCompat="@drawable/top_bcakground"
+        tools:layout_editor_absoluteY="-6dp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="339dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="184dp"
+        android:text="this step for increase safety pleas write an unexpected answer "
+        android:textColor="#ffff"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="45dp"
+        android:layout_height="57dp"
+        android:background="#001937FD"
+        android:backgroundTint="#1937FD"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <Spinner
         android:id="@+id/hint_questions_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/imageView11"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView11"
+        app:layout_constraintVertical_bias="0.298" />
 
     <EditText
         android:id="@+id/hint_answer_edit_text"
@@ -42,5 +71,17 @@
         app:layout_constraintTop_toBottomOf="@id/hint_questions_spinner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="95dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView11"
+        app:layout_constraintVertical_bias="0.388"
+        app:srcCompat="@android:drawable/ic_lock_idle_lock" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

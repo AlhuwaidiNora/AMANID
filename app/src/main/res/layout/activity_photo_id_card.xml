@@ -6,6 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".PhotoIdCard">
 
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="345dp"
+        android:layout_height="380dp"
+        android:layout_marginBottom="380dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/top_bcakground"
+        tools:layout_editor_absoluteX="27dp" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="45dp"
+        android:layout_height="57dp"
+        android:background="#001937FD"
+        android:backgroundTint="#1937FD"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/contiuebutt"
         android:layout_width="139dp"
@@ -38,13 +59,13 @@
         android:layout_height="37dp"
         android:fontFamily="sans-serif-medium"
         android:text="Please point the camera at the ID card"
-        android:textColor="#656363"
+        android:textColor="#ffff"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.331" />
 
     <TextView
         android:id="@+id/intro2"
@@ -52,11 +73,12 @@
         android:layout_height="56dp"
         android:fontFamily="sans-serif-black"
         android:text="Photo ID Card"
-        android:textColor="#393737"
+        android:textColor="#ffff"
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
+        app:layout_constraintVertical_bias="0.217" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
