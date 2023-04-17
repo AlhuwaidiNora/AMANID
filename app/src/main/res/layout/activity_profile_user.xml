@@ -17,6 +17,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/top_bcakground" />
 
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="45dp"
+        android:layout_height="57dp"
+        android:background="#001937FD"
+        android:backgroundTint="#1937FD"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="246dp"
