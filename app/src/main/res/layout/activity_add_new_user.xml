@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/icon"
-        android:layout_width="84dp"
-        android:layout_height="61dp"
+        android:layout_width="72dp"
+        android:layout_height="56dp"
         android:background="#00FFFFFF"
         android:ellipsize="none"
         android:gravity="center"
