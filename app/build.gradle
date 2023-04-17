@@ -25,14 +25,15 @@ android {
             multiDexKeepProguard file('multidex-config.pro')
         }
     }
-
+//..
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding true
+
     }
 
     lintOptions {
