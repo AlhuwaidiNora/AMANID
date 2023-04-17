@@ -28,7 +28,6 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
     String selectedHintQuestion;
  FirebaseDatabase database;
  DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,8 +113,8 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(signup_page.this,know_more_about_qhint.class));
-            }
+                Intent intent = new Intent(signup_page.this, done_page9.class);
+                startActivity(intent);            }
         });
 
 

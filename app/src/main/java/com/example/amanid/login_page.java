@@ -158,7 +158,7 @@ public class login_page extends AppCompatActivity {
         String userpass = edit_pass.getText().toString().trim();
         String qhint = hint_answer_edit_text.getText().toString().trim();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("username").equalTo(username);
+        Query checkUserDatabase = reference.orderByChild("indium").equalTo(username);
 
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -166,10 +166,10 @@ public class login_page extends AppCompatActivity {
                 if (snapshot.exists()) {
                     editTextid_login.setError(null);
                     String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
-                    String qhintFromDB = snapshot.child(username).child("qhint").getValue(String.class);
+                    String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
                     if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
                         editTextid_login.setError(null);
-                        String idnumFromDB = snapshot.child(username).child("idnum").getValue(String.class);
+                        String idnumFromDB = snapshot.child(username).child("indium").getValue(String.class);
                         Intent intent = new Intent(login_page.this, SuccessfulLogin.class);
                         startActivity(intent);
 
