@@ -255,7 +255,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="159dp" />
+                android:layout_height="141dp" />
         </LinearLayout>
     </ScrollView>
 

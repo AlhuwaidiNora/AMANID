@@ -13,7 +13,7 @@ public class fingerPrint_plus extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finger_print_plus);
+        setContentView(R.layout.activity_finger_print_plus_later);
       imageView2 = findViewById(R.id.imageView2);
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,10 +7,10 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tra"
-        tools:layout_editor_absoluteX="0dp"
+        android:layout_width="412dp"
+        android:layout_height="355dp"
+        app:srcCompat="@drawable/top_bcakground"
+        tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="-183dp" />
 
     <Button
@@ -20,8 +20,10 @@
         android:background="#001937FD"
         android:backgroundTint="#1937FD"
         app:icon="?attr/actionModeCloseDrawable"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView26"
@@ -37,23 +39,25 @@
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="You have successfully "
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="422dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
         android:text="sent 10$ to Noura"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="476dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <Button
         android:id="@+id/button13"
@@ -79,8 +83,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="217dp"
-        android:layout_height="232dp"
+        android:layout_width="216dp"
+        android:layout_height="206dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"

@@ -25,7 +25,7 @@
             android:name=".home_page_7"
             android:exported="false" />
         <activity
-            android:name=".profile_user"
+            android:name=".setting"
             android:exported="false" />
         <activity
             android:name=".Add_New_User"

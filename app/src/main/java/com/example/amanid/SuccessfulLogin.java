@@ -16,7 +16,7 @@ public class SuccessfulLogin extends AppCompatActivity {
         addbutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SuccessfulLogin.this, profile_user.class);
+                Intent intent = new Intent(SuccessfulLogin.this, setting.class);
                   startActivity(intent);
             }
         });

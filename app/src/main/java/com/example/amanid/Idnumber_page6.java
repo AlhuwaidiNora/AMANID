@@ -19,7 +19,7 @@ public class Idnumber_page6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_idnumber_page6);
+        setContentView(R.layout.activity_idnumber_old_idea);
         button3 = findViewById(R.id.button3);
         editTextid = findViewById(R.id.editTextid);
         mAuth = FirebaseAuth.getInstance();

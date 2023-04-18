@@ -7,21 +7,24 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/tra"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-182dp" />
+        android:layout_width="378dp"
+        android:layout_height="381dp"
+        app:srcCompat="@drawable/top_bcakground"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="-165dp" />
 
     <Button
         android:id="@+id/button12"
         android:layout_width="45dp"
         android:layout_height="57dp"
+        android:layout_marginTop="4dp"
         android:background="#001937FD"
         android:backgroundTint="#1937FD"
         app:icon="?attr/actionModeCloseDrawable"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
@@ -46,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintVertical_bias="0.34" />
 
     <EditText
         android:id="@+id/editTextNumber"

@@ -16,7 +16,7 @@ public class createPasssword_page8 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_passsword_page8);
+        setContentView(R.layout.activity_create_passsword_later);
         button5 = findViewById(R.id.button5);
         editTextTextPersonName4 =findViewById(R.id.editTextTextPersonName4);
         editTextTextPersonName2 =findViewById(R.id.editTextTextPersonName2);
