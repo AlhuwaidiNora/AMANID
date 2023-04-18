@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".done_page9">
 
-    <Button
-        android:id="@+id/addbutton2"
-        android:layout_width="127dp"
-        android:layout_height="45dp"
-        android:background="@drawable/custom_button"
-        android:text=" go"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
-
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
