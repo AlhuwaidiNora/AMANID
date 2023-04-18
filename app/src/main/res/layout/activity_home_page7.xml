@@ -115,7 +115,7 @@
                             android:background="@drawable/top_button_main">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageView164"
                                 android:layout_width="30dp"
                                 android:layout_height="26dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -127,7 +127,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView36"
+                            android:id="@+id/textView_Add"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="         Add"
@@ -149,7 +149,7 @@
                             android:background="@drawable/top_button_main">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageView163"
                                 android:layout_width="30dp"
                                 android:layout_height="26dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -161,7 +161,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView36"
+                            android:id="@+id/textView_send"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="         Send"
@@ -183,7 +183,7 @@
                             android:background="@drawable/top_button_main">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageView162"
                                 android:layout_width="30dp"
                                 android:layout_height="26dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -195,7 +195,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView36"
+                            android:id="@+id/textView_recevie"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="       Recevie"
@@ -217,7 +217,7 @@
                             android:background="@drawable/top_button_main">
 
                             <ImageView
-                                android:id="@+id/imageView16"
+                                android:id="@+id/imageView161"
                                 android:layout_width="30dp"
                                 android:layout_height="26dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -229,7 +229,7 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/textView36"
+                            android:id="@+id/textView_buy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
@@ -287,7 +287,7 @@
                     android:visibility="visible">
 
                     <ImageView
-                        android:id="@+id/imageView21"
+                        android:id="@+id/imageView211"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -295,7 +295,7 @@
                         app:srcCompat="@drawable/baseline_home_24" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/textView_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -314,7 +314,7 @@
                     android:visibility="visible">
 
                     <ImageView
-                        android:id="@+id/imageView21"
+                        android:id="@+id/imageView214"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -322,7 +322,7 @@
                         app:srcCompat="@drawable/baseline_person_outline_24" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/textView_profile1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -341,7 +341,7 @@
                     android:visibility="invisible">
 
                     <ImageView
-                        android:id="@+id/imageView21"
+                        android:id="@+id/imageView77"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -349,7 +349,7 @@
                         app:srcCompat="@drawable/baseline_home_24" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/textView_spec1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -368,7 +368,7 @@
                     android:visibility="visible">
 
                     <ImageView
-                        android:id="@+id/imageView21"
+                        android:id="@+id/imageView219"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -376,7 +376,7 @@
                         app:srcCompat="@drawable/baseline_wallet_24" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/textView_wallet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -395,7 +395,7 @@
                     android:visibility="visible">
 
                     <ImageView
-                        android:id="@+id/imageView21"
+                        android:id="@+id/imageView210"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -403,7 +403,7 @@
                         app:srcCompat="@drawable/baseline_settings_24" />
 
                     <TextView
-                        android:id="@+id/textView39"
+                        android:id="@+id/textView_setting_home"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
