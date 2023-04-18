@@ -70,10 +70,13 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
 
                HelperClass helperClass = new HelperClass(idnum, pass, pass2, qhint);
                reference.child(idnum).setValue(helperClass);
-                if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty()){
+
+                if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty() && (idnum.length() < 10)){
                     Toast.makeText(signup_page.this, "Please fill all fields", Toast.LENGTH_LONG).show();
-                } else if (!pass.equals(pass2)){
+
+                } else if (!pass.equals(pass2)) {
                     Toast.makeText(signup_page.this, "Passwords are not matching", Toast.LENGTH_LONG).show();
+
                 } else {
                     reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override

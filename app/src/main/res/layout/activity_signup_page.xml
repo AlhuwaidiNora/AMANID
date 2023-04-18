@@ -120,7 +120,7 @@
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
         android:ems="10"
-        android:hint="Enter your ID Number "
+        android:hint="Enter your ID Number (ten number)"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

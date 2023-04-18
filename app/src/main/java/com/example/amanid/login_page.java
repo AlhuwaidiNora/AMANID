@@ -81,10 +81,10 @@ public class login_page extends AppCompatActivity {
 
                 if (!validateidnum() | !validatepass()) {
 
+                }  else {
 
-                } else {
+
                     checkUser();
-
                 }
 
             }
