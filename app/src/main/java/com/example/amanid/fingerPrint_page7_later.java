@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class fingerPrint_page7 extends AppCompatActivity {
+public class fingerPrint_page7_later extends AppCompatActivity {
       ImageView imageView2;
 
         @Override
@@ -17,7 +17,7 @@ public class fingerPrint_page7 extends AppCompatActivity {
             imageView2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(fingerPrint_page7.this, createPasssword_page8.class);
+                    Intent intent = new Intent(fingerPrint_page7_later.this, createPasssword_later.class);
                     startActivity(intent);
                 }
             });

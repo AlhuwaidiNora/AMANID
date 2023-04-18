@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Idnumber_page6 extends AppCompatActivity {
+public class Idnumber_old_idea extends AppCompatActivity {
     Button button3;
     private EditText editTextid;
     private FirebaseAuth mAuth;
@@ -31,7 +31,7 @@ public class Idnumber_page6 extends AppCompatActivity {
             }
             private void  rightid(String num) {
                 if (num.length() >= 10 ) {
-                    Intent intent = new Intent(Idnumber_page6.this, fingerPrint_page7.class);
+                    Intent intent = new Intent(Idnumber_old_idea.this, fingerPrint_page7_later.class);
                     startActivity(intent);
                 } else {
                     if (num.length() < 10) {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fingerPrint_page7">
+    tools:context=".fingerPrint_page7_later">
 
     <TextView
         android:id="@+id/textView121"

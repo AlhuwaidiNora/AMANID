@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class fingerPrint_plus extends AppCompatActivity {
+public class fingerPrint_plus_later extends AppCompatActivity {
     ImageView imageView2;
 
     @Override
@@ -18,7 +18,7 @@ public class fingerPrint_plus extends AppCompatActivity {
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(fingerPrint_plus.this, done_page9.class);
+                Intent intent = new Intent(fingerPrint_plus_later.this, done_page9.class);
                 startActivity(intent);
             }
         });

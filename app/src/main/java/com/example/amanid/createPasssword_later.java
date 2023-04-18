@@ -9,7 +9,7 @@ package com.example.amanid;
         import android.widget.Button;
         import android.widget.EditText;
 
-public class createPasssword_page8 extends AppCompatActivity {
+public class createPasssword_later extends AppCompatActivity {
     Button button5;
     EditText editTextTextPersonName2;
     EditText editTextTextPersonName4;
@@ -27,7 +27,7 @@ public class createPasssword_page8 extends AppCompatActivity {
                 }
             private void   rightpass(String pass1, String pass2) {
                 if (pass1.length() >= 6 && pass2.length() >= 6) {
-                Intent intent = new Intent(createPasssword_page8.this, done_page9.class);
+                Intent intent = new Intent(createPasssword_later.this, done_page9.class);
                startActivity(intent);
 
                     } else {

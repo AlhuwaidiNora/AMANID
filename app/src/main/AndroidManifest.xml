@@ -46,7 +46,7 @@
             android:name=".SuccessfulLogin"
             android:exported="false" />
         <activity
-            android:name=".fingerPrint_plus"
+            android:name=".fingerPrint_plus_later"
             android:exported="false" />
         <activity android:name=".getStarted_page2" />
         <activity android:name=".intro_option_page5" />
@@ -63,13 +63,13 @@
             android:name=".know_more_about_qhint"
             android:exported="false" />
         <activity
-            android:name=".createPasssword_page8"
+            android:name=".createPasssword_later"
             android:exported="false" />
         <activity
-            android:name=".Idnumber_page6"
+            android:name=".Idnumber_old_idea"
             android:exported="false" />
         <activity
-            android:name=".fingerPrint_page7"
+            android:name=".fingerPrint_page7_later"
             android:exported="false" />
         <activity
             android:name=".getStarted_page4"
