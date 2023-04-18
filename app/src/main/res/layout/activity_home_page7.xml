@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@drawable/top_bcakground"
     tools:context=".home_page_7">
 
     <ScrollView
@@ -120,8 +120,10 @@
                                 android:layout_height="26dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.589"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.363"
                                 app:srcCompat="@drawable/add" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -253,7 +255,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="176dp" />
+                android:layout_height="159dp" />
         </LinearLayout>
     </ScrollView>
 
