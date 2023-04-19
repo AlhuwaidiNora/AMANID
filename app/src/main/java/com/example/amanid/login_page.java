@@ -32,6 +32,7 @@ public class login_page extends AppCompatActivity {
     EditText editTextid_login;
     EditText edit_pass;
     ProgressBar progressBar;
+    TextView textView19;
 
 
     @Override
@@ -62,6 +63,7 @@ public class login_page extends AppCompatActivity {
         edit_pass = findViewById(R.id.edit_pass);
         editTextid_login = findViewById(R.id.editTextid_login);
         hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
+        textView19 =findViewById(R.id.textView19);
         initial();
 
     }
@@ -72,6 +74,14 @@ public class login_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(login_page.this, signup_page.class));
+
+            }
+
+        });
+        textView19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login_page.this, Forget_password.class));
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {

@@ -340,15 +340,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:visibility="invisible">
+                    android:visibility="visible">
 
                     <ImageView
                         android:id="@+id/imageView77"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/baseline_home_24" />
+                        android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/textView_spec1"
@@ -356,7 +355,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:text=" "
+                        android:text="."
                         android:textAlignment="center"
                         android:textColor="#9695ce"
                         android:textSize="12sp" />
@@ -420,6 +419,7 @@
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/transfer_icon"
             style="@style/Floating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
