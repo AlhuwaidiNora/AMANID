@@ -42,6 +42,7 @@ public class Forget_password extends AppCompatActivity {
     BiometricPrompt.PromptInfo promptInfo;
     ConstraintLayout mMainLayout2;
      Button confirmbutton;
+     Button button17;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,14 @@ public class Forget_password extends AppCompatActivity {
         setContentView(R.layout.activity_forget_password);
         mMainLayout2 = findViewById(R.id.mMainLayout2);
         confirmbutton =findViewById(R.id.confirmbutton);
+        button17 = findViewById(R.id.button17);
+        button17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Forget_password.this, login_page.class);
+                startActivity(intent);
+            }
+        });
         confirmbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +98,7 @@ public class Forget_password extends AppCompatActivity {
             }
         });
 
-        promptInfo = new BiometricPrompt.PromptInfo.Builder().setTitle("Rest Password")
+        promptInfo = new BiometricPrompt.PromptInfo.Builder().setTitle("Reset Password")
                 .setDescription("Use FingerPrint  ").setDeviceCredentialAllowed(true).build();
 
         biometricPrompt.authenticate(promptInfo);
