@@ -24,7 +24,7 @@ public class signup_page extends AppCompatActivity {
 EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
  Button button9 ;
     EditText hintAnswerEditText;
-
+    TextView textView30;
     String selectedHintQuestion;
  FirebaseDatabase database;
  DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
@@ -51,7 +51,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
             }
         });
 
-        TextView btn=findViewById(R.id.textView30);
+
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         editTextpass2 = findViewById(R.id.editTextpass2);
@@ -116,13 +116,18 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                // startActivity(intent);
             }});
 
-        btn.setOnClickListener(new View.OnClickListener() {
+
+
+}
+
+    private void initial1()   {
+        textView30 =findViewById(R.id.textView30);
+        textView30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signup_page.this, done_page9.class);
-                startActivity(intent);            }
+                startActivity(new Intent(signup_page.this,know_more_about_qhint.class));
+            }
         });
-
-
+    }
 }
-}
+
