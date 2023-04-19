@@ -10,13 +10,12 @@
         android:id="@+id/button8"
         android:layout_width="127dp"
         android:layout_height="45dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/custom_button"
         android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -29,7 +28,7 @@
         android:id="@+id/edit_pass"
         android:layout_width="355dp"
         android:layout_height="34dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="332dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_lock_24"
         android:ems="10"
@@ -44,7 +43,7 @@
 
     <EditText
         android:id="@+id/editTextid_login"
-        android:layout_width="347dp"
+        android:layout_width="355dp"
         android:layout_height="40dp"
         android:layout_marginBottom="388dp"
         android:background="@drawable/edit_text"
@@ -100,7 +99,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView19"
@@ -124,9 +124,10 @@
         android:textColor="#FF018786"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintHorizontal_bias="0.663"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.01" />
 
     <ImageView
         android:id="@+id/imageView5"
