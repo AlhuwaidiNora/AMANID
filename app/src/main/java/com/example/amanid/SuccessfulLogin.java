@@ -3,8 +3,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
-import android.widget.Button;
 
 
 public class SuccessfulLogin extends AppCompatActivity {
@@ -21,7 +19,7 @@ public class SuccessfulLogin extends AppCompatActivity {
 
             public void run() {
 
-                Intent i = new Intent(SuccessfulLogin.this, home_page_7.class);
+                Intent i = new Intent(SuccessfulLogin.this, home_page_8.class);
 
                 startActivity(i);
 

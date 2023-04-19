@@ -91,7 +91,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                                 reference.child("users").child(idnum).child("idnum").setValue(idnum);
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();
-                                Intent intent = new Intent(signup_page.this, done_page9.class);
+                                Intent intent = new Intent(signup_page.this, fingerPrint_page7_later.class);
                                 startActivity(intent);
 
                             }
@@ -119,7 +119,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signup_page.this, done_page9.class);
+                Intent intent = new Intent(signup_page.this, done_page.class);
                 startActivity(intent);            }
         });
 

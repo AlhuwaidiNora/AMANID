@@ -39,7 +39,7 @@ public class login_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
+       /* Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.hint_questions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
@@ -56,7 +56,7 @@ public class login_page extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
+        });*/
 
         button8 = findViewById(R.id.button8);
         edit_pass = findViewById(R.id.edit_pass);
@@ -157,7 +157,7 @@ public class login_page extends AppCompatActivity {
                     if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
                         editTextid_login.setError(null);
                         String idnumFromDB = snapshot.child(username).child("indium").getValue(String.class);
-                        Intent intent = new Intent(login_page.this, SuccessfulLogin.class);
+                        Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
                         startActivity(intent);
 
                     } else {

@@ -28,7 +28,7 @@
             android:name=".profile"
             android:exported="false" />
         <activity
-            android:name=".home_page_7"
+            android:name=".home_page_8"
             android:exported="false" />
         <activity
             android:name=".setting"
@@ -60,7 +60,7 @@
             android:name=".login_page"
             android:exported="false" />
         <activity
-            android:name=".done_page9"
+            android:name=".done_page"
             android:exported="false" />
         <activity
             android:name=".signup_page"

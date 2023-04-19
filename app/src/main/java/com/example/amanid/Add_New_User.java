@@ -17,7 +17,7 @@ public class Add_New_User extends AppCompatActivity {
         button20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Add_New_User.this, home_page_7.class);
+                Intent intent = new Intent(Add_New_User.this, home_page_8.class);
                 startActivity(intent);
             }
         });

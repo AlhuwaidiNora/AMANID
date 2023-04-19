@@ -137,32 +137,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/img_8125" />
 
-    <Spinner
-        android:id="@+id/hint_questions_spinner"
-        android:layout_width="326dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="228dp"
-        android:entries="@array/hint_questions"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextid_login" />
 
-    <EditText
-        android:id="@+id/hint_answer_edit_text"
-        android:layout_width="339dp"
-        android:layout_height="44dp"
-        android:hint="Enter your answer"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hint_questions_spinner"
-        app:layout_constraintVertical_bias="0.0" />
 
 
 
