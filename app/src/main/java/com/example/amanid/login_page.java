@@ -1,18 +1,19 @@
 package com.example.amanid;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,12 +33,13 @@ public class login_page extends AppCompatActivity {
     EditText edit_pass;
     ProgressBar progressBar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
+        Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.hint_questions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
@@ -61,6 +63,7 @@ public class login_page extends AppCompatActivity {
         editTextid_login = findViewById(R.id.editTextid_login);
         hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
         initial();
+
     }
 
     private void initial() {
@@ -74,20 +77,35 @@ public class login_page extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!validateidnum() || !validatepass()) {
 
-                } else {
+
+                if (!validateidnum() | !validatepass()) {
+
+                }  else {
+
+
                     checkUser();
                 }
+
             }
         });
     }
 
     private void loginWithId(String num, String pass) {
         if (num.length() >= 10 && pass.length() > 6) {
+            //  progressBar.setVisibility(View.VISIBLE);
+            //  mAuth.signInWithEmailAndPassword(num, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            //   @Override
+            //   public void onComplete(@NonNull Task<AuthResult> task) {
+            //       progressBar.setVisibility(View.GONE);
+            //      if (task.isSuccessful()) {
+            // Sign in success, update UI with the signed-in user's information
+            //       FirebaseUser user = mAuth.getCurrentUser();
+            //   updateUI(user);
             Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
             startActivity(intent);
         } else {
+
             if (editTextid_login.length() < 10) {
                 editTextid_login.setError(" the ID number not valid");
             }
@@ -115,103 +133,61 @@ public class login_page extends AppCompatActivity {
             edit_pass.setError(" password cannot be empty");
             return false;
         } else {
-            edit_pass.setError(null);
+            editTextid_login.setError(null);
             return true;
         }
 
     }
-    public class User {
-        private String idNum;
-        private String password;
-        private String hintAnswer;
-        private String hintQuestion;
 
-        // Default constructor
-        public User() {
-            // Required for Firebase
-        }
-
-        // Getter for idNum field
-        public String getIdNum() {
-            return idNum;
-        }
-
-        // Setter for idNum field
-        public void setIdNum(String idNum) {
-            this.idNum = idNum;
-        }
-
-        // Getter for password field
-        public String getPassword() {
-            return password;
-        }
-
-        // Setter for password field
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
-        // Getter for hintAnswer field
-        public String getHintAnswer() {
-            return hintAnswer;
-        }
-
-        // Setter for hintAnswer field
-        public void setHintAnswer(String hintAnswer) {
-            this.hintAnswer = hintAnswer;
-        }
-
-        // Getter for hintQuestion field
-        public String getHintQuestion() {
-            return hintQuestion;
-        }
-
-        // Setter for hintQuestion field
-        public void setHintQuestion(String hintQuestion) {
-            this.hintQuestion = hintQuestion;
-        }
-    }
 
     public void checkUser() {
         String username = editTextid_login.getText().toString().trim();
         String userpass = edit_pass.getText().toString().trim();
-        String userHintAnswer = hint_answer_edit_text.getText().toString().trim();
-
+        String qhint = hint_answer_edit_text.getText().toString().trim();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUser = reference.orderByChild("idnum").equalTo(username);
+        Query checkUserDatabase = reference.orderByChild("indium").equalTo(username);
 
-        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        User user = snapshot.getValue(User.class);
-                        if (user != null) {
-                            String passFromDB = user.getPassword();
-                            String hintAnswerFromDB = user.getHintAnswer();
-                            if (passFromDB.equals(userpass)) {
-                                if (selectedHintQuestion.equals(user.getHintQuestion())
-                                        && userHintAnswer.equals(hintAnswerFromDB)) {
-                                    loginWithId(username, userpass);
-                                } else {
-                                    hint_answer_edit_text.setError("Hint answer is incorrect.");
-                                }
-                            } else {
-                                edit_pass.setError("Password is incorrect.");
-                            }
-                        }
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    editTextid_login.setError(null);
+                    String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
+                    String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
+                    if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
+                        editTextid_login.setError(null);
+                        String idnumFromDB = snapshot.child(username).child("indium").getValue(String.class);
+                        Intent intent = new Intent(login_page.this, SuccessfulLogin.class);
+                        startActivity(intent);
+
+                    } else {
+                        edit_pass.setError(" Invalid Credentials");
+                        edit_pass.requestFocus();
+                        hint_answer_edit_text.setError(" wrong answer");
+                        hint_answer_edit_text.requestFocus();
                     }
+
                 } else {
-                    editTextid_login.setError("ID number not found.");
+                    editTextid_login.setError(" User dose not exist");
+                    editTextid_login.requestFocus();
                 }
             }
 
+
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Handle database error
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
-    }}
+
+    }
+}
+
+
+
+
+
+
 
 
 
