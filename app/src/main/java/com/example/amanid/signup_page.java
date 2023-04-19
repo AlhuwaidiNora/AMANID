@@ -89,6 +89,8 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                                 reference.child("users").child(idnum).child("qhint").setValue(qhint);
                                 reference.child("users").child(idnum).child("pass").setValue(pass);
                                 reference.child("users").child(idnum).child("idnum").setValue(idnum);
+                                reference.child("users").child(idnum).child("pass2").setValue(pass);
+
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();
                                 Intent intent = new Intent(signup_page.this, done_page9.class);

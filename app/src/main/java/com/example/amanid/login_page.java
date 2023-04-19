@@ -152,8 +152,10 @@ public class login_page extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     editTextid_login.setError(null);
-                    String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
-                    String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
+                    String passwordFromDB = snapshot.child(userpass).child("pass").getValue(String.class);
+                    String passwordsFromDB = snapshot.child(userpass).child("pass2").getValue(String.class);
+
+                    String qhintFromDB = snapshot.child(qhint).child("hint").getValue(String.class);
                     if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
                         editTextid_login.setError(null);
                         String idnumFromDB = snapshot.child(username).child("indium").getValue(String.class);
