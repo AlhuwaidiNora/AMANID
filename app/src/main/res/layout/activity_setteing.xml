@@ -191,8 +191,8 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="382dp"
+            android:layout_height="41dp"
             android:layout_marginStart="1dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
@@ -203,13 +203,14 @@
             <TextView
                 android:id="@+id/textView_logout"
                 android:layout_width="287dp"
-                android:layout_height="wrap_content"
+                android:layout_height="57dp"
                 android:layout_weight="1"
                 android:drawableLeft="@drawable/baseline_logout_24"
                 android:text="Log out "
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="#800A0A"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
         </LinearLayout>
 
