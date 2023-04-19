@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:text="Hello Ahemd"
+                    android:text="Hello Ahmed"
                     android:textColor="#ffff"
                     android:textSize="16dp"
                     android:textStyle="bold"

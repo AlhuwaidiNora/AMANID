@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class home_page_7 extends AppCompatActivity {
-ImageView imageview201 , imageview164;
+ImageView imageview201 , imageview164 , imageView77 , imageView214;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,23 @@ ImageView imageview201 , imageview164;
         setContentView(R.layout.activity_home_page7);
         imageview201 =findViewById(R.id.imageView210);
         imageview164 = findViewById(R.id.imageView164);
+        imageView77 = findViewById(R.id.imageView77);
+        imageView214 = findViewById(R.id.imageView214);
+
+
+
+
+
+
+
+
+        imageView214.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home_page_7.this, profile.class);
+                startActivity(intent);
+            }
+        });
 
         imageview201.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +46,13 @@ ImageView imageview201 , imageview164;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(home_page_7.this, Add_New_User.class);
+                startActivity(intent);
+            }
+        });
+        imageView77.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home_page_7.this, transfer.class);
                 startActivity(intent);
             }
         });

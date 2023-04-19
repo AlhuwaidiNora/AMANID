@@ -12,9 +12,11 @@
         android:layout_width="423dp"
         android:layout_height="369dp"
         android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.729"
         app:srcCompat="@drawable/top_bcakground" />
 
     <Button
@@ -29,65 +31,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView177"
-        android:layout_width="246dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile" />
-
-    <TextView
-        android:id="@+id/textView_name_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="52dp"
-        android:text="Ahmed"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_goneMarginTop="20dp" />
-
-    <TextView
-        android:id="@+id/textView_abc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1123456678"
-        android:textColor="#FFFFFF"
-        android:textSize="18dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="179dp" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="392dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/background_white"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.989">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -101,22 +57,14 @@
 
             <TextView
                 android:id="@+id/textView_password"
-                android:layout_width="240dp"
+                android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableLeft="@drawable/baseline_lock_24"
                 android:text=" Password "
-                android:textColor="#0090ff"
+                android:textColor="#3A3B3C"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView_change"
-                android:layout_width="246dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Change"
-                android:textAlignment="viewEnd"
-                android:textColor="#585858"
-                android:textSize="16sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -127,7 +75,7 @@
             android:background="#585858" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="287dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
             android:layout_marginTop="5dp"
@@ -141,19 +89,10 @@
                 android:layout_width="246dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableLeft="@drawable/baseline_phone_24"
                 android:text=" Mobile number"
-                android:textColor="#0090ff"
+                android:textColor="#3A3B3C"
                 android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView_num"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" +966 50987656"
-                android:textAlignment="viewEnd"
-                android:textColor="#585858"
-                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -176,22 +115,14 @@
 
             <TextView
                 android:id="@+id/textView_any"
-                android:layout_width="246dp"
+                android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text=" any thing "
-                android:textColor="#0090ff"
+                android:drawableLeft="@drawable/baseline_perm_device_information_24"
+                android:text="About AMAMID"
+                android:textColor=" #3A3B3C"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView_plus"
-                android:layout_width="246dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="-------"
-                android:textAlignment="viewEnd"
-                android:textColor="#585858"
-                android:textSize="16sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -212,23 +143,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView_abd"
-                android:layout_width="240dp"
+                android:id="@+id/help"
+                android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="any thing"
-                android:textColor="#0090ff"
+                android:drawableLeft="@drawable/baseline_help_24"
+                android:text="Help and support"
+                android:textColor=" #3A3B3C"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView_view"
-                android:layout_width="246dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=" view"
-                android:textAlignment="viewEnd"
-                android:textColor="#585858"
-                android:textSize="16sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatEditText
@@ -237,6 +160,35 @@
             android:layout_margin="10dp"
             android:alpha="0.5"
             android:background="#585858" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/privacy"
+                    android:layout_width="287dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/baseline_privacy_tip_24"
+                    android:text="Privacy Policy"
+                    android:textColor=" #3A3B3C"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -249,34 +201,29 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView_qqhiint"
-                android:layout_width="57dp"
+                android:id="@+id/textView_logout"
+                android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text=" Qoustions hint "
-                android:textColor="#0090ff"
+                android:drawableLeft="@drawable/baseline_logout_24"
+                android:text="Log out "
+                android:textAlignment="center"
+                android:textColor="#800A0A"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView_chang_hint"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Change"
-                android:textAlignment="viewEnd"
-                android:textColor="#585858"
-                android:textSize="16sp" />
         </LinearLayout>
 
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log out"
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="111dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
