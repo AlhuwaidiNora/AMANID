@@ -60,7 +60,7 @@
         android:id="@+id/imageView251"
         android:layout_width="290dp"
         android:layout_height="473dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginBottom="468dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
