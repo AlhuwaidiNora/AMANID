@@ -10,10 +10,10 @@
         android:id="@+id/imageView19"
         android:layout_width="345dp"
         android:layout_height="380dp"
-        android:layout_marginBottom="380dp"
+        android:layout_marginBottom="556dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/top_bcakground"
-        tools:layout_editor_absoluteX="27dp" />
+        tools:layout_editor_absoluteX="38dp" />
 
     <Button
         android:id="@+id/button21"
@@ -63,9 +63,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331" />
+        app:layout_constraintVertical_bias="0.295" />
 
     <TextView
         android:id="@+id/intro2"
@@ -77,8 +78,9 @@
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintVertical_bias="0.082" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
