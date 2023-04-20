@@ -40,7 +40,7 @@ public class login_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-       /* Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
+      /* Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.hint_questions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
@@ -62,13 +62,21 @@ public class login_page extends AppCompatActivity {
         button8 = findViewById(R.id.button8);
         edit_pass = findViewById(R.id.edit_pass);
         editTextid_login = findViewById(R.id.editTextid_login);
-        hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
-        textView19 =findViewById(R.id.textView19);
+      //  hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
+        textView19 = findViewById(R.id.textView19);
+
         initial();
+
 
     }
 
     private void initial() {
+        textView19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login_page.this, Forget_password.class));
+            }
+        });
         TextView btn = findViewById(R.id.textViewSignUp);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,12 +86,8 @@ public class login_page extends AppCompatActivity {
             }
 
         });
-        textView19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(login_page.this, Forget_password.class));
-            }
-        });
+
+
         button8.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -154,7 +158,7 @@ public class login_page extends AppCompatActivity {
     public void checkUser() {
         String username = editTextid_login.getText().toString().trim();
         String userpass = edit_pass.getText().toString().trim();
-        String qhint = hint_answer_edit_text.getText().toString().trim();
+       // String qhint = hint_answer_edit_text.getText().toString().trim();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
         Query checkUserDatabase = reference.orderByChild("indium").equalTo(username);
 
@@ -164,8 +168,9 @@ public class login_page extends AppCompatActivity {
                 if (snapshot.exists()) {
                     editTextid_login.setError(null);
                     String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
-                    String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
-                    if (passwordFromDB.equals(userpass) && qhintFromDB.equals(qhint)) {
+                    //String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
+                    //&& qhintFromDB.equals(qhint)
+                    if (passwordFromDB.equals(userpass) ) {
                         editTextid_login.setError(null);
                         String idnumFromDB = snapshot.child(username).child("indium").getValue(String.class);
                         Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
@@ -174,8 +179,8 @@ public class login_page extends AppCompatActivity {
                     } else {
                         edit_pass.setError(" Invalid Credentials");
                         edit_pass.requestFocus();
-                        hint_answer_edit_text.setError(" wrong answer");
-                        hint_answer_edit_text.requestFocus();
+                       // hint_answer_edit_text.setError(" wrong answer");
+                      //  hint_answer_edit_text.requestFocus();
                     }
 
                 } else {

@@ -10,25 +10,10 @@
         android:id="@+id/imageView21"
         android:layout_width="423dp"
         android:layout_height="369dp"
-        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.729"
         app:srcCompat="@drawable/top_bcakground" />
-
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="45dp"
-        android:layout_height="38dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.289"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347"
-        app:srcCompat="@drawable/add" />
 
     <Button
         android:id="@+id/button15"
@@ -59,73 +44,115 @@
 
     <ImageView
         android:id="@+id/imageView251"
-        android:layout_width="290dp"
-        android:layout_height="473dp"
-        android:layout_marginBottom="460dp"
+        android:layout_width="284dp"
+        android:layout_height="213dp"
+        android:layout_marginBottom="224dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/card2" />
 
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="46dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="192dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView26"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toEndOf="@+id/imageView27"
-        app:layout_constraintTop_toBottomOf="@+id/textView377"
-        app:srcCompat="@drawable/baseline_transform_24" />
-
-    <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="92dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:background="@drawable/top_button_main"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/baseline_arrow_forward_24"
-        tools:layout_editor_absoluteY="296dp" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Add money"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+        tools:layout_editor_absoluteY="125dp">
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.529"
+            app:srcCompat="@drawable/baseline_transform_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="My Spending"
 
+        android:text="My Spending"
         android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_editor_absoluteX="165dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:background="@drawable/top_button_main"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toEndOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="125dp">
+
+        <ImageView
+            android:id="@+id/imageView164"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:background="@drawable/top_button_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="125dp">
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_forward_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add money"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_editor_absoluteX="280dp" />
 
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Transfer"
         android:textColor="@color/white"
 
-        app:layout_constraintBottom_toBottomOf="@+id/imageView251"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toEndOf="@+id/textView31"
-        app:layout_constraintTop_toBottomOf="@+id/imageView26"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_editor_absoluteX="73dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

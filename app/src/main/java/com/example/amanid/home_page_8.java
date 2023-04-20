@@ -23,6 +23,16 @@ FloatingActionButton transfer_icon;
         imageView77 = findViewById(R.id.imageView77);
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
+        transfer_icon = findViewById(R.id.transfer_icon);
+
+        transfer_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home_page_8.this, transfer.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         imageView219.setOnClickListener(new View.OnClickListener() {

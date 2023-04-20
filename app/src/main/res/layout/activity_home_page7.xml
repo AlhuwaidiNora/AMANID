@@ -115,7 +115,7 @@
                             android:background="@drawable/top_button_main">
 
                             <ImageView
-                                android:id="@+id/imageView164"
+                                android:id="@+id/imageView1645"
                                 android:layout_width="30dp"
                                 android:layout_height="26dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -355,7 +355,6 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:text="."
                         android:textAlignment="center"
                         android:textColor="#9695ce"
                         android:textSize="12sp" />
