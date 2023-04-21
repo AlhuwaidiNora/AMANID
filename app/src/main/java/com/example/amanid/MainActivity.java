@@ -3,17 +3,17 @@ package com.example.amanid;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intro_page1);
+
+        // Initialize Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 
         // Check if the Firebase app already exists
-        if(FirebaseApp.getApps(this).isEmpty()) {
+        if (FirebaseApp.getApps(this).isEmpty()) {
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setProjectId("your-project-id")
                     .setApplicationId("your-application-id")
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             FirebaseApp.initializeApp(this, options);
         }
 
+        // Delayed launch of next activity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -46,6 +49,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }, DELAY);
     }
-
-
 }

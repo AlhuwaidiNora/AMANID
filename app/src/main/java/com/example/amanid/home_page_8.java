@@ -1,4 +1,6 @@
 package com.example.amanid;
+import androidx.appcompat.app.AlertDialog;
+import android.content.DialogInterface;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -65,20 +67,61 @@ FloatingActionButton transfer_icon;
                 startActivity(intent);
             }
         });
-        imageview164.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home_page_8.this, Add_New_User.class);
-                startActivity(intent);
-            }
-        });
-       imageView77.setOnClickListener(new View.OnClickListener() {
+// Ensure that the layout is inflated before referencing the ImageView
+        setContentView(R.layout.activity_home_page7);
+
+// Get a reference to the ImageView
+        ImageView imageview164 = findViewById(R.id.imageView1645);
+
+// Check if the ImageView is not null before setting the OnClickListener
+        if (imageview164 != null) {
+            imageview164.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Handle the click event here
+                    // You can show a dialog, start a new activity, or perform any other action
+                    // to display the options "Add money from credit card" and "Add money from bank transfer"
+
+                    // Example: Show a dialog with the two options
+                    AlertDialog.Builder builder = new AlertDialog.Builder(home_page_8.this);
+                    builder.setTitle("Add Money");
+                    builder.setItems(new CharSequence[]{"Add money from credit card", "Add money from bank transfer"},
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // Handle the option click event here
+                                    if (which == 0) {
+                                        // Option 1: Add money from credit card
+                                        // Perform the corresponding action
+                                    } else if (which == 1) {
+                                        // Option 2: Add money from bank transfer
+                                        // Perform the corresponding action
+                                    }
+                                }
+                            });
+                    builder.show();
+                }
+            });
+        }
+
+        imageView77.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(home_page_8.this, transfer.class);
                 startActivity(intent);
             }
         });
+        ImageView imageViewWallet = findViewById(R.id.imageView219);
+        imageViewWallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start a new activity to navigate to wallet XML layout
+                Intent intent = new Intent(home_page_8.this, wallet.class); // Replace YourCurrentActivity with the name of your current activity
+                startActivity(intent);
+            }
+        });
+
+
 
     }
     }

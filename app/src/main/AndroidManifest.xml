@@ -11,7 +11,7 @@
         android:name="your_package_name.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="your_package_name.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.example.amanid.permission.C2D_MESSAGE" />
 
     <application
         android:allowBackup="true"
