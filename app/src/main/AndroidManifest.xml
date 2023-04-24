@@ -49,9 +49,6 @@
             android:name=".navigation_menu"
             android:exported="false" />
         <activity
-            android:name=".SuccessfulLogin"
-            android:exported="false" />
-        <activity
             android:name=".fingerPrint_plus_later"
             android:exported="false" />
         <activity android:name=".getStarted_page2" />

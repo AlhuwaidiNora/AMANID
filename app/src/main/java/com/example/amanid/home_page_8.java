@@ -14,11 +14,23 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class home_page_8 extends AppCompatActivity {
 ImageView imageview201 , imageview164 , imageView77 , imageView214 ,imageView219;
-TextView textView_spec1;
+TextView textView_spec1,greetings;
 FloatingActionButton transfer_icon;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home_page7);
+
+        // Retrieve the idnum value from the intent
+
+        // Display a greeting message with the user ID
+        String idnum = getIntent().getStringExtra("idnum");
+
+        // Display a greeting message with the user ID
+        TextView greetingTextView = findViewById(R.id.greetings);
+        greetingTextView.setText("Hello " + idnum + "!");
+
         setContentView(R.layout.activity_home_page7);
         imageview201 =findViewById(R.id.imageView210);
         imageview164 = findViewById(R.id.imageView164);
@@ -140,6 +152,10 @@ FloatingActionButton transfer_icon;
         });
 
 
+            // Rest of your code here...
+            // ...
+        }
+
     }
-    }
+
 

@@ -68,7 +68,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = hintAnswerEditText.getText().toString();
 
-               HelperClass helperClass = new HelperClass(idnum, pass, pass2, qhint);
+                HelperClass helperClass = new HelperClass(idnum, pass, pass2, qhint);
                reference.child(idnum).setValue(helperClass);
 
                 if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty() && (idnum.length() < 10)){

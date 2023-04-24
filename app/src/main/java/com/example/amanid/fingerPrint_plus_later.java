@@ -77,7 +77,7 @@ public class fingerPrint_plus_later extends AppCompatActivity {
 
                     public void run() {
 
-                        Intent i = new Intent(fingerPrint_plus_later.this, SuccessfulLogin.class);
+                        Intent i = new Intent(fingerPrint_plus_later.this, home_page_8.class);
 
                         startActivity(i);
 

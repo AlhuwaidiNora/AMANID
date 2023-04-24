@@ -1,4 +1,5 @@
 package com.example.amanid;
+import android.widget.Toast;
 
 import android.widget.AdapterView;
 
@@ -21,6 +22,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.auth.AuthResult;
 
 public class login_page extends AppCompatActivity {
     Spinner hintQuestionsSpinner;
@@ -106,7 +112,7 @@ public class login_page extends AppCompatActivity {
         });
     }
 
-    private void loginWithId(String num, String pass) {
+    private void loginWithIds(String num, String pass) {
         if (num.length() >= 10 && pass.length() > 6) {
             //  progressBar.setVisibility(View.VISIBLE);
             //  mAuth.signInWithEmailAndPassword(num, pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -129,7 +135,55 @@ public class login_page extends AppCompatActivity {
             }
         }
     }
+    private void updateUI(FirebaseUser user) {
+        if (user != null) {
+            // User is signed in, update UI accordingly
+            String idnum = user.getUid(); // Get the user ID
 
+            // Pass the userId value to the home page activity using an Intent
+            Intent intent = new Intent(login_page.this, home_page_8.class);
+            intent.putExtra("idnum", idnum); // Put the userId value as an extra in the Intent
+            startActivity(intent);
+        } else {
+            // User is signed out, update UI accordingly
+            // For example, show/hide certain views or display a login prompt
+        }
+    }
+
+
+    private void loginWithId(String num, String pass) {
+        if (num != null && !num.isEmpty() && pass != null && !pass.isEmpty()) {
+            // Sign in with email/username/phone number and password
+            FirebaseAuth.getInstance().signInWithEmailAndPassword(num, pass)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                updateUI(user);
+                                Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
+                                startActivity(intent);
+                            } else {
+                                // Sign in failed, display an error message
+                                Toast.makeText(login_page.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        } else {
+            // Handle empty email/username/phone number or password
+            if (num == null || num.isEmpty()) {
+                editTextid_login.setError(" Email/Username/Phone number cannot be empty");
+            }
+            if (pass == null || pass.isEmpty()) {
+                edit_pass.setError(" Password cannot be empty");
+            }
+        }
+
+
+
+    }
     public Boolean validateidnum() {
         String val = editTextid_login.getText().toString();
         if (val.isEmpty()) {
@@ -194,10 +248,14 @@ public class login_page extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+
+
         });
 
+        }
+
     }
-}
+
 
 
 
