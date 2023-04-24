@@ -120,10 +120,26 @@ FloatingActionButton transfer_icon;
                 startActivity(intent);
             }
         });
-
+        ImageView imageViewSetting = findViewById(R.id.imageView210);
+        imageViewSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start a new activity to navigate to wallet XML layout
+                Intent intent = new Intent(home_page_8.this, setting.class); // Replace YourCurrentActivity with the name of your current activity
+                startActivity(intent);
+            }
+        });
+        ImageView imageViewProfile = findViewById(R.id.imageView13);
+        imageViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start a new activity to navigate to wallet XML layout
+                Intent intent = new Intent(home_page_8.this, profile.class); // Replace YourCurrentActivity with the name of your current activity
+                startActivity(intent);
+            }
+        });
 
 
     }
     }
-
 
