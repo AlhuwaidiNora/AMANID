@@ -138,11 +138,9 @@ public class login_page extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if (user != null) {
             // User is signed in, update UI accordingly
-            String idnum = user.getUid(); // Get the user ID
-
-            // Pass the userId value to the home page activity using an Intent
+            String idnum = user.getUid(); // Get the user I// replace with actual user ID value
             Intent intent = new Intent(login_page.this, home_page_8.class);
-            intent.putExtra("idnum", idnum); // Put the userId value as an extra in the Intent
+            intent.putExtra("idnum", idnum);
             startActivity(intent);
         } else {
             // User is signed out, update UI accordingly

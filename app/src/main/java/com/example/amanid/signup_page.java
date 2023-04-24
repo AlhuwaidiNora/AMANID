@@ -68,7 +68,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = hintAnswerEditText.getText().toString();
 
-                HelperClass helperClass = new HelperClass(idnum, pass, pass2, qhint);
+                HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
                reference.child(idnum).setValue(helperClass);
 
                 if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty() && (idnum.length() < 10)){
@@ -86,7 +86,6 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                                 Toast.makeText(signup_page.this, " ID number is already signup", Toast.LENGTH_LONG).show();
                             }else{
                                 // sending data
-                                reference.child("users").child(idnum).child("qhint").setValue(qhint);
                                 reference.child("users").child(idnum).child("pass").setValue(pass);
                                 reference.child("users").child(idnum).child("idnum").setValue(idnum);
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();

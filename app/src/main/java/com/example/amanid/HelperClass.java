@@ -3,7 +3,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class HelperClass {
-    String indium;
+    String idnum;
     String pass;
     String pass2;
     String hint;
@@ -32,16 +32,16 @@ public class HelperClass {
         this.pass2 = pass2;
     }
 
-    public String getindium() {
-        return indium;
+    public String idnum() {
+        return idnum;
     }
 
-    public void setindium(String indium) {
-        this.indium = indium;
+    public void idnum(String indium) {
+        this.idnum = idnum;
     }
 
     public HelperClass(String idnum, String pass, String pass2, String qhint) {
-        this.indium = idnum;
+        this.idnum = idnum;
         this.pass2 = pass2;
         this.pass = pass;
         this.hint = qhint;
