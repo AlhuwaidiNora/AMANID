@@ -2,8 +2,9 @@ package com.example.amanid;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class HelperClass {
-    String idnum;
+    String indnium;
     String pass;
     String pass2;
     String hint;
@@ -33,15 +34,15 @@ public class HelperClass {
     }
 
     public String idnum() {
-        return idnum;
+        return indnium;
     }
 
     public void idnum(String indium) {
-        this.idnum = idnum;
+        this.indnium = indnium;
     }
 
     public HelperClass(String idnum, String pass, String pass2, String qhint) {
-        this.idnum = idnum;
+        this.indnium = indnium;
         this.pass2 = pass2;
         this.pass = pass;
         this.hint = qhint;

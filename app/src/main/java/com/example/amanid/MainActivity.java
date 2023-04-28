@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
         // Check if the Firebase app already exists
         if (FirebaseApp.getApps(this).isEmpty()) {
             FirebaseOptions options = new FirebaseOptions.Builder()
-                    .setProjectId("your-project-id")
-                    .setApplicationId("your-application-id")
-                    .setApiKey("your-api-key")
-                    .setDatabaseUrl("your-database-url")
+                    .setProjectId("amanid-e0318")
+                    .setApplicationId("com.example.amanid")
+                    .setApiKey("AIzaSyBtkAFcdTyDc33qQTINzBiC6rxU1mIqInQ\n")
+                    .setDatabaseUrl("https://amanid-e0318-default-rtdb.firebaseio.com/")
                     .build();
             FirebaseApp.initializeApp(this, options);
         }
