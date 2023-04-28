@@ -95,7 +95,6 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
 
                             }
                         }
-
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 

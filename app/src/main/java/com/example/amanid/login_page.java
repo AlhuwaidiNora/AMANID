@@ -40,7 +40,6 @@ public class login_page extends AppCompatActivity {
     ProgressBar progressBar;
     TextView textView19;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
