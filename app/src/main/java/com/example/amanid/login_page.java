@@ -1,4 +1,5 @@
 package com.example.amanid;
+import android.util.Log;
 import android.widget.Toast;
 
 import android.widget.AdapterView;
@@ -40,6 +41,7 @@ public class login_page extends AppCompatActivity {
     ProgressBar progressBar;
     TextView textView19;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +69,7 @@ public class login_page extends AppCompatActivity {
         button8 = findViewById(R.id.button8);
         edit_pass = findViewById(R.id.edit_pass);
         editTextid_login = findViewById(R.id.editTextid_login);
-      //  hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
+        //  hint_answer_edit_text = findViewById(R.id.hint_answer_edit_text);
         textView19 = findViewById(R.id.textView19);
 
         initial();
@@ -209,29 +211,31 @@ public class login_page extends AppCompatActivity {
     public void checkUser() {
         String username = editTextid_login.getText().toString().trim();
         String userpass = edit_pass.getText().toString().trim();
-       // String qhint = hint_answer_edit_text.getText().toString().trim();
+        // String qhint = hint_answer_edit_text.getText().toString().trim();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("indium").equalTo(username);
 
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+        //Query checkUserDatabase = reference.equalTo("idnum",username);
+
+        reference.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.d("SSSS", "onDataChange: "+snapshot.getChildrenCount());
                 if (snapshot.exists()) {
                     editTextid_login.setError(null);
-                    String passwordFromDB = snapshot.child(username).child("pass").getValue(String.class);
+                    String passwordFromDB = snapshot.child("pass").getValue(String.class);
                     //String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
                     //&& qhintFromDB.equals(qhint)
                     if (passwordFromDB.equals(userpass) ) {
                         editTextid_login.setError(null);
-                        String idnumFromDB = snapshot.child(username).child("indium").getValue(String.class);
+                        String idnumFromDB = snapshot.child("idnum").getValue(String.class);
                         Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
                         startActivity(intent);
 
                     } else {
                         edit_pass.setError(" Invalid Credentials");
                         edit_pass.requestFocus();
-                       // hint_answer_edit_text.setError(" wrong answer");
-                      //  hint_answer_edit_text.requestFocus();
+                        // hint_answer_edit_text.setError(" wrong answer");
+                        //  hint_answer_edit_text.requestFocus();
                     }
 
                 } else {
@@ -249,9 +253,9 @@ public class login_page extends AppCompatActivity {
 
         });
 
-        }
-
     }
+
+}
 
 
 
