@@ -98,7 +98,6 @@ public class signup_page extends AppCompatActivity {
 
                             }
                         }
-
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 

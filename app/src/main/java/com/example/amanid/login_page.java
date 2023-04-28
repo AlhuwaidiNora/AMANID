@@ -93,14 +93,10 @@ public class login_page extends AppCompatActivity {
             }
 
         });
-
-
         button8.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
-
                 if (!validateidnum() | !validatepass()) {
 
                 }  else {
