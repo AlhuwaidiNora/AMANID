@@ -22,7 +22,7 @@
         android:id="@+id/textView11"
         android:layout_width="343dp"
         android:layout_height="127dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="164dp"
         android:gravity="center_horizontal"
         android:text="Transfer money easily to friends and families on your contact list using AmanID"
         android:textSize="16sp"
