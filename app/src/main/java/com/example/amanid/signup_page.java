@@ -102,7 +102,6 @@ public class signup_page extends AppCompatActivity {
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
-
                     });
                     // sending data
                     //  reference.child("users").child(idnum).child("qhint").setValue(qhint);
