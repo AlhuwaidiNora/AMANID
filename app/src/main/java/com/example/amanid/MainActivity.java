@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     .build();
             FirebaseApp.initializeApp(this, options);
         }
-//full
+//full firebase
         // Delayed launch of next activity
         new Handler().postDelayed(new Runnable() {
             @Override
