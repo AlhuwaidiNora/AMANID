@@ -3,6 +3,7 @@ package com.example.amanid;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.content.Intent;
@@ -21,13 +22,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class signup_page extends AppCompatActivity {
-EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
- Button button9 ;
+    EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
+    Button button9 ;
     EditText hintAnswerEditText;
 
     String selectedHintQuestion;
- FirebaseDatabase database;
- DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
+    FirebaseDatabase database;
+    DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +56,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         editTextpass2 = findViewById(R.id.editTextpass2);
-       // editTextid_qhint = findViewById(R.id. hintAnswerEditText);
+        // editTextid_qhint = findViewById(R.id. hintAnswerEditText);
         hintAnswerEditText = findViewById(R.id.hintAnswerEditText);
         button9 = findViewById(R.id.button9);
         button9.setOnClickListener( new View.OnClickListener(){
@@ -68,8 +69,7 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = hintAnswerEditText.getText().toString();
 
-                HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
-               reference.child(idnum).setValue(helperClass);
+
 
                 if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty() && (idnum.length() < 10)){
                     Toast.makeText(signup_page.this, "Please fill all fields", Toast.LENGTH_LONG).show();
@@ -78,16 +78,19 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
                     Toast.makeText(signup_page.this, "Passwords are not matching", Toast.LENGTH_LONG).show();
 
                 } else {
-                    reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    reference.child(idnum).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             // check if id not registered before
-                            if (snapshot.hasChild(idnum)){
+                            if (snapshot.exists()){
                                 Toast.makeText(signup_page.this, " ID number is already signup", Toast.LENGTH_LONG).show();
                             }else{
                                 // sending data
-                                reference.child("users").child(idnum).child("pass").setValue(pass);
-                                reference.child("users").child(idnum).child("idnum").setValue(idnum);
+//                                reference.child("users").child(idnum).child("pass").setValue(pass);
+//                                reference.child("users").child(idnum).child("idnum").setValue(idnum);
+                                HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
+                                reference.child(idnum).setValue(helperClass);
+                                reference.child(idnum).child("idnum").setValue(idnum);
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();
                                 Intent intent = new Intent(signup_page.this, fingerPrint_page7_later.class);
@@ -103,16 +106,16 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
 
                     });
                     // sending data
-                  //  reference.child("users").child(idnum).child("qhint").setValue(qhint);
-                  //  reference.child("users").child(idnum).child("pass").setValue(pass);
-                  //  Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
-                  //  finish();
+                    //  reference.child("users").child(idnum).child("qhint").setValue(qhint);
+                    //  reference.child("users").child(idnum).child("pass").setValue(pass);
+                    //  Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
+                    //  finish();
 
                 }
 
                 //Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
-               // Intent intent = new Intent(signup_page.this, login_page.class);
-               // startActivity(intent);
+                // Intent intent = new Intent(signup_page.this, login_page.class);
+                // startActivity(intent);
             }});
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -123,5 +126,5 @@ EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
         });
 
 
-}
+    }
 }
