@@ -78,7 +78,12 @@ public class login_page extends AppCompatActivity {
     }
 
     private void initial() {
-
+        textView19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(login_page.this, Forget_password.class));
+            }
+        });
         TextView btn = findViewById(R.id.textViewSignUp);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,14 +94,6 @@ public class login_page extends AppCompatActivity {
 
         });
 
-        TextView forgetPassTextView = findViewById(R.id.textView19);
-        forgetPassTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(login_page.this, Forget_password.class);
-                startActivity(intent);
-            }
-        });
 
         button8.setOnClickListener(new View.OnClickListener() {
 
