@@ -78,12 +78,7 @@ public class login_page extends AppCompatActivity {
     }
 
     private void initial() {
-        textView19.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(login_page.this, Forget_password.class));
-            }
-        });
+
         TextView btn = findViewById(R.id.textViewSignUp);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

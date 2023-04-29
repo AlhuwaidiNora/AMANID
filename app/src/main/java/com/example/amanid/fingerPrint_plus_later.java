@@ -82,7 +82,7 @@ public class fingerPrint_plus_later extends AppCompatActivity {
         biometricPrompt.authenticate(promptInfo);
 
         // added click listener for "Forgot Password" button
-        findViewById(R.id.confirmbutton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.confirmButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 forgotPasswordClicked = true;
