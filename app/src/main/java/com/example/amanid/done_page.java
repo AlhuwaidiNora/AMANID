@@ -28,7 +28,7 @@ public class done_page extends AppCompatActivity {
 
             public void run() {
 
-                Intent i = new Intent(done_page.this, intro_option_page5.class);
+                Intent i = new Intent(done_page.this, home_page_8.class);
 
                 startActivity(i);
 
