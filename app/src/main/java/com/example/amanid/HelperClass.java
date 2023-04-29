@@ -48,7 +48,7 @@ public class HelperClass {
         this.hint = qhint;
     }
 
-    public HelperClass() {
+    public HelperClass(String idnum, String qhint) {
     }
 
     // Example method to sign in a user with email and password

@@ -6,17 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".getStarted_page4">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="290dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="64dp"
-        android:background="@drawable/custom_button"
-        android:text="Get Strated  >"
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="137dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_login" />
 
     <TextView
         android:id="@+id/textView11"

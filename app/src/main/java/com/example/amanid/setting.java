@@ -14,6 +14,7 @@ public class setting extends AppCompatActivity {
     Button button18;
     TextView textView_password;
     TextView textView_logout;
+    TextView textView_any , help;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,23 @@ public class setting extends AppCompatActivity {
           button18=findViewById(R.id.button18);
         textView_password = findViewById(R.id.textView_password);
         textView_logout = findViewById(R.id.textView_logout);
+        textView_any = findViewById(R.id.textView_any);
+        help = findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(setting.this, help_support.class);
+                startActivity(intent);
+            }
+        });
+
+        textView_any.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(setting.this, About_Amanid.class);
+                startActivity(intent);
+            }
+        });
         textView_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
