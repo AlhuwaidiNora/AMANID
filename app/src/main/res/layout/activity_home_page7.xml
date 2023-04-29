@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/top_bcakground"
+    android:background="@drawable/pasted_graphic_24"
     tools:context=".home_page_8">
 
     <ScrollView
@@ -23,21 +23,21 @@
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="474dp"
-                android:layout_margin="16dp"
+                android:layout_width="353dp"
+                android:layout_height="446dp"
                 android:layout_gravity="center"
+                android:layout_margin="16dp"
                 android:background="@drawable/backgroound_grey">
 
                 <ImageView
                     android:id="@+id/imageView13"
-                    android:layout_width="98dp"
-                    android:layout_height="92dp"
+                    android:layout_width="64dp"
+                    android:layout_height="79dp"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="4dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_person_outline_24" />
+                    app:srcCompat="@drawable/pasted_graphic_7" />
 
                 <TextView
                     android:id="@+id/greetings"
@@ -94,14 +94,16 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView34"
-                    app:layout_constraintVertical_bias="0.0">
-                </LinearLayout>
+                    app:layout_constraintVertical_bias="0.0"></LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="156dp"
+                    android:layout_width="73dp"
+                    android:layout_height="69dp"
                     android:orientation="vertical"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="4dp">
+                    app:layout_constraintBottom_toBottomOf="@+id/button28_confirm"
+                    app:layout_constraintEnd_toEndOf="@+id/button28_confirm"
+                    app:layout_constraintStart_toStartOf="@+id/button28_confirm"
+                    app:layout_constraintTop_toTopOf="@+id/button28_confirm">
 
 
                     <LinearLayout
@@ -112,13 +114,19 @@
                 </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
                     android:layout_width="352dp"
                     android:layout_height="140dp"
                     android:layout_gravity="center"
                     android:layout_margin="4dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/top_button_main"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="214dp">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView34"
+                    app:layout_constraintVertical_bias="0.189">
 
                     <TextView
                         android:id="@+id/textView35"
@@ -212,14 +220,15 @@
 
                 <Button
                     android:id="@+id/button28_confirm"
-                    android:layout_width="84dp"
-                    android:layout_height="77dp"
+                    android:layout_width="66dp"
+                    android:layout_height="64dp"
                     android:background="@drawable/logo"
-                    android:text="Confirm"
                     android:textColor="@color/purple_200"
                     android:textSize="10dp"
-                    tools:layout_editor_absoluteX="134dp"
-                    tools:layout_editor_absoluteY="381dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

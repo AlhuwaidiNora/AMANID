@@ -8,26 +8,22 @@
 
     <ImageView
         android:id="@+id/imageView27"
-        android:layout_width="428dp"
-        android:layout_height="318dp"
-        android:layout_marginBottom="436dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/top_bcakground" />
+        android:layout_width="383dp"
+        android:layout_height="378dp"
+        app:srcCompat="@drawable/pasted_graphic_27"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="-29dp" />
 
     <TextView
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="128dp"
         android:text="Help and support"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,7 +45,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="369dp"
         android:layout_height="168dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="316dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -60,7 +56,7 @@
             android:layout_height="208dp"
             app:srcCompat="@drawable/top_button_main"
             tools:layout_editor_absoluteX="-11dp"
-            tools:layout_editor_absoluteY="-20dp" />
+            tools:layout_editor_absoluteY="-95dp" />
 
         <TextView
             android:id="@+id/textView41"

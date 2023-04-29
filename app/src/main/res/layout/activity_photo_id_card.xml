@@ -7,13 +7,14 @@
     tools:context=".PhotoIdCard">
 
     <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="345dp"
-        android:layout_height="380dp"
-        android:layout_marginBottom="556dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/top_bcakground"
-        tools:layout_editor_absoluteX="38dp" />
+        android:id="@+id/imageView11"
+        android:layout_width="383dp"
+        android:layout_height="378dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pasted_graphic_27"
+        tools:layout_editor_absoluteY="-32dp" />
 
     <Button
         android:id="@+id/button21"

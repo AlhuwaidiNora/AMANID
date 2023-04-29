@@ -8,16 +8,14 @@
     tools:context=".setting">
 
     <ImageView
-        android:id="@+id/imageView133"
-        android:layout_width="423dp"
-        android:layout_height="369dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:id="@+id/imageView37"
+        android:layout_width="383dp"
+        android:layout_height="378dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802"
-        app:srcCompat="@drawable/top_bcakground" />
+        app:srcCompat="@drawable/pasted_graphic_27"
+        tools:layout_editor_absoluteY="-32dp" />
 
     <TextView
         android:id="@+id/textView39"
