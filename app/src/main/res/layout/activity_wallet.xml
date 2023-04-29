@@ -8,47 +8,49 @@
     tools:context=".wallet">
 
     <ImageView
-        android:id="@+id/imageView40"
-        android:layout_width="383dp"
-        android:layout_height="378dp"
+        android:id="@+id/imageView15"
+        android:layout_width="391dp"
+        android:layout_height="337dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView251"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/pasted_graphic_27"
-        tools:layout_editor_absoluteY="-22dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166"
+        app:srcCompat="@drawable/pasted_graphic_27" />
 
     <Button
         android:id="@+id/button15"
-        android:layout_width="45dp"
-        android:layout_height="57dp"
+        android:layout_width="64dp"
+        android:layout_height="69dp"
         android:layout_marginTop="4dp"
         android:background="#001937FD"
         android:backgroundTint="#1937FD"
         app:icon="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toBottomOf="@+id/textView377"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.818" />
 
     <TextView
         android:id="@+id/textView377"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="748dp"
+        android:layout_marginTop="68dp"
         android:text="Wallet"
         android:textColor="#fff"
         android:textSize="53sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView15" />
 
     <ImageView
         android:id="@+id/imageView251"
-        android:layout_width="284dp"
-        android:layout_height="213dp"
+        android:layout_width="289dp"
+        android:layout_height="193dp"
         android:layout_marginBottom="224dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="8dp"
         android:text="My Spending"
         android:textColor="@color/white"
@@ -105,10 +107,10 @@
         android:background="@drawable/top_button_main"
         app:layout_constraintBottom_toTopOf="@+id/imageView251"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button15"
-        app:layout_constraintVertical_bias="0.437">
+        app:layout_constraintVertical_bias="0.37">
 
         <ImageView
             android:id="@+id/imageView164"

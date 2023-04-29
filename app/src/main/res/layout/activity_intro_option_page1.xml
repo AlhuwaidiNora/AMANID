@@ -22,28 +22,26 @@
 
     <ImageView
         android:id="@+id/imageView35"
-        android:layout_width="136dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="132dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView38"
+        android:layout_width="134dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="128dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AmanIDlogo2"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/pasted_graphic_8" />
 
     <ImageView
         android:id="@+id/imageView38"
-        android:layout_width="136dp"
-        android:layout_height="96dp"
+        android:layout_width="134dp"
+        android:layout_height="106dp"
         android:layout_marginBottom="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AmanIDlogo2"
-        app:layout_constraintVertical_bias="0.675"
-        app:srcCompat="@drawable/pasted_graphic_14" />
+        app:layout_constraintVertical_bias="0.709"
+        app:srcCompat="@drawable/pasted_graphic_29" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
