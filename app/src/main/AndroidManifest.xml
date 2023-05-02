@@ -88,17 +88,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter android:autoVerify="true">
-                <activity android:name=".home_page_8">
-                    <intent-filter>
-                        <action android:name="android.intent.action.VIEW" />
-                        <category android:name="android.intent.category.DEFAULT" />
-                        <category android:name="android.intent.category.BROWSABLE" />
-                        <data android:scheme="http" android:host="http://localhost:3000/AllUsers.com" android:pathPrefix="/path/to/home_page_7" />
-                    </intent-filter>
-                </activity>
 
-            </intent-filter>
         </activity>
 
     </application>
