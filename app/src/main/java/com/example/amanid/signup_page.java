@@ -119,7 +119,7 @@ public class signup_page extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signup_page.this, done_page.class);
+                Intent intent = new Intent(signup_page.this, home_page_8.class);
                 startActivity(intent);            }
         });
 

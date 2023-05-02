@@ -24,6 +24,8 @@ public class setting extends AppCompatActivity {
         textView_logout = findViewById(R.id.textView_logout);
         textView_any = findViewById(R.id.textView_any);
         help = findViewById(R.id.help);
+
+        
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

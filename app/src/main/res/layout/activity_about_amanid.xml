@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".About_Amanid">
 
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="430dp"
-        android:layout_height="293dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/top_bcakground"
-        tools:layout_editor_absoluteY="0dp" />
-
     <Button
         android:id="@+id/button17"
         android:layout_width="45dp"
@@ -30,11 +20,12 @@
 
     <ImageView
         android:id="@+id/imageView36"
-        android:layout_width="383dp"
-        android:layout_height="378dp"
-        android:layout_marginBottom="75dp"
+        android:layout_width="370dp"
+        android:layout_height="376dp"
+        android:layout_marginBottom="108dp"
         app:layout_constraintBottom_toTopOf="@+id/amanid"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pasted_graphic_27" />
 
