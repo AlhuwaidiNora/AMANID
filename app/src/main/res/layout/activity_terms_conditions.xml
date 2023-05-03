@@ -36,11 +36,11 @@
 
         <TextView
             android:id="@+id/terms"
-            android:layout_width="322dp"
-            android:layout_height="80dp"
+            android:layout_width="430dp"
+            android:layout_height="84dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text="Terms & Conditions"
+            android:text="Terms and Conditions"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
