@@ -15,6 +15,7 @@ public class setting extends AppCompatActivity {
     TextView textView_password;
     TextView textView_logout;
     TextView textView_any , help;
+    TextView privacy;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class setting extends AppCompatActivity {
         textView_logout = findViewById(R.id.textView_logout);
         textView_any = findViewById(R.id.textView_any);
         help = findViewById(R.id.help);
+        privacy = findViewById(R.id.privacy);
 
         
         help.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,13 @@ public class setting extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(setting.this, home_page_8.class);
+                startActivity(intent);
+            }
+        });
+        privacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(setting.this, Terms_Conditions.class);
                 startActivity(intent);
             }
         });

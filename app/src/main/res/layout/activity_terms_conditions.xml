@@ -40,7 +40,7 @@
             android:layout_height="80dp"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text="Terms - Conditions"
+            android:text="Terms & Conditions"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
