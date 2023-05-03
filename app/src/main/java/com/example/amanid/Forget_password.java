@@ -127,7 +127,7 @@ public class Forget_password extends AppCompatActivity {
     public Boolean validateqhint() {
         String val = hintanswer.getText().toString();
         if (val.isEmpty()) {
-            hintanswer.setError(" password cannot be empty");
+            hintanswer.setError(" cannot be empty");
             return false;
         } else {
             forgetpassword.setError(null);
