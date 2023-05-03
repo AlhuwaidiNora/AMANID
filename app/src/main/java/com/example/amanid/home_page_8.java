@@ -23,9 +23,10 @@ public class home_page_8 extends AppCompatActivity {
         setContentView(R.layout.activity_home_page7);
 
         String idnum = getIntent().getStringExtra("idnum");
-
         TextView greetingTextView = findViewById(R.id.greetings);
-        greetingTextView.setText("Hello " + idnum + "!");
+        greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
+
+
 
         imageview201 = findViewById(R.id.imageView201);
         imageview164 = findViewById(R.id.imageView164);
