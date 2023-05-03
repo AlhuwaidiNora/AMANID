@@ -40,7 +40,7 @@
             android:name=".wallet"
             android:exported="false" />
         <activity
-            android:name=".profile"
+            android:name=".history"
             android:exported="false" />
         <activity
             android:name=".home_page_8"

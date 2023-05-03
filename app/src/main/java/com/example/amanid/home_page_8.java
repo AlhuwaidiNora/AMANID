@@ -1,8 +1,6 @@
 package com.example.amanid;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -95,7 +93,7 @@ public class home_page_8 extends AppCompatActivity {
         imageView214.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(home_page_8.this, profile.class);
+                Intent intent = new Intent(home_page_8.this, history.class);
                 startActivity(intent);
             }
         });
