@@ -101,11 +101,41 @@ public class Forget_password extends AppCompatActivity {
 
         confirmButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                checkUser();
+
+                if (!validateidnum() | !validateqhint()) {
+
+                }  else {
+
+
+                    checkUser2();
+                }
             }
         });
     }
-        public void checkUser() {
+    public Boolean validateidnum() {
+        String val = forgetpassword.getText().toString();
+        if (val.isEmpty()) {
+            forgetpassword.setError(" id number cannot be empty");
+            return false;
+        } else {
+            forgetpassword.setError(null);
+            return true;
+        }
+
+    }
+
+    public Boolean validateqhint() {
+        String val = hintanswer.getText().toString();
+        if (val.isEmpty()) {
+            hintanswer.setError(" password cannot be empty");
+            return false;
+        } else {
+            forgetpassword.setError(null);
+            return true;
+        }
+
+    }
+        public void checkUser2() {
             String username = forgetpassword.getText().toString().trim();
             String qhint = hintanswer.getText().toString().trim();
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
