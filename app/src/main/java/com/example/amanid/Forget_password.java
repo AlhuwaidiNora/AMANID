@@ -124,7 +124,7 @@ public class Forget_password extends AppCompatActivity {
                         if (qhintFromDB.equals(qhint) ) {
                             forgetpassword.setError(null);
                             String idnumFromDB = snapshot.child("idnum").getValue(String.class);
-                            Intent intent = new Intent(Forget_password.this, login_page.class);
+                            Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
                             startActivity(intent);
 
                         } else {
