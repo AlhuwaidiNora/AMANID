@@ -44,10 +44,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:text="Hello "
                     android:textColor="@color/purple_500"
                     android:textSize="16dp"
                     android:textStyle="bold"
+                    android:text='@{idnum != null ? "Hello " + idnum : "Hello!" }'
                     app:layout_constraintBottom_toBottomOf="@+id/imageView13"
                     app:layout_constraintStart_toEndOf="@+id/imageView13"
                     app:layout_constraintTop_toTopOf="@+id/imageView13" />

@@ -120,7 +120,11 @@ public class signup_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(signup_page.this, home_page_8.class);
-                startActivity(intent);            }
+                String idnum = editTextid_signup.getText().toString();
+                intent.putExtra("idnum", idnum);
+                startActivity(intent);
+            }
+
         });
 
 
