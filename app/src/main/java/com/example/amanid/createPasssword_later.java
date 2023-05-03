@@ -22,6 +22,7 @@ public class createPasssword_later extends AppCompatActivity {
     Button button5;
     EditText editTextTextPersonName2;
     EditText editTextTextPersonName4;
+    String pass1 , pass2;
     FirebaseDatabase database;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
 
@@ -29,6 +30,7 @@ public class createPasssword_later extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_passsword_later);
+        reference = FirebaseDatabase.getInstance().getReference("users");
 
         button5 = findViewById(R.id.button5);
         editTextTextPersonName4 = findViewById(R.id.editTextTextPersonName4);
@@ -38,6 +40,14 @@ public class createPasssword_later extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                if (ispasswordchange()&&ispasswordchange2()){
+                    Toast.makeText(createPasssword_later.this, "Password has been change", Toast.LENGTH_LONG).show();
+
+                } else {
+                    Toast.makeText(createPasssword_later.this, "Password is same and can not be change ", Toast.LENGTH_LONG).show();
+
+                }
                 String pass1 = editTextTextPersonName2.getText().toString();
                 String pass2 = editTextTextPersonName4.getText().toString();
                 if (pass1.isEmpty() || pass2.isEmpty()){
@@ -72,5 +82,28 @@ public class createPasssword_later extends AppCompatActivity {
             }
 
         });
+    }
+
+    private boolean ispasswordchange2() {
+        if (!pass2.equals(editTextTextPersonName4.getText().toString())){
+            reference.child(pass2).child("pass2").setValue(editTextTextPersonName4.getText().toString());
+            pass2 =editTextTextPersonName4.getText().toString();
+            return true;
+        }else {
+            return false;
+
+        }
+    }
+
+    private boolean ispasswordchange() {
+        if (!pass1.equals(editTextTextPersonName2.getText().toString())){
+            reference.child(pass1).child("pass").setValue(editTextTextPersonName2.getText().toString());
+            pass1 =editTextTextPersonName4.getText().toString();
+return true;
+        }else {
+            return false;
+
+        }
+
     }
 }
