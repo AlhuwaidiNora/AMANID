@@ -47,7 +47,7 @@ public class Forget_password extends AppCompatActivity {
         button137 = findViewById(R.id.button137);
         confirmButton = findViewById(R.id.confirmButton); // initialize confirmButton
          forgetpassword = findViewById(R.id.forgetpassword);
-         hintanswer = findViewById(R.id.hintanswer);
+         hintanswer =  findViewById(R.id.hintanswer);
 
         initial2();
         // Initialize Firebase Authentication
