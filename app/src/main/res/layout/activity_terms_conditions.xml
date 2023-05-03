@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Terms_Conditions">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".About_Amanid">
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="45dp"
+            android:layout_height="57dp"
+            android:background="#001937FD"
+            android:backgroundTint="#1937FD"
+            app:icon="?attr/actionModeCloseDrawable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView36"
+            android:layout_width="370dp"
+            android:layout_height="376dp"
+            android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toTopOf="@+id/amanidterms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/pasted_graphic_27" />
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="322dp"
+            android:layout_height="80dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Terms & Conditions"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.17" />
+
+        <TextView
+            android:id="@+id/amanidterms"
+            android:layout_width="383dp"
+            android:layout_height="314dp"
+            android:fontFamily="sans-serif-black"
+            android:text="This preamble thereof shall be deemed an integral part of contract’s clauses and complementary thereto as well as “company” or “service provider” herein shall refer to AMANID (first party), and “customer(s)” shall mean individual requesting the service (second party).  AMANID (first party) is specialized in provides a secure, convenient, and flexible solution for digital identity verification Whereas customer (second party) desires to obtain services provided by (first party) as agreed in clauses hereof, information authentication has been agreed and signed. In addition, all stated herein have been approved upon customer’s review of components of service to which customer desire to subscribe  In addition, customer shall be held liable for authentication of data and information filled thereby in service application form. Furthermore, customer shall be held fully liable for inauthenticity thereof."
+            android:textColor="#050505"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.727" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

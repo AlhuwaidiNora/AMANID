@@ -23,14 +23,14 @@
         android:layout_width="370dp"
         android:layout_height="376dp"
         android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toTopOf="@+id/amanid"
+        app:layout_constraintBottom_toTopOf="@+id/amanidterms"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pasted_graphic_27" />
 
     <TextView
-        android:id="@+id/About"
+        android:id="@+id/terms"
         android:layout_width="217dp"
         android:layout_height="76dp"
         android:fontFamily="sans-serif-black"
@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.163" />
 
     <TextView
-        android:id="@+id/amanid"
+        android:id="@+id/amanidterms"
         android:layout_width="349dp"
         android:layout_height="135dp"
         android:fontFamily="sans-serif-black"
