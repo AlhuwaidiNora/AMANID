@@ -311,7 +311,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/baseline_person_outline_24" />
+                        app:srcCompat="@drawable/baseline_history_24" />
 
                     <TextView
                         android:id="@+id/textView_profile1"
@@ -319,7 +319,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:layout_weight="1"
-                        android:text="profile"
+                        android:text=" History"
                         android:textAlignment="center"
                         android:textColor="#9695ce"
                         android:textSize="12sp" />
