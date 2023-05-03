@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,22 +61,22 @@ public class Forget_password extends AppCompatActivity {
             }
         });
 
-        BiometricManager biometricManager= BiometricManager.from(this);
-        switch (biometricManager.canAuthenticate()){
+        BiometricManager biometricManager = BiometricManager.from(this);
+        switch (biometricManager.canAuthenticate()) {
             case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-                Toast.makeText(getApplicationContext(),"Device Does Not Have Fingerprint Sensor",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Device Does Not Have Fingerprint Sensor", Toast.LENGTH_LONG).show();
                 break;
             case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-                Toast.makeText(getApplicationContext(),"Fingerprint Sensor Is Currently Unavailable",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Fingerprint Sensor Is Currently Unavailable", Toast.LENGTH_LONG).show();
                 break;
             case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                Toast.makeText(getApplicationContext(),"No Fingerprint Sensor Found",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "No Fingerprint Sensor Found", Toast.LENGTH_LONG).show();
                 break;
         }
 
-        Executor executor= ContextCompat.getMainExecutor(this);
+        Executor executor = ContextCompat.getMainExecutor(this);
 
-        biometricPrompt= new BiometricPrompt(Forget_password.this, executor, new BiometricPrompt.AuthenticationCallback() {
+        biometricPrompt = new BiometricPrompt(Forget_password.this, executor, new BiometricPrompt.AuthenticationCallback() {
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
@@ -87,7 +88,7 @@ public class Forget_password extends AppCompatActivity {
                 confirmButton.setVisibility(View.VISIBLE);
             }
 
-            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString){
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
                 super.onAuthenticationError(errorCode, errString);
             }
         });
@@ -98,15 +99,90 @@ public class Forget_password extends AppCompatActivity {
         biometricPrompt.authenticate(promptInfo);
 
 
-        confirmButton.setOnClickListener( new View.OnClickListener(){
+        confirmButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                database = FirebaseDatabase.getInstance();
+                checkUser();
+            }
+        });
+    }
+        public void checkUser() {
+            String username = forgetpassword.getText().toString().trim();
+            String qhint = hintanswer.getText().toString().trim();
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+
+            //Query checkUserDatabase = reference.equalTo("idnum",username);
+
+            reference.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Log.d("SSSS", "onDataChange: "+snapshot.getChildrenCount());
+                    if (snapshot.exists()) {
+                        forgetpassword.setError(null);
+
+                        String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
+                         qhintFromDB.equals(qhint);
+                        if (qhintFromDB.equals(qhint) ) {
+                            forgetpassword.setError(null);
+                            String idnumFromDB = snapshot.child("idnum").getValue(String.class);
+                            Intent intent = new Intent(Forget_password.this, login_page.class);
+                            startActivity(intent);
+
+                        } else {
+
+                            hintanswer.setError(" wrong answer");
+                            hintanswer.requestFocus();
+                        }
+
+                    } else {
+                        forgetpassword.setError(" User dose not exist");
+                        forgetpassword.requestFocus();
+                    }
+                }
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               /*  database = FirebaseDatabase.getInstance();
 
                 String idnum =  forgetpassword.getText().toString();
                 String qhint = hintanswer.getText().toString();
 
                 if (idnum.isEmpty() || qhint.isEmpty() ){
-                    Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
+                Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
 
                 }  else {
                     reference.child(idnum).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -142,16 +218,13 @@ public class Forget_password extends AppCompatActivity {
                     //  Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                     //  finish();
 
-                }
+                } */
+
 
                 //Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                 // Intent intent = new Intent(signup_page.this, login_page.class);
                 // startActivity(intent);
-            }});
-
-    }
-
 
 }
-
+}
 
