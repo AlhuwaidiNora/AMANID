@@ -23,36 +23,22 @@ public class change_password extends AppCompatActivity {
         newPasswordEditText = findViewById(R.id.editTextTextPersonName5);
         confirmPasswordEditText = findViewById(R.id.editTextTextPersonName6);
 
+
         button23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String newPassword = newPasswordEditText.getText().toString();
                 String confirmPassword = confirmPasswordEditText.getText().toString();
 
-                if (!newPassword.equals(confirmPassword)) {
-                    // if the new password does not match the confirm password, display an error message
-                    // and return without encrypting the password
+                if (newPassword.equals(confirmPassword)) {
+                    // password and confirm password match, proceed to the next activity
+                    Intent intent = new Intent(change_password.this, setting.class);
+                    startActivity(intent);
+                } else {
+                    // password and confirm password do not match, display an error message
                     Toast.makeText(change_password.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
-                    return;
                 }
-
-                // if the new password matches the confirm password, encrypt the password
-                String encryptedPassword = encryptPassword(newPassword);
-
-                // you can then store the encrypted password in a database or a file
-                // or send it to a server, depending on your requirements
-
-                // finally, navigate to the next activity
-                Intent intent = new Intent(change_password.this, setting.class);
-                startActivity(intent);
             }
         });
-    }
-
-    private String encryptPassword(String password) {
-        // encrypt the password using an appropriate encryption algorithm
-        // you can use a library like Bouncy Castle or a built-in encryption algorithm like AES
-        // for simplicity, we will just return the password as is
-        return password;
     }
 }
