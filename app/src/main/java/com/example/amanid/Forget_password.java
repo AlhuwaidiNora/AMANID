@@ -158,7 +158,7 @@ public class Forget_password extends AppCompatActivity {
                                 Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
                                 startActivity(intent);
                             } else {
-                                Toast.makeText(Forget_password.this, " Wrong Answer ", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Forget_password.this, " Wrong Answer hint ", Toast.LENGTH_LONG).show();
                             }
 
                         } else {
