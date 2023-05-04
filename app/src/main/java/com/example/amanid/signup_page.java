@@ -86,11 +86,14 @@ public class signup_page extends AppCompatActivity {
                                 Toast.makeText(signup_page.this, " ID number is already signup", Toast.LENGTH_LONG).show();
                             }else{
                                 // sending data
+
 //                                reference.child("users").child(idnum).child("pass").setValue(pass);
 //                                reference.child("users").child(idnum).child("idnum").setValue(idnum);
                                 HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
                                 reference.child(idnum).setValue(helperClass);
                                 reference.child(idnum).child("idnum").setValue(idnum);
+                                reference.child("users").child(idnum).child("hint").setValue(qhint);
+
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();
                                 Intent intent = new Intent(signup_page.this, fingerPrint_page7_later.class);
