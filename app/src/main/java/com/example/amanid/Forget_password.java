@@ -46,11 +46,12 @@ public class Forget_password extends AppCompatActivity {
         setContentView(R.layout.activity_forget_password);
         button137 = findViewById(R.id.button137);
         confirmButton = findViewById(R.id.confirmButton); // initialize confirmButton
-        EditText forgetpassword = findViewById(R.id.forgetpassword);
-        EditText hintanswer = findViewById(R.id.forgetpassword);
+         forgetpassword = findViewById(R.id.forgetpassword);
+         hintanswer = findViewById(R.id.hintanswer);
 
+        initial2();
         // Initialize Firebase Authentication
-        mAuth = FirebaseAuth.getInstance();
+      //  mAuth = FirebaseAuth.getInstance();
 
 
         button137.setOnClickListener(new View.OnClickListener() {
@@ -99,19 +100,21 @@ public class Forget_password extends AppCompatActivity {
         biometricPrompt.authenticate(promptInfo);
 
 
+
+    }
+    private void initial2() {
         confirmButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 if (!validateidnum() | !validateqhint()) {
 
                 }  else {
-
-
-                    checkUser2();
+                   checkUser2();
                 }
             }
         });
     }
+
     public Boolean validateidnum() {
         String val = forgetpassword.getText().toString();
         if (val.isEmpty()) {
@@ -130,53 +133,49 @@ public class Forget_password extends AppCompatActivity {
             hintanswer.setError(" cannot be empty");
             return false;
         } else {
-            forgetpassword.setError(null);
+            hintanswer.setError(null);
             return true;
         }
 
     }
         public void checkUser2() {
-            String username = forgetpassword.getText().toString().trim();
-            String qhint = hintanswer.getText().toString().trim();
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        final   String idnum =  forgetpassword.getText().toString();
+       final      String qhint = hintanswer.getText().toString();
+            if (idnum.isEmpty() || qhint.isEmpty() ) {
+                Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
+            }
+            else {
+                reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.hasChild(idnum)) {
 
-            //Query checkUserDatabase = reference.equalTo("idnum",username);
 
-            reference.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    Log.d("SSSS", "onDataChange: "+snapshot.getChildrenCount());
-                    if (snapshot.exists()) {
-                        forgetpassword.setError(null);
+                            final String getqhint = snapshot.child(idnum).child("qhint").getValue(String.class);
 
-                        String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
-                          qhintFromDB.equals(qhint);
-                        if (qhintFromDB.equals(qhint) ) {
-                            forgetpassword.setError(null);
-                            String idnumFromDB = snapshot.child("idnum").getValue(String.class);
-                            Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
-                            startActivity(intent);
+                            if (getqhint.equals(qhint)) {
+                                Toast.makeText(Forget_password.this, "correct data ", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(Forget_password.this, " Wrong Answer ", Toast.LENGTH_LONG).show();
+                            }
 
                         } else {
+                            Toast.makeText(Forget_password.this, " Wrong Answer ", Toast.LENGTH_LONG).show();
 
-                            hintanswer.setError(" wrong answer");
-                            hintanswer.requestFocus();
+                        }
+                    }
+
+                        @Override
+                        public void onCancelled (@NonNull DatabaseError error){
+
                         }
 
-                    } else {
-                        forgetpassword.setError(" User dose not exist");
-                        forgetpassword.requestFocus();
-                    }
-                }
+                });
+            }
 
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-
-
-            });
 
 
 
@@ -247,6 +246,46 @@ public class Forget_password extends AppCompatActivity {
                     //  reference.child("users").child(idnum).child("pass").setValue(pass);
                     //  Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                     //  finish();
+                      String username1 = forgetpassword.getText().toString().trim();
+            String qhint = hintanswer.getText().toString().trim();
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+
+           // Query checkUserDatabase = reference.equalTo("idnum",username);
+
+            reference.child(username1).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Log.d("SSSS", "onDataChange: "+snapshot.getChildrenCount());
+                    if (snapshot.exists()) {
+                        forgetpassword.setError(null);
+                        String qhintFromDB = snapshot.child(qhint).child("hint").getValue(String.class);
+                        if (qhintFromDB.equals(qhint) ) {
+                            forgetpassword.setError(null);
+                            String idnumFromDB = snapshot.child("idnum").getValue(String.class);
+
+                            Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
+                            startActivity(intent);
+
+                        } else {
+
+                            hintanswer.setError(" wrong answer");
+                            hintanswer.requestFocus();
+                        }
+
+                    } else {
+                        forgetpassword.setError(" User dose not exist");
+                        forgetpassword.requestFocus();
+                    }
+                }
+
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+
+
+            });
 
                 } */
 
