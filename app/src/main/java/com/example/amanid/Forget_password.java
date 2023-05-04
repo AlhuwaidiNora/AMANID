@@ -161,7 +161,7 @@ public class Forget_password extends AppCompatActivity {
 
                             final String getqhint = snapshot.child(idnum).child("qhint").getValue(String.class);
 
-                            if (getqhint.equals("qhint")) {
+                            if (getqhint.equals(qhint)) {
                                 Toast.makeText(Forget_password.this, "correct data ", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
                                 startActivity(intent);
