@@ -1,11 +1,14 @@
 package com.example.amanid;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -102,7 +105,12 @@ public class Forget_password extends AppCompatActivity {
 
 
     }
+
+
+
+
     private void initial2() {
+        Log.d(TAG, "initial2: ");
         confirmButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -139,12 +147,12 @@ public class Forget_password extends AppCompatActivity {
 
     }
         public void checkUser2() {
-        final   String idnum =  forgetpassword.getText().toString();
-       final      String qhint = hintanswer.getText().toString();
-            if (idnum.isEmpty() || qhint.isEmpty() ) {
-                Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
-            }
-            else {
+            final String idnum = forgetpassword.getText().toString();
+            final String qhint = hintanswer.getText().toString();
+            //   if (idnum.isEmpty() || qhint.isEmpty() ) {
+            //       Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
+            // }
+
                 reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -153,7 +161,7 @@ public class Forget_password extends AppCompatActivity {
 
                             final String getqhint = snapshot.child(idnum).child("qhint").getValue(String.class);
 
-                            if (getqhint.equals(qhint)) {
+                            if (getqhint.equals("qhint")) {
                                 Toast.makeText(Forget_password.this, "correct data ", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
                                 startActivity(intent);
@@ -295,5 +303,5 @@ public class Forget_password extends AppCompatActivity {
                 // startActivity(intent);
 
 }
-}
+
 
