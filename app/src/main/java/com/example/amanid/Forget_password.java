@@ -40,7 +40,7 @@ public class Forget_password extends AppCompatActivity {
     private EditText hintanswer;
 
     FirebaseDatabase database;
-    DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
+    DatabaseReference referenceF = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
 
 
     @Override
@@ -146,42 +146,37 @@ public class Forget_password extends AppCompatActivity {
         }
 
     }
-        public void checkUser2() {
-            final String idnum = forgetpassword.getText().toString();
-            final String qhint = hintanswer.getText().toString();
-            //   if (idnum.isEmpty() || qhint.isEmpty() ) {
-            //       Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
-            // }
+    public void checkUser2() {
+        final String idnum = forgetpassword.getText().toString();
+        final String qhint = hintanswer.getText().toString();
 
-                reference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.hasChild(idnum)) {
+        referenceF.child("users").child(idnum).child("qhint").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    String dbQHint = snapshot.getValue(String.class);
+                    Log.d("MyApp", "dbQHint = " + dbQHint);
 
-
-                            final String getqhint = snapshot.child(idnum).child("qhint").getValue(String.class);
-
-                            if (getqhint.equals(qhint)) {
-                                Toast.makeText(Forget_password.this, "correct data ", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
-                                startActivity(intent);
-                            } else {
-                                Toast.makeText(Forget_password.this, " Wrong Answer hint ", Toast.LENGTH_LONG).show();
-                            }
-
-                        } else {
-                            Toast.makeText(Forget_password.this, " Wrong Answer ", Toast.LENGTH_LONG).show();
-
-                        }
+                    if (dbQHint != null && dbQHint.equals(qhint)) {
+                        Toast.makeText(Forget_password.this, "Correct Answer", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(Forget_password.this, "Wrong Answer Hint", Toast.LENGTH_LONG).show();
                     }
-
-                        @Override
-                        public void onCancelled (@NonNull DatabaseError error){
-
-                        }
-
-                });
+                } else {
+                    Toast.makeText(Forget_password.this, "Wrong Answer", Toast.LENGTH_LONG).show();
+                }
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("MyApp", "Database error: " + error.getMessage());
+            }
+        });
+    }
+
+}
 
 
 
@@ -302,6 +297,6 @@ public class Forget_password extends AppCompatActivity {
                 // Intent intent = new Intent(signup_page.this, login_page.class);
                 // startActivity(intent);
 
-}
+
 
 
