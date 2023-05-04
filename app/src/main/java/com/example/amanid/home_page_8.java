@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
@@ -21,7 +22,8 @@ public class home_page_8 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page7);
-
+Bundle b=getIntent().getExtras();
+        Toast.makeText(this,b.getString("name"),Toast.LENGTH_LONG).show();
         String idnum = getIntent().getStringExtra("idnum");
         TextView greetingTextView = findViewById(R.id.greetings);
         greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
