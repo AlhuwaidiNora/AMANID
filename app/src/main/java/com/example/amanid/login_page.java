@@ -74,6 +74,7 @@ public class login_page extends AppCompatActivity {
 
         initial();
 
+        String uniqueId = getIntent().getStringExtra("uniqueId");
 
     }
 
