@@ -92,7 +92,7 @@ public class signup_page extends AppCompatActivity {
                                 HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
                                 reference.child(idnum).setValue(helperClass);
                                 reference.child(idnum).child("idnum").setValue(idnum);
-                                reference.child("users").child(idnum).child("hint").setValue(qhint);
+                                 reference.child("users").child(idnum).child("hint").setValue(qhint);
 
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();

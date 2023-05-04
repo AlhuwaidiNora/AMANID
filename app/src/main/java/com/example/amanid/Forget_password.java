@@ -150,7 +150,7 @@ public class Forget_password extends AppCompatActivity {
                         forgetpassword.setError(null);
 
                         String qhintFromDB = snapshot.child(username).child("hint").getValue(String.class);
-                         qhintFromDB.equals(qhint);
+                          qhintFromDB.equals(qhint);
                         if (qhintFromDB.equals(qhint) ) {
                             forgetpassword.setError(null);
                             String idnumFromDB = snapshot.child("idnum").getValue(String.class);
