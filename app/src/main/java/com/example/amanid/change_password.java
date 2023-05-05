@@ -29,6 +29,8 @@ public class change_password extends AppCompatActivity {
     private EditText newPasswordEditText;
     private EditText confirmPasswordEditText;
 
+    Button button6 ;
+
     private DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
 
 
@@ -37,11 +39,21 @@ public class change_password extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
+        databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
         Button button23 = findViewById(R.id.button23);
         oldPasswordEditText = findViewById(R.id.editTextTextPersonName3);
         newPasswordEditText = findViewById(R.id.editTextTextPersonName5);
         confirmPasswordEditText = findViewById(R.id.editTextTextPersonName6);
+        button6=findViewById(R.id.button6);
+
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(change_password.this, setting.class);
+                startActivity(intent);
+            }
+        });
 
         // initialize the Firebase database reference
 
