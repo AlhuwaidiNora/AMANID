@@ -29,7 +29,9 @@ public class change_password extends AppCompatActivity {
     private EditText newPasswordEditText;
     private EditText confirmPasswordEditText;
 
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,7 @@ public class change_password extends AppCompatActivity {
                 Log.d("ChangePassword", "Button clicked");
                 final String oldPassword = oldPasswordEditText.getText().toString();
                 final String newPassword = newPasswordEditText.getText().toString();
-                String confirmPassword = confirmPasswordEditText.getText().toString();
+             final   String confirmPassword = confirmPasswordEditText.getText().toString();
 
                 // check if the new password matches the confirm password
                 if (!newPassword.equals(confirmPassword)) {
@@ -62,11 +64,11 @@ public class change_password extends AppCompatActivity {
 
 
 
-                if (user != null) {
-                    final String userId = user.getUid();
+               if (user != null) {
+                   final String userId = user.getUid();
 
-                    AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), oldPassword);
-                    user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                   AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), oldPassword);
+                user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {

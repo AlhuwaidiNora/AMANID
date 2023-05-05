@@ -53,7 +53,7 @@ public class setting extends AppCompatActivity {
         textView_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(setting.this, createPasssword_later.class);
+                Intent intent = new Intent(setting.this, change_password.class);
                 startActivity(intent);
             }
         });

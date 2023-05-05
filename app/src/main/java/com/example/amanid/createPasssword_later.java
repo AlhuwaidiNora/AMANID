@@ -68,7 +68,7 @@ public class createPasssword_later extends AppCompatActivity {
 
     private boolean ispasswordchange2() {
         if (!passnew2.equals(pass2.getText().toString())){
-            reference.child(passnew2).child("pass2").setValue(editTextTextPersonName4.getText().toString());
+            reference.child(passnew2).child("pass2").setValue(pass2.getText().toString());
             passnew2 =pass2.getText().toString();
             return true;
         }else {
@@ -79,7 +79,7 @@ public class createPasssword_later extends AppCompatActivity {
 
     private boolean ispasswordchange() {
         if (!passnew1.equals(pass1.getText().toString())){
-            reference.child(passnew1).child("pass").setValue(editTextTextPersonName2.getText().toString());
+            reference.child(passnew1).child("pass").setValue(pass1.getText().toString());
             passnew1 =pass1.getText().toString();
             return true;
         }else {
