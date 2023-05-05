@@ -8,7 +8,8 @@ public class HelperClass {
     String pass;
     String pass2;
     String hint;
-
+    public HelperClass() {
+    }
     public String getPass() {
         return pass;
     }
