@@ -107,8 +107,7 @@ public class change_password extends AppCompatActivity {
                                         }
                                     }
 
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
+                                    @Override public void onCancelled(@NonNull DatabaseError error) {
                                         // Error occurred while fetching password from database
                                         Toast.makeText(change_password.this, "Failed to fetch password from database", Toast.LENGTH_SHORT).show();
                                     }
