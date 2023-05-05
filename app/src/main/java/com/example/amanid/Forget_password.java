@@ -31,151 +31,58 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.concurrent.Executor;
 
 public class Forget_password extends AppCompatActivity {
-    private FirebaseAuth mAuth;
-    private BiometricPrompt biometricPrompt;
-    private BiometricPrompt.PromptInfo promptInfo;
-    private Button confirmButton;
-    private Button button137;
     private EditText forgetpassword;
     private EditText hintanswer;
+    private Button confirmButton;
 
-    FirebaseDatabase database;
-    DatabaseReference referenceF = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
-
+    private FirebaseDatabase database;
+    private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
-        button137 = findViewById(R.id.button137);
-        confirmButton = findViewById(R.id.confirmButton); // initialize confirmButton
-         forgetpassword = findViewById(R.id.forgetpassword);
-         hintanswer = findViewById(R.id.hintanswer);
 
-        initial2();
-        // Initialize Firebase Authentication
-      //  mAuth = FirebaseAuth.getInstance();
+        forgetpassword = findViewById(R.id.forgetpassword);
+        hintanswer = findViewById(R.id.hintanswer);
+        confirmButton = findViewById(R.id.confirmButton);
 
+        database = FirebaseDatabase.getInstance();
+        reference = database.getReference("users");
 
-        button137.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Forget_password.this, login_page.class);
-                startActivity(intent);
-            }
-        });
-
-        BiometricManager biometricManager = BiometricManager.from(this);
-        switch (biometricManager.canAuthenticate()) {
-            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
-                Toast.makeText(getApplicationContext(), "Device Does Not Have Fingerprint Sensor", Toast.LENGTH_LONG).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
-                Toast.makeText(getApplicationContext(), "Fingerprint Sensor Is Currently Unavailable", Toast.LENGTH_LONG).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                Toast.makeText(getApplicationContext(), "No Fingerprint Sensor Found", Toast.LENGTH_LONG).show();
-                break;
-        }
-
-        Executor executor = ContextCompat.getMainExecutor(this);
-
-        biometricPrompt = new BiometricPrompt(Forget_password.this, executor, new BiometricPrompt.AuthenticationCallback() {
-            @Override
-            public void onAuthenticationFailed() {
-                super.onAuthenticationFailed();
-            }
-
-            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
-                super.onAuthenticationSucceeded(result);
-                Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_LONG).show();
-                confirmButton.setVisibility(View.VISIBLE);
-            }
-
-            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-                super.onAuthenticationError(errorCode, errString);
-            }
-        });
-
-        promptInfo = new BiometricPrompt.PromptInfo.Builder().setTitle("Reset Password")
-                .setDescription("Use Fingerprint Sensor").setDeviceCredentialAllowed(true).build();
-
-        biometricPrompt.authenticate(promptInfo);
-
-
-
-    }
-
-
-
-
-    private void initial2() {
-        Log.d(TAG, "initial2: ");
         confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
+                String idnum = forgetpassword.getText().toString().trim();
+                String qhint = hintanswer.getText().toString().trim();
 
-                if (!validateidnum() | !validateqhint()) {
-
-                }  else {
-                   checkUser2();
-                }
-            }
-        });
-    }
-
-    public Boolean validateidnum() {
-        String val = forgetpassword.getText().toString();
-        if (val.isEmpty()) {
-            forgetpassword.setError(" id number cannot be empty");
-            return false;
-        } else {
-            forgetpassword.setError(null);
-            return true;
-        }
-
-    }
-
-    public Boolean validateqhint() {
-        String val = hintanswer.getText().toString();
-        if (val.isEmpty()) {
-            hintanswer.setError(" cannot be empty");
-            return false;
-        } else {
-            hintanswer.setError(null);
-            return true;
-        }
-
-    }
-    public void checkUser2() {
-        final String idnum = forgetpassword.getText().toString();
-        final String qhint = hintanswer.getText().toString();
-
-        referenceF.child("users").child(idnum).child("qhint").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    String dbQHint = snapshot.getValue(String.class);
-                    Log.d("MyApp", "dbQHint = " + dbQHint);
-
-                    if (dbQHint != null && dbQHint.equals(qhint)) {
-                        Toast.makeText(Forget_password.this, "Correct Answer", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(Forget_password.this, createPasssword_later.class);
-                        startActivity(intent);
-                    } else {
-                        Toast.makeText(Forget_password.this, "Wrong Answer Hint", Toast.LENGTH_LONG).show();
-                    }
+                if (idnum.isEmpty() || qhint.isEmpty()) {
+                    Toast.makeText(Forget_password.this, "Please fill all fields", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(Forget_password.this, "Wrong Answer", Toast.LENGTH_LONG).show();
-                }
-            }
+                    reference.child(idnum).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()) {
+                                HelperClass helperClass = snapshot.getValue(HelperClass.class);
+                                if (helperClass.gethint().equals(qhint)) {
+                                    Toast.makeText(Forget_password.this, "Your password is: " + helperClass.getPass(), Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(Forget_password.this, "Hint answer is incorrect", Toast.LENGTH_LONG).show();
+                                }
+                            } else {
+                                Toast.makeText(Forget_password.this, "ID number is not registered", Toast.LENGTH_LONG).show();
+                            }
+                        }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyApp", "Database error: " + error.getMessage());
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                }
             }
         });
     }
-
 }
 
 
