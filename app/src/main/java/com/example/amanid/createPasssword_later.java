@@ -21,8 +21,9 @@ import com.google.firebase.database.ValueEventListener;
 public class createPasssword_later extends AppCompatActivity {
     Button button5;
     EditText editTextTextPersonName2;
+    EditText pass1 ,pass2;
     EditText editTextTextPersonName4;
-    String pass1 , pass2;
+    String passnew1, passnew2;
     FirebaseDatabase database;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
 
@@ -33,61 +34,42 @@ public class createPasssword_later extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("users");
 
         button5 = findViewById(R.id.button5);
-        editTextTextPersonName4 = findViewById(R.id.editTextTextPersonName4);
-        editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
+        pass2 = findViewById(R.id.editTextTextPersonName4);
+        pass1 = findViewById(R.id.editTextTextPersonName2);
+        Userdata();
 
         button5.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-                if (ispasswordchange()&&ispasswordchange2()){
-                    Toast.makeText(createPasssword_later.this, "Password has been change", Toast.LENGTH_LONG).show();
-
+                if (ispasswordchange() && ispasswordchange2()) {
+                    Toast.makeText(createPasssword_later.this, "Password has been changed", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(createPasssword_later.this, "Password is same and can not be change ", Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(createPasssword_later.this, "Password cannot be changed", Toast.LENGTH_LONG).show();
                 }
-                String pass1 = editTextTextPersonName2.getText().toString();
-                String pass2 = editTextTextPersonName4.getText().toString();
-                if (pass1.isEmpty() || pass2.isEmpty()){
-                    Toast.makeText(createPasssword_later.this, "Please fill all fields", Toast.LENGTH_LONG).show();
-                } else if (!pass1.equals(pass2)) {
-                    Toast.makeText(createPasssword_later.this, "Passwords are not matching", Toast.LENGTH_LONG).show();
-                } else {
-                    reference.child(pass1).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            // check if id not registered before
-                            if (snapshot.exists()){
-                                // sending data
-//                  reference.child("users").child(idnum).child("pass").setValue(pass);
-//                  reference.child("users").child(idnum).child("idnum").setValue(idnum);
-                                HelperClass helperClass = new HelperClass(pass1,pass2);
-                                reference.child(pass1).setValue(helperClass);
-                                reference.child(pass1).child("pass").setValue(pass1);
-                                Toast.makeText(createPasssword_later.this, "you have change the password successfully!", Toast.LENGTH_LONG).show();
-                                finish(); }
-                                Intent intent = new Intent(createPasssword_later.this, login_page.class);
-                                startActivity(intent);
 
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-                }
             }
-
         });
+
+    }
+
+
+
+
+
+    private void Userdata() {
+        Intent intent = getIntent();
+        passnew1 = intent.getStringExtra("pass1");
+        passnew2 = intent.getStringExtra("pass2");
+
+
+        pass1.setText(passnew1);
+        pass2.setText(passnew2);
     }
 
     private boolean ispasswordchange2() {
-        if (!pass2.equals(editTextTextPersonName4.getText().toString())){
-            reference.child(pass2).child("pass2").setValue(editTextTextPersonName4.getText().toString());
-            pass2 =editTextTextPersonName4.getText().toString();
+        if (!passnew2.equals(pass2.getText().toString())){
+            reference.child(passnew2).child("pass2").setValue(editTextTextPersonName4.getText().toString());
+            passnew2 =pass2.getText().toString();
             return true;
         }else {
             return false;
@@ -96,10 +78,10 @@ public class createPasssword_later extends AppCompatActivity {
     }
 
     private boolean ispasswordchange() {
-        if (!pass1.equals(editTextTextPersonName2.getText().toString())){
-            reference.child(pass1).child("pass").setValue(editTextTextPersonName2.getText().toString());
-            pass1 =editTextTextPersonName4.getText().toString();
-return true;
+        if (!passnew1.equals(pass1.getText().toString())){
+            reference.child(passnew1).child("pass").setValue(editTextTextPersonName2.getText().toString());
+            passnew1 =pass1.getText().toString();
+            return true;
         }else {
             return false;
 
