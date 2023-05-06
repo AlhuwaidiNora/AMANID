@@ -33,7 +33,10 @@ import java.util.concurrent.Executor;
 public class Forget_password extends AppCompatActivity {
     private EditText forgetpassword;
     private EditText hintanswer;
+    private Button button137;
     private Button confirmButton;
+    private BiometricPrompt biometricPrompt;
+    private BiometricPrompt.PromptInfo promptInfo;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -46,8 +49,54 @@ public class Forget_password extends AppCompatActivity {
         forgetpassword = findViewById(R.id.forgetpassword);
         hintanswer = findViewById(R.id.hintanswer);
         confirmButton = findViewById(R.id.confirmButton);
+        button137 = findViewById(R.id.button137);
+        button137.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Forget_password.this, login_page.class);
+                startActivity(intent);
+            }
+        });
+        BiometricManager biometricManager = BiometricManager.from(this);
+        switch (biometricManager.canAuthenticate()) {
+            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+                Toast.makeText(getApplicationContext(), "Device Does Not Have Fingerprint Sensor", Toast.LENGTH_LONG).show();
+                break;
+            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+                Toast.makeText(getApplicationContext(), "Fingerprint Sensor Is Currently Unavailable", Toast.LENGTH_LONG).show();
+                break;
+            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                Toast.makeText(getApplicationContext(), "No Fingerprint Sensor Found", Toast.LENGTH_LONG).show();
+                break;
+        }
 
-        database = FirebaseDatabase.getInstance();
+        Executor executor = ContextCompat.getMainExecutor(this);
+
+        biometricPrompt = new BiometricPrompt(Forget_password.this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+            }
+
+            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_LONG).show();
+                confirmButton.setVisibility(View.VISIBLE);
+            }
+
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+            }
+        });
+
+        promptInfo = new BiometricPrompt.PromptInfo.Builder().setTitle("Reset Password")
+                .setDescription("Use Fingerprint Sensor").setDeviceCredentialAllowed(true).build();
+
+        biometricPrompt.authenticate(promptInfo);
+
+
+
+    database = FirebaseDatabase.getInstance();
         reference = database.getReference("users");
 
         confirmButton.setOnClickListener(new View.OnClickListener() {
