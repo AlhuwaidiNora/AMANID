@@ -8,17 +8,13 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -37,9 +33,7 @@ public class change_password extends AppCompatActivity {
     private BiometricPrompt.PromptInfo promptInfo;
     Button button6 ;
 
-    private DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
-
-
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +41,7 @@ public class change_password extends AppCompatActivity {
         setContentView(R.layout.activity_change_password);
         databaseReference = FirebaseDatabase.getInstance().getReference("users");
 
-        Button button23 = findViewById(R.id.button23);
+        Button button232 = findViewById(R.id.button232);
         oldPasswordEditText = findViewById(R.id.editTextTextPersonName3);
         newPasswordEditText = findViewById(R.id.editTextTextPersonName5);
         confirmPasswordEditText = findViewById(R.id.editTextTextPersonName6);
@@ -76,7 +70,7 @@ public class change_password extends AppCompatActivity {
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_LONG).show();
-                button23.setVisibility(View.VISIBLE);
+                button232.setVisibility(View.VISIBLE);
             }
 
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
@@ -99,81 +93,70 @@ public class change_password extends AppCompatActivity {
             }
         });
 
-        // initialize the Firebase database reference
+        // Get the current FirebaseUser
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        button23.setOnClickListener(new View.OnClickListener() {
+        // Initialize the Firebase database reference
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
 
+        button232.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                databaseReference = FirebaseDatabase.getInstance().getReference("users");
-                Log.d("ChangePassword", "Button clicked");
-                final String oldPassword = oldPasswordEditText.getText().toString();
-                final String newPassword = newPasswordEditText.getText().toString();
-             final   String confirmPassword = confirmPasswordEditText.getText().toString();
+                String newPassword = newPasswordEditText.getText().toString();
+                String confirmPassword = confirmPasswordEditText.getText().toString();
 
-                // check if the new password matches the confirm password
+                // Check if the new password matches the confirm password
                 if (!newPassword.equals(confirmPassword)) {
                     Toast.makeText(change_password.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                if (user != null) {
+                    String userId = user.getUid();
 
-
-               if (user != null) {
-                   final String userId = user.getUid();
-
-                   AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), oldPassword);
-                user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    // Fetch the old password from the database
+                    databaseReference.child(userId).child("password").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                // Fetch the password from the database
-                                databaseReference.child(userId).child("password").addListenerForSingleValueEvent(new ValueEventListener() {
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            String passwordFromDB = snapshot.getValue(String.class);
+
+                            if (passwordFromDB != null && passwordFromDB.equals(newPassword)) {
+                                // Old password matches, update the password in both Firebase Authentication and the database
+                                user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        String passwordFromDB = snapshot.getValue(String.class);
-                                        if (oldPassword.equals(passwordFromDB)) {
-                                            // Passwords match, update the password
-                                            user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            // Password updated successfully in Firebase Authentication system
+                                            // Now update the password in the database as well
+                                            databaseReference.child(userId).child("password").setValue(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-                                                        // Password updated successfully in Firebase Authentication system
-                                                        // Now update the password in the database as well
-                                                        databaseReference.child(userId).child("password").setValue(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                            @Override
-                                                            public void onComplete(@NonNull Task<Void> task) {
-                                                                if (task.isSuccessful()) {
-                                                                    // Password updated successfully in the database
-                                                                    Toast.makeText(change_password.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
-                                                                } else {
-                                                                    // Password update failed in the database
-                                                                    Toast.makeText(change_password.this, "Failed to update password in database", Toast.LENGTH_SHORT).show();
-                                                                }
-                                                            }
-                                                        });
+                                                        // Password updated successfully in the database
+                                                        Toast.makeText(change_password.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
+                                                        finish();
                                                     } else {
-                                                        // Password update failed in Firebase Authentication system
-                                                        Toast.makeText(change_password.this, "Failed to update password", Toast.LENGTH_SHORT).show();
+                                                        // Password update failed in the database
+                                                        Toast.makeText(change_password.this, "Failed to update password in database", Toast.LENGTH_SHORT).show();
                                                     }
                                                 }
                                             });
                                         } else {
-                                            // Passwords don't match
-                                            Toast.makeText(change_password.this, "Old password is incorrect", Toast.LENGTH_SHORT).show();
+                                            // Password update failed in Firebase Authentication system
+                                            Toast.makeText(change_password.this, "Failed to update password", Toast.LENGTH_SHORT).show();
                                         }
                                     }
-
-                                    @Override public void onCancelled(@NonNull DatabaseError error) {
-                                        // Error occurred while fetching password from database
-                                        Toast.makeText(change_password.this, "Failed to fetch password from database", Toast.LENGTH_SHORT).show();
-                                    }
                                 });
-                            } else {
-                                // Re-authentication failed
-                                Toast.makeText(change_password.this, "Old password is incorrect", Toast.LENGTH_SHORT).show();
                             }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            // Error occurred while
+
+                            // Error occurred while fetching password from database
+// Error occurred while fetching password from database
+                            Toast.makeText(change_password.this, "Failed to fetch password from database", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
