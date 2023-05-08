@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Z Specification:
+ *   - Preconditions: The activity has been created.
+ *   - Postconditions: On button click, the home_page_8 activity is started.
+ */
+
 public class history extends AppCompatActivity {
  Button button18 ;
     @Override
