@@ -225,6 +225,8 @@ public class login_page extends AppCompatActivity {
                     if (passwordFromDB.equals(userpass) ) {
                         editTextid_login.setError(null);
                         String idnumFromDB = snapshot.child("idnum").getValue(String.class);
+                        Log.d("SSSS", "onDataChange: "+idnumFromDB);
+                        new UserSession(login_page.this).setUserID(idnumFromDB);
                         Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
                         startActivity(intent);
 
@@ -298,3 +300,6 @@ public void onClick(View v) {
 }
 
  */
+
+
+
