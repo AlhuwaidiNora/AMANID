@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-//model
+
 public class signup_page extends AppCompatActivity {
     EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
     Button button9 ;
@@ -70,7 +70,7 @@ public class signup_page extends AppCompatActivity {
                 String qhint = hintAnswerEditText.getText().toString();
 
 
-//controller
+
                 if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty() && (idnum.length() < 10)){
                     Toast.makeText(signup_page.this, "Please fill all fields", Toast.LENGTH_LONG).show();
 
@@ -91,8 +91,9 @@ public class signup_page extends AppCompatActivity {
 //                                reference.child("users").child(idnum).child("idnum").setValue(idnum);
                                 HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
                                 reference.child(idnum).setValue(helperClass);
+                                new UserSession(signup_page.this).setUserID(idnum);
                                 reference.child(idnum).child("idnum").setValue(idnum);
-                                 reference.child("users").child(idnum).child("hint").setValue(qhint);
+                                reference.child("users").child(idnum).child("hint").setValue(qhint);
 
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();
