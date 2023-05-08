@@ -1,4 +1,7 @@
 package com.example.amanid;
+import android.content.Context;
+import android.content.Intent;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -52,6 +55,7 @@ public class HelperClass {
     public HelperClass(String idnum, String qhint) {
     }
 
+
     // Example method to sign in a user with email and password
     public void signInWithEmail(String email, String password) {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
@@ -67,9 +71,81 @@ public class HelperClass {
                 });
     }
 
+
     // Example method to sign out a user
     public void signOut() {
         FirebaseAuth.getInstance().signOut();
         // Call a method or update UI after sign out
     }
+    public void changePassword(String newPassword, Context context) {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            user.updatePassword(newPassword).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    // Password updated successfully
+                    // Call a method or display a success message
+                } else {
+                    // Password update failed
+                    // Call a method or display an error message
+                }
+            });
+        }
+    }
+
+    public class AuthManager {
+        private FirebaseAuth firebaseAuth;
+
+        public AuthManager() {
+            firebaseAuth = FirebaseAuth.getInstance();
+        }
+
+        public void registerUser(String email, String password) {
+            firebaseAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // User registration successful
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            // Proceed with further actions, e.g., saving user data to a database
+                        } else {
+                            // User registration failed
+                            // Display an error message or handle the failure
+                        }
+                    });
+        }
+
+        public void loginUser(String email, String password) {
+            firebaseAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // User login successful
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            // Proceed with further actions, e.g., navigate to the main screen
+                        } else {
+                            // User login failed
+                            // Display an error message or handle the failure
+                        }
+                    });
+        }
+
+        public void resetPassword(String email) {
+            firebaseAuth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            // Password reset email sent successfully
+                            // Display a success message or navigate to a confirmation screen
+                        } else {
+                            // Failed to send password reset email
+                            // Display an error message or handle the failure
+                        }
+                    });
+        }
+
+        public FirebaseUser getCurrentUser() {
+            return firebaseAuth.getCurrentUser();
+        }
+    }
+
+
 }
+
+
