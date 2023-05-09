@@ -29,11 +29,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="hint_questions">
-        <item>What is your mother's maiden name?</item>
-        <item>What is the name of your first pet? </item>
-        <item> What is your favorite childhood movie? </item>
+        <item>What is the name of your first pet?</item>
+        <item>What is your favorite childhood movie? </item>
         <item>What is the city where you were born?</item>
         <item>What is your favorite book?</item>
+        <item>What is the name of the street you grew up on?</item>
+        <item>What is the year of your high school graduation?</item>
     </string-array>
 </resources>
 
