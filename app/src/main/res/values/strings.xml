@@ -29,12 +29,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="hint_questions">
-        <item>What is one thing you have never told anyone before? </item>
-        <item>What is a secret dream or goal that you have for yourself? </item>
-        <item>What is a guilty pleasure that you enjoy but do not usually talk about</item>
-        <item>What is a secret talent or skill that you possess that most people do not know about??</item>
-        <item>What is a fear or insecurity that you have been working to overcome?</item>
-        <item>What is a food or dish that you absolutely love but rarely get to eat? </item>
+        <item>What is your mother's maiden name?</item>
+        <item>What is the name of your first pet? </item>
+        <item> What is your favorite childhood movie? </item>
+        <item>What is the city where you were born?</item>
+        <item>What is your favorite book?</item>
     </string-array>
 </resources>
 
