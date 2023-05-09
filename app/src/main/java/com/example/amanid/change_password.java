@@ -25,7 +25,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.auth.User;
 
+import java.util.HashMap;
+import java.util.Objects;
 import java.util.concurrent.Executor;
 
 public class change_password extends AppCompatActivity {
@@ -96,38 +99,53 @@ public class change_password extends AppCompatActivity {
                     return;
                 }
 
-                // Update the password using Firebase Authentication
-                user.updatePassword(pass)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    // Password updated successfully
-                                    Toast.makeText(change_password.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
+                String idnum=new UserSession(change_password.this).gtUserID();
+                HashMap<String, Object> map=new HashMap<>();
+                map.put("pass",pass);
+                map.put("pass2",pass);
+                FirebaseDatabase.getInstance().getReference().child("users").child(idnum).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(change_password.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(change_password.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
 
-                                    // Reauthenticate the user with the new password
-                                    AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), pass);
-                                    user.reauthenticate(credential)
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        // User reauthenticated successfully
-                                                        // Proceed with further actions if needed
-                                                    } else {
-                                                        // Failed to reauthenticate the user
-                                                        // Handle the failure or prompt the user to sign in again
-                                                    }
-                                                }
-                                            });
-                                } else {
-                                    // An error occurred while updating the password
-                                    Toast.makeText(change_password.this, "Failed to update password", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
+                // Update the password using Firebase Authentication
+//                user.updatePassword(pass)
+//                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<Void> task) {
+//                                if (task.isSuccessful()) {
+//                                    // Password updated successfully
+//                                    Toast.makeText(change_password.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
+//
+//                                    // Reauthenticate the user with the new password
+//                                    AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), pass);
+//                                    user.reauthenticate(credential)
+//                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                                @Override
+//                                                public void onComplete(@NonNull Task<Void> task) {
+//                                                    if (task.isSuccessful()) {
+//                                                        // User reauthenticated successfully
+//                                                        // Proceed with further actions if needed
+//                                                    } else {
+//                                                        // Failed to reauthenticate the user
+//                                                        // Handle the failure or prompt the user to sign in again
+//                                                    }
+//                                                }
+//                                            });
+//                                } else {
+//                                    // An error occurred while updating the password
+//                                    Toast.makeText(change_password.this, "Failed to update password", Toast.LENGTH_SHORT).show();
+//                                }
+//                            }
+//                        });
             }
         });
 
 
-}}
+    }}
