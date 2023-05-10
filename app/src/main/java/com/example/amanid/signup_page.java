@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class signup_page extends AppCompatActivity {
     EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
+    TextView textView30;
     Button button9 ;
     EditText hintAnswerEditText;
 
@@ -130,7 +131,14 @@ public class signup_page extends AppCompatActivity {
             }
 
         });
+        textView30.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(signup_page.this, know_more_about_qhint.class);
+                startActivity(intent);
+            }
 
+        });
 
     }
 }

@@ -25,6 +25,10 @@
             android:name=".Terms_Conditions"
             android:exported="false" />
         <activity
+            android:name=".know_more_about_qhint"
+            android:exported="true" />
+
+        <activity
             android:name=".change_password"
             android:exported="true" />
         <activity
@@ -76,7 +80,7 @@
             android:exported="false" />
         <activity
             android:name=".signup_page"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".createPasssword_later"
             android:exported="false" />

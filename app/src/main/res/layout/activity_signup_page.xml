@@ -135,16 +135,16 @@
         android:layout_height="35dp"
         android:fontFamily="sans-serif"
         android:gravity="left"
-        android:text="National Identity/Iqama Number"
-        android:textAlignment="center"
+        android:text="Digital Identity"
+        android:textAlignment="left"
         android:textColor="#070707"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.241" />
 
     <TextView
         android:id="@+id/textView30"
