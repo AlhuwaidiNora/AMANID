@@ -114,13 +114,13 @@
 
     <EditText
         android:id="@+id/editTextid_signup"
-        android:layout_width="329dp"
-        android:layout_height="38dp"
+        android:layout_width="375dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="480dp"
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
         android:ems="10"
-        android:hint="Enter your ID Number (ten number)"
+        android:hint="Enter your Digital ID provided by bank"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
