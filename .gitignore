@@ -13,3 +13,8 @@
 .externalNativeBuild
 .cxx
 app/local.properties
+/bin/
+/Libs/
+/.settings/
+/.classpath
+.svn/
