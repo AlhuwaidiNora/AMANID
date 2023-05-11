@@ -136,7 +136,6 @@
         android:fontFamily="sans-serif"
         android:gravity="left"
         android:text="Digital Identity"
-        android:textAlignment="left"
         android:textColor="#070707"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
