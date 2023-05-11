@@ -24,9 +24,6 @@
         <activity
             android:name=".Terms_Conditions"
             android:exported="false" />
-        <activity
-            android:name=".know_more_about_qhint"
-            android:exported="false" />
 
         <activity
             android:name=".change_password"
