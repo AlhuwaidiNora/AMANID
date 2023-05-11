@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".signup_page">
     //View
+    --! original code --
     <Button
         android:id="@+id/button9"
         android:layout_width="230dp"

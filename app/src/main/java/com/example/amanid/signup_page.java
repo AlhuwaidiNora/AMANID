@@ -20,7 +20,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+/*
+original code
+ */
 public class signup_page extends AppCompatActivity {
     EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
     TextView textView30;
