@@ -50,7 +50,7 @@
                 android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/alock_14"
+                android:drawableLeft="@drawable/anewlock_16"
                 android:text=" Password "
                 android:textColor="#3A3B3C"
                 android:textSize="20sp" />
@@ -80,7 +80,7 @@
                 android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/about3_13_2"
+                android:drawableLeft="@drawable/anewabout_19_2"
                 android:text=" About AMAMID"
                 android:textColor=" #3A3B3C"
                 android:textSize="20sp" />
@@ -109,7 +109,7 @@
                 android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/contact_12_2"
+                android:drawableLeft="@drawable/anewcontact_18_2"
                 android:text=" Help and support"
                 android:textColor=" #3A3B3C"
                 android:textSize="20sp" />
@@ -144,13 +144,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/privacy_11_2"
+                    android:drawableLeft="@drawable/anewprivacy_17_2"
                     android:text="  Privacy Policy"
                     android:textColor=" #3A3B3C"
                     android:textSize="20sp" />
 
             </LinearLayout>
         </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:alpha="0.5"
+            android:background="#585858" />
 
         <LinearLayout
             android:layout_width="382dp"
