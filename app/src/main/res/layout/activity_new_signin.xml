@@ -1,0 +1,108 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="127dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/custom_button"
+        android:text="Sign in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextpass6"
+        android:layout_width="319dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="236dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:ems="10"
+        android:hint=" Enter your password "
+        android:inputType="textPassword"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/textView64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Password"
+        android:textColor="#090808"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="402dp" />
+
+    <EditText
+        android:id="@+id/editTextid_signup3"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="360dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/baseline_perm_identity_24"
+        android:ems="10"
+        android:hint="Enter your Digital ID provided by bank"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital  Identity  "
+        android:textColor="#090808"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textColor="#090808"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget your password?"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <TextView
+        android:id="@+id/textView68"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dont have an Account ?"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="679dp" />
+
+    <TextView
+        android:id="@+id/textView69"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:textColor="#009688"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="679dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
