@@ -25,12 +25,16 @@ public class fingerPrint_plus_later extends AppCompatActivity {
     private ConstraintLayout mainLayout1;
     private Button confirmButton;
     private boolean forgotPasswordClicked = false;
+    private String receiver;
+    private double amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finger_print_plus_later);
         mainLayout1 = findViewById(R.id.mMainLayout1);
+        receiver=getIntent().getStringExtra("receiver");
+        amount=getIntent().getDoubleExtra("amount",0);
 
         BiometricManager biometricManager = BiometricManager.from(this);
         switch (biometricManager.canAuthenticate()) {
@@ -64,6 +68,8 @@ public class fingerPrint_plus_later extends AppCompatActivity {
                         i = new Intent(fingerPrint_plus_later.this, Forget_password.class);
                     } else {
                         i = new Intent(fingerPrint_plus_later.this, home_page_8.class);
+                        i.putExtra("amount",amount);
+                        i.putExtra("receiver",receiver);
                     }
                     startActivity(i);
                     finish();
@@ -97,6 +103,7 @@ public class fingerPrint_plus_later extends AppCompatActivity {
 
 
 }
+
 
 // imageView2 = findViewById(R.id.imageView2);
 ///    imageView2.setOnClickListener(new View.OnClickListener() {

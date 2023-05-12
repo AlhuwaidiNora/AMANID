@@ -13,80 +13,95 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class home_page_8 extends AppCompatActivity {
-    ImageView imageview201, imageview164, imageView77, imageView214, imageView219 ;
+    ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
     TextView textView_spec1, greetings;
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
+    private String receiver;
+    private double amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page7);
         Bundle b = getIntent().getExtras();
-       if (b != null) {
-          Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
-   String idnum = getIntent().getStringExtra("idnum");
-         TextView greetingTextView = findViewById(R.id.greetings);
-          greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
-     } else {
+        if (b != null) {
+            Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
+            String idnum = getIntent().getStringExtra("idnum");
+            TextView greetingTextView = findViewById(R.id.greetings);
+            greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
+        } else {
             // handle the case where the bundle is null
         }
+        String idnum=new UserSession(this).gtUserID();
+        TextView greetingTextView = findViewById(R.id.greetings);
+        greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
+        if(getIntent().hasExtra("amount")&& getIntent().hasExtra("receiver")){
+            receiver=getIntent().getStringExtra("receiver");
+            amount=getIntent().getDoubleExtra("amount",0);
+            TextView amountText=findViewById(R.id.textView47);
+            TextView receiverName=findViewById(R.id.textView48);
+            amountText.setText(String.valueOf(amount)+" SAR");
+            receiverName.setText(receiver);
+        }
+
+
 
 
 
         imageview201 = findViewById(R.id.imageView201);
         imageview164 = findViewById(R.id.imageView164);
-      //  imageView77 = findViewById(R.id.imageView77);
+        //  imageView77 = findViewById(R.id.imageView77);
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
         transfer_icon = findViewById(R.id.transfer_icon);
-       // imageView77.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-         //   public void onClick(View v) {
-          //      Intent intent = new Intent(home_page_8.this, transfer.class);
-           //     startActivity(intent);
-         //   }
-       // });
-       // ImageView imageViewWallet = findViewById(R.id.imageView219);
-     //   imageViewWallet.setOnClickListener(new View.OnClickListener() {
-         //   @Override
+        // imageView77.setOnClickListener(new View.OnClickListener() {
+        //  @Override
+        //   public void onClick(View v) {
+        //      Intent intent = new Intent(home_page_8.this, transfer.class);
+        //     startActivity(intent);
+        //   }
+        // });
+        // ImageView imageViewWallet = findViewById(R.id.imageView219);
+        //   imageViewWallet.setOnClickListener(new View.OnClickListener() {
+        //   @Override
         //    public void onClick(View v) {
-                // Start a new activity to navigate to wallet XML layout
-          //      Intent intent = new Intent(home_page_8.this, wallet.class); // Replace YourCurrentActivity with the name of your current activity
-           //     startActivity(intent);
-         //   }
-      //  });
-      //  ImageView imageView201 = findViewById(R.id.imageView201);
-      //  imageView201.setOnClickListener(new View.OnClickListener() {
-       //     @Override
-       //     public void onClick(View v) {
-                // Start a new activity to navigate to wallet XML layout
+        // Start a new activity to navigate to wallet XML layout
+        //      Intent intent = new Intent(home_page_8.this, wallet.class); // Replace YourCurrentActivity with the name of your current activity
+        //     startActivity(intent);
+        //   }
+        //  });
+        //  ImageView imageView201 = findViewById(R.id.imageView201);
+        //  imageView201.setOnClickListener(new View.OnClickListener() {
+        //     @Override
+        //     public void onClick(View v) {
+        // Start a new activity to navigate to wallet XML layout
         //        Intent intent = new Intent(home_page_8.this, setting.class); // Replace YourCurrentActivity with the name of your current activity
-         //       startActivity(intent);
+        //       startActivity(intent);
         //    }
-       // });
-     //   ImageView imageViewProfile = findViewById(R.id.imageView13);
-      //  imageViewProfile.setOnClickListener(new View.OnClickListener() {
-       //     @Override
+        // });
+        //   ImageView imageViewProfile = findViewById(R.id.imageView13);
+        //  imageViewProfile.setOnClickListener(new View.OnClickListener() {
+        //     @Override
         //    public void onClick(View v) {
-                // Start a new activity to navigate to wallet XML layout
-          ///      Intent intent = new Intent(home_page_8.this, profile.class); // Replace YourCurrentActivity with the name of your current activity
-           //     startActivity(intent);
+        // Start a new activity to navigate to wallet XML layout
+        ///      Intent intent = new Intent(home_page_8.this, profile.class); // Replace YourCurrentActivity with the name of your current activity
+        //     startActivity(intent);
         //    }
-     //   });
+        //   });
 
 
 
         FirebaseApp.initializeApp(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
-       // transfer_icon.setOnClickListener(new View.OnClickListener() {
-           // @Override
-          //  public void onClick(View v) {
-          //      Intent intent = new Intent(home_page_8.this, transfer.class);
-          //      startActivity(intent);
-         //   }
-       // });
+        // transfer_icon.setOnClickListener(new View.OnClickListener() {
+        // @Override
+        //  public void onClick(View v) {
+        //      Intent intent = new Intent(home_page_8.this, transfer.class);
+        //      startActivity(intent);
+        //   }
+        // });
 
         imageView219.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,7 +127,7 @@ public class home_page_8 extends AppCompatActivity {
             }
         });
 
-       // setContentView(R.layout.activity_home_page7);
+        // setContentView(R.layout.activity_home_page7);
 
 //        ImageView imageview164 = findViewById(R.id.imageView1645);
 
@@ -143,10 +158,7 @@ public class home_page_8 extends AppCompatActivity {
 
 
 
-            // Rest of your code here...
-            // ...
-        }
-
-
-
+    // Rest of your code here...
+    // ...
+}
 

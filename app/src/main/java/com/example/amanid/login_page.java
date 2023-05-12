@@ -41,11 +41,16 @@ public class login_page extends AppCompatActivity {
     ProgressBar progressBar;
     TextView textView19;
 
+    private String receiver;
+    private double amount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+        receiver=getIntent().getStringExtra("receiver");
+        amount=getIntent().getDoubleExtra("amount",0);
 
       /* Spinner hintQuestionsSpinner = findViewById(R.id.hint_questions_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.hint_questions, android.R.layout.simple_spinner_item);
@@ -225,9 +230,10 @@ public class login_page extends AppCompatActivity {
                     if (passwordFromDB.equals(userpass) ) {
                         editTextid_login.setError(null);
                         String idnumFromDB = snapshot.child("idnum").getValue(String.class);
-                        Log.d("SSSS", "onDataChange: "+idnumFromDB);
                         new UserSession(login_page.this).setUserID(idnumFromDB);
                         Intent intent = new Intent(login_page.this, fingerPrint_plus_later.class);
+                        intent.putExtra("amount",amount);
+                        intent.putExtra("receiver",receiver);
                         startActivity(intent);
 
                     } else {
