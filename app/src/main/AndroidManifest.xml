@@ -22,6 +22,9 @@
         android:theme="@style/Theme.AMANID"
         tools:targetApi="31">
         <activity
+            android:name=".New_Forget_pass"
+            android:exported="false" />
+        <activity
             android:name=".New_Change_pass"
             android:exported="false" />
         <activity
