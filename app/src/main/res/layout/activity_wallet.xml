@@ -7,173 +7,79 @@
     android:background="#F6F8FF"
     tools:context=".wallet">
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="391dp"
-        android:layout_height="337dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView251"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166"
-        app:srcCompat="@drawable/pasted_graphic_27" />
-
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="64dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="4dp"
-        android:background="#001937FD"
-        android:backgroundTint="#1937FD"
-        app:icon="?attr/actionModeCloseDrawable"
-        app:layout_constraintBottom_toBottomOf="@+id/textView377"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
-
     <TextView
         android:id="@+id/textView377"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:text="Wallet"
-        android:textColor="#fff"
+        android:textColor="#0057FF"
         android:textSize="53sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView15" />
+        tools:layout_editor_absoluteY="51dp" />
 
     <ImageView
         android:id="@+id/imageView251"
-        android:layout_width="289dp"
-        android:layout_height="193dp"
-        android:layout_marginBottom="224dp"
+        android:layout_width="346dp"
+        android:layout_height="239dp"
+        android:layout_marginBottom="268dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/card2" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:layout_margin="4dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/top_button_main"
-        app:layout_constraintBottom_toTopOf="@+id/imageView251"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView377"
-        app:layout_constraintVertical_bias="0.297">
-
-        <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="40dp"
-            android:layout_height="36dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.529"
-            app:srcCompat="@drawable/baseline_transform_24" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:text="My Spending"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/textView36"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1" />
+        app:srcCompat="@drawable/pasted_graphic_12" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="77dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
         android:layout_margin="4dp"
+        android:layout_marginBottom="128dp"
         android:background="@drawable/top_button_main"
-        app:layout_constraintBottom_toTopOf="@+id/imageView251"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button15"
-        app:layout_constraintVertical_bias="0.37">
+        app:layout_constraintTop_toBottomOf="@+id/imageView251">
 
         <ImageView
             android:id="@+id/imageView164"
-            android:layout_width="30dp"
-            android:layout_height="26dp"
+            android:layout_width="54dp"
+            android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.363"
-            app:srcCompat="@drawable/add" />
+            app:srcCompat="@drawable/add_7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:text="Add money"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView36"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        android:layout_width="129dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="78dp"
+        android:text="Add Wallet"
+        android:textColor="#0057FF"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="0.088" />
 
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="Transfer"
-
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout1"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:layout_margin="4dp"
-        android:background="@drawable/top_button_main"
-        app:layout_constraintBottom_toTopOf="@+id/imageView251"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout1"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/textView377"
-        app:layout_constraintVertical_bias="0.339">
-
-        <ImageView
-            android:id="@+id/imageView26"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/baseline_arrow_forward_24" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pasted_graphic_1_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

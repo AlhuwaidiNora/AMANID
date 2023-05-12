@@ -11,7 +11,8 @@ import android.widget.ImageView;
 
 public class intro_option_page5 extends AppCompatActivity {
 
-Button button22, button7;
+//Button button22, button7;
+ImageView imageView24 , imageView28;
 
 
     @Override
@@ -19,10 +20,9 @@ Button button22, button7;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_option_page1);
 
-        button22 = findViewById(R.id.button22);
-        button7 = findViewById(R.id.button7);
-
-        button22.setOnClickListener(new View.OnClickListener() {
+        imageView24 = findViewById(R.id.imageView24);
+        imageView28 = findViewById(R.id.imageView28);
+        imageView24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(intro_option_page5.this, getStarted_page2.class);
@@ -30,7 +30,7 @@ Button button22, button7;
             }
         });
 
-        button7.setOnClickListener(new View.OnClickListener() {
+        imageView28.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(intro_option_page5.this, login_page.class);

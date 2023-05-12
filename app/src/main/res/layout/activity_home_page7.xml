@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pasted_graphic_24"
+    android:background="#F0F5FF"
     tools:context=".home_page_8">
 
     <ScrollView
@@ -39,19 +39,20 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/pasted_graphic_7" />
 
+
                 <TextView
                     android:id="@+id/greetings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="60dp"
+                    android:text='@{idnum != null ? "Hello " + idnum : "Hello!" }'
                     android:textColor="@color/purple_500"
                     android:textSize="16dp"
                     android:textStyle="bold"
-                    android:text='@{idnum != null ? "Hello " + idnum : "Hello!" }'
                     app:layout_constraintBottom_toBottomOf="@+id/imageView13"
                     app:layout_constraintStart_toEndOf="@+id/imageView13"
-                    app:layout_constraintTop_toTopOf="@+id/imageView13" />
-
+                    app:layout_constraintTop_toTopOf="@+id/imageView13"
+                    app:layout_constraintVertical_bias="0.508" />
 
                 <TextView
                     android:id="@+id/textView33"
@@ -227,24 +228,12 @@
                     android:textSize="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.512"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                    app:layout_constraintVertical_bias="0.657" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:text="Last activies"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="141dp" />
 
         </LinearLayout>
     </ScrollView>
@@ -261,7 +250,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="bottom"
-            android:backgroundTint="#0E2B6E"
+            android:backgroundTint="#ffff"
             app:fabCradleMargin="8dp"
             app:fabCradleRoundedCornerRadius="50dp"
             app:fabCradleVerticalOffset="6dp">

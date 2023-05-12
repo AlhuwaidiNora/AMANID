@@ -10,54 +10,45 @@
 
     <ImageView
         android:id="@+id/AmanIDlogo2"
-        android:layout_width="175dp"
-        android:layout_height="191dp"
+        android:layout_width="170dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="16dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo2_3" />
 
-    <Button
-        android:id="@+id/button22"
-        android:layout_width="305dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:background="@color/common_google_signin_btn_text_light_default"
-        android:text="Sign Up"
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="280dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        app:layout_constraintVertical_bias="0.068" />
+        app:srcCompat="@drawable/sign_up" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="301dp"
-        android:layout_height="46dp"
-        android:background="@color/cardview_dark_background"
-        android:text="Log In"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:srcCompat="@drawable/pasted_login1_3" />
 
-    <TextView
-        android:id="@+id/textView70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Let’s you in"
-        android:textSize="50sp"
-        android:textColor="@color/purple_200"
-        app:layout_constraintBottom_toTopOf="@+id/AmanIDlogo2"
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="375dp"
+        android:layout_height="306dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView24"
+        app:srcCompat="@drawable/header_down" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

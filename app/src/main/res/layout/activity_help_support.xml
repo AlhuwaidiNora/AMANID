@@ -7,60 +7,15 @@
     tools:context=".help_support">
 
 
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="430dp"
-        android:layout_height="293dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/top_bcakground"
-        tools:layout_editor_absoluteY="-75dp" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="Help and support"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button24"
-        android:layout_width="45dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="16dp"
-        android:background="#001937FD"
-        android:backgroundTint="#1937FD"
-        app:icon="?attr/actionModeCloseDrawable"
-        app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="369dp"
         android:layout_height="168dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginBottom="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView29"
-            android:layout_width="391dp"
-            android:layout_height="208dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:srcCompat="@drawable/top_button_main"
-            tools:layout_editor_absoluteX="-11dp" />
 
         <TextView
             android:id="@+id/textView41"
@@ -133,5 +88,39 @@
             app:layout_constraintStart_toEndOf="@+id/imageView31" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="96dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pasted_graphic_1_2" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="406dp"
+        android:layout_height="655dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43"
+        app:srcCompat="@drawable/help_support_de" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#0057FF"
+        android:textSize="30dp"
+        android:text="Help and Support"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView27" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,7 +34,7 @@ import java.util.concurrent.Executor;
 public class Forget_password extends AppCompatActivity {
     private EditText forgetpassword;
     private EditText hintanswer;
-    private Button button137;
+    private ImageView imageView7;
     private Button confirmButton;
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
@@ -49,8 +50,8 @@ public class Forget_password extends AppCompatActivity {
         forgetpassword = findViewById(R.id.forgetpassword);
         hintanswer = findViewById(R.id.hintanswer);
         confirmButton = findViewById(R.id.confirmButton);
-        button137 = findViewById(R.id.button137);
-        button137.setOnClickListener(new View.OnClickListener() {
+        imageView7 = findViewById(R.id.imageView7);
+        imageView7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Forget_password.this, login_page.class);

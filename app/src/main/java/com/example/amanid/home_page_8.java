@@ -13,7 +13,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class home_page_8 extends AppCompatActivity {
-    ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
+    ImageView imageview201, imageview164, imageView77, imageView214, imageView219 ;
     TextView textView_spec1, greetings;
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;

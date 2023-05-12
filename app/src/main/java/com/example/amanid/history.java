@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 /**
  * Z Specification:
@@ -14,21 +16,15 @@ import android.widget.Button;
  */
 
 public class history extends AppCompatActivity {
- Button button18 ;
+ ImageView imageView19 ;
+ EditText editTextText2 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        button18 =findViewById(R.id.button18);
-
-
-
-
-
-
-
-
-        button18.setOnClickListener(new View.OnClickListener() {
+        imageView19 =findViewById(R.id.imageView19);
+        editTextText2=findViewById(R.id.editTextText2);
+        imageView19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(history.this, home_page_8.class);
