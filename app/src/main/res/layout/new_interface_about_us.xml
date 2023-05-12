@@ -14,14 +14,6 @@
         tools:layout_editor_absoluteY="124dp" />
 
     <ImageView
-        android:id="@+id/imageView36"
-        android:layout_width="28dp"
-        android:layout_height="27dp"
-        app:srcCompat="@drawable/ic_history"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="677dp" />
-
-    <ImageView
         android:id="@+id/imageView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,5 +68,13 @@
         android:text="Setting"
         tools:layout_editor_absoluteX="351dp"
         tools:layout_editor_absoluteY="704dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_history_24"
+        tools:layout_editor_absoluteX="292dp"
+        tools:layout_editor_absoluteY="677dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
