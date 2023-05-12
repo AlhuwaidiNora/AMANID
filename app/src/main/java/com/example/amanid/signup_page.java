@@ -20,7 +20,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+/*
+original code
+ */
 public class signup_page extends AppCompatActivity {
     EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
     TextView textView30;
@@ -53,7 +55,7 @@ public class signup_page extends AppCompatActivity {
             }
         });
 
-        TextView btn=findViewById(R.id.textView30);
+      //   TextView btn=findViewById(R.id.textView30);
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         editTextpass2 = findViewById(R.id.editTextpass2);
@@ -121,24 +123,16 @@ public class signup_page extends AppCompatActivity {
                 // startActivity(intent);
             }});
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(signup_page.this, home_page_8.class);
-                String idnum = editTextid_signup.getText().toString();
-                intent.putExtra("idnum", idnum);
-                startActivity(intent);
-            }
+      //  btn.setOnClickListener(new View.OnClickListener() {
+       //     @Override
+        //    public void onClick(View v) {
+         //       Intent intent = new Intent(signup_page.this, home_page_8.class);
+         //       String idnum = editTextid_signup.getText().toString();
+         //       intent.putExtra("idnum", idnum);
+         //       startActivity(intent);
+         //   }
 
-        });
-        textView30.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(signup_page.this, know_more_about_qhint.class);
-                startActivity(intent);
-            }
-
-        });
+      //  });
 
     }
 }
