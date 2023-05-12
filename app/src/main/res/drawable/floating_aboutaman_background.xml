@@ -8,7 +8,7 @@
     </shape>
 </item>
     <item
-        android:drawable="@drawable/float_icon"
+        android:drawable="@drawable/baseline_perm_device_information_24"
         android:top="15dp"
         android:right="15dp"
         android:left="15dp"
