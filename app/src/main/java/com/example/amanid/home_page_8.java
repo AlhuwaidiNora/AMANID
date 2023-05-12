@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,7 +15,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class home_page_8 extends AppCompatActivity {
     ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
-    TextView textView_spec1, greetings;
+    TextView textView_spec1, greetings ;
+    Button button28_confirm;
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
     private String receiver;
@@ -48,7 +50,7 @@ public class home_page_8 extends AppCompatActivity {
 
 
 
-
+        button28_confirm=findViewById(R.id.button28_confirm);
         imageview201 = findViewById(R.id.imageView201);
         imageview164 = findViewById(R.id.imageView164);
         //  imageView77 = findViewById(R.id.imageView77);
@@ -89,7 +91,13 @@ public class home_page_8 extends AppCompatActivity {
         //     startActivity(intent);
         //    }
         //   });
-
+        button28_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home_page_8.this, done_transfer.class);
+                startActivity(intent);
+            }
+        });
 
 
         FirebaseApp.initializeApp(this);

@@ -69,7 +69,7 @@ public class setting extends AppCompatActivity {
         privacy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(setting.this, Terms_Conditions.class);
+                Intent intent = new Intent(setting.this, privacy_1.class);
                 startActivity(intent);
             }
         });
