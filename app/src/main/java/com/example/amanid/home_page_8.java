@@ -26,15 +26,15 @@ public class home_page_8 extends AppCompatActivity {
         setContentView(R.layout.activity_home_page7);
         Bundle b = getIntent().getExtras();
         if (b != null) {
-            Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
+          //  Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
             String idnum = getIntent().getStringExtra("idnum");
-            TextView greetingTextView = findViewById(R.id.greetings);
+            TextView greetingTextView = findViewById(R.id.b);
             greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
         } else {
             // handle the case where the bundle is null
         }
         String idnum=new UserSession(this).gtUserID();
-        TextView greetingTextView = findViewById(R.id.greetings);
+        TextView greetingTextView = findViewById(R.id.b);
         greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
         if(getIntent().hasExtra("amount")&& getIntent().hasExtra("receiver")){
             receiver=getIntent().getStringExtra("receiver");

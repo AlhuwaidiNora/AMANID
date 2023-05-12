@@ -25,7 +25,7 @@ original code
  */
 public class signup_page extends AppCompatActivity {
     EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
-    TextView textView30;
+    TextView  textView29;
     Button button9 ;
     EditText hintAnswerEditText;
 
@@ -58,10 +58,19 @@ public class signup_page extends AppCompatActivity {
       //   TextView btn=findViewById(R.id.textView30);
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
+        textView29 = findViewById(R.id.textView29);
         editTextpass2 = findViewById(R.id.editTextpass2);
         // editTextid_qhint = findViewById(R.id. hintAnswerEditText);
         hintAnswerEditText = findViewById(R.id.hintAnswerEditText);
         button9 = findViewById(R.id.button9);
+
+        textView29.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(signup_page.this, Terms_Conditions.class);
+                startActivity(intent);
+            }
+        });
         button9.setOnClickListener( new View.OnClickListener(){
             public void onClick(View v) {
                 database = FirebaseDatabase.getInstance();

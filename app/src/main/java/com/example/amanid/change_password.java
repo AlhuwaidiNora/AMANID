@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,7 +35,7 @@ import java.util.concurrent.Executor;
 public class change_password extends AppCompatActivity {
     private EditText newPasswordEditText;
     private EditText confirmPasswordEditText;
-    private Button button6;
+    private ImageView imageView23;
     private Button button232;
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -50,7 +51,7 @@ public class change_password extends AppCompatActivity {
 
         newPasswordEditText = findViewById(R.id.editTextTextPersonName5);
         confirmPasswordEditText = findViewById(R.id.editTextTextPersonName6);
-        button6 = findViewById(R.id.button6);
+        imageView23 = findViewById(R.id.imageView23);
         button232 = findViewById(R.id.button232);
 
         Executor executor = ContextCompat.getMainExecutor(this);
@@ -77,7 +78,7 @@ public class change_password extends AppCompatActivity {
 
         biometricPrompt.authenticate(promptInfo);
 
-        button6.setOnClickListener(new View.OnClickListener() {
+        imageView23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(change_password.this, setting.class);

@@ -1,26 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About_Amanid">
+    tools:context=".privacy_1">
 
     <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="410dp"
-        android:layout_height="513dp"
+        android:id="@+id/imageView49"
+        android:layout_width="416dp"
+        android:layout_height="719dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/terms"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pasted_graphic_8_3" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="351dp"
+        android:layout_height="404dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="if you would at any time ise to review or change the information in your account or terminate your account you can Confection of in Log in to your account settings and upon your user account.  Use of inform-at Contact us uang the contact information provided  Dace of be Upon your request to terminate your account, we wis deactivate or delete your account and information from our active databases.  However, we may retain me intonation in our fies to prevent fraud, troubleshoot problems, assist with any investigations, enforce our legal term andor comply with apple legal"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="136dp"
+        android:text="Privacy and Security"
+        android:textColor="#0057FF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.604" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="117dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pasted_graphic_1_2" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomappbar.BottomAppBar
@@ -96,7 +141,7 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/transfer_icon"
-            style="@style/Floating1"
+            style="@style/Floating3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/floating_aboutaman_background"
@@ -106,49 +151,4 @@
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
-    <TextView
-        android:id="@+id/terms"
-        android:layout_width="217dp"
-        android:layout_height="76dp"
-        android:fontFamily="sans-serif-black"
-        android:gravity="center"
-        android:text="About Us"
-        android:textColor="#0057FF"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
-
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="101dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pasted_graphic_1_2" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="361dp"
-        android:layout_height="316dp"
-        android:fontFamily="sans-serif-thin"
-        android:text="  AMAN provides a secure, convenient, and flexible solution for digital identity verification that is trusted by banks,government agencies, and other organizations worldwide"
-        android:textSize="28dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView26"
-        app:layout_constraintVertical_bias="0.489" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
