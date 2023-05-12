@@ -8,7 +8,7 @@
     </shape>
 </item>
     <item
-        android:drawable="@drawable/baseline_privacy_tip_24"
+        android:drawable="@drawable/privacy_11_2"
         android:top="15dp"
         android:right="15dp"
         android:left="15dp"

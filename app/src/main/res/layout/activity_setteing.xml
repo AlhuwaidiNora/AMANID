@@ -7,28 +7,17 @@
     android:background="#ffff"
     tools:context=".setting">
 
-    <ImageView
-        android:id="@+id/imageView48"
-        android:layout_width="750dp"
-        android:layout_height="290dp"
-        android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/settinghead_5" />
-
     <TextView
         android:id="@+id/textView39"
-        android:layout_width="152dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="172dp"
+        android:layout_width="176dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="92dp"
         android:text="setting "
         android:textColor="#0057FF"
         android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,10 +50,10 @@
                 android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawableLeft="@drawable/alock_14"
                 android:text=" Password "
                 android:textColor="#3A3B3C"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -91,10 +80,10 @@
                 android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/baseline_perm_device_information_24"
-                android:text="About AMAMID"
+                android:drawableLeft="@drawable/about3_13_2"
+                android:text=" About AMAMID"
                 android:textColor=" #3A3B3C"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -120,10 +109,10 @@
                 android:layout_width="287dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableLeft="@drawable/baseline_help_24"
-                android:text="Help and support"
+                android:drawableLeft="@drawable/contact_12_2"
+                android:text=" Help and support"
                 android:textColor=" #3A3B3C"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -155,10 +144,10 @@
                     android:layout_width="287dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:drawableLeft="@drawable/baseline_privacy_tip_24"
-                    android:text="Privacy Policy"
+                    android:drawableLeft="@drawable/privacy_11_2"
+                    android:text="  Privacy Policy"
                     android:textColor=" #3A3B3C"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
         </LinearLayout>
