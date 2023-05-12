@@ -17,7 +17,7 @@ ImageView imageView46 ;
         imageView46.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Terms_Conditions.this ,setting.class);
+                Intent intent = new Intent(Terms_Conditions.this ,signup_page.class);
                 startActivity(intent);
             }
         });
