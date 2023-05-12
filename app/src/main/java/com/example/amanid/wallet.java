@@ -11,19 +11,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class wallet extends AppCompatActivity {
-    Button button15;
-    ImageView imageView26, imageView25, imageView164;
+
+    ImageView imageView15, imageView164;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallet);
-        button15 = findViewById(R.id.button15);
-        imageView26 = findViewById(R.id.imageView26);
-        imageView25 = findViewById(R.id.imageView25);
+        imageView15 = findViewById(R.id.imageView15);
+
         imageView164 = findViewById(R.id.imageView164);
 
-        button15.setOnClickListener(new View.OnClickListener() {
+        imageView15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(wallet.this, home_page_8.class);
@@ -59,16 +58,5 @@ public class wallet extends AppCompatActivity {
             }
 
         });
-        Button button = findViewById(R.id.button15);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start a new activity to navigate back to home page or desired activity
-                Intent intent = new Intent(wallet.this, home_page_8.class);
-                startActivity(intent);
-            }
-        });
-
     }
-
 }
