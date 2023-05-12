@@ -9,7 +9,7 @@
         android:layout_width="209dp"
         android:layout_height="49dp"
         android:layout_marginBottom="44dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/background_white"
         android:text=" send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
