@@ -76,7 +76,7 @@
         android:layout_height="35dp"
         android:fontFamily="sans-serif-black"
         android:gravity="left"
-        android:text="National Identity/Iqama Number"
+        android:text="Digital Identit Number"
         android:textAlignment="center"
         android:textColor="#020202"
         android:textSize="20sp"
