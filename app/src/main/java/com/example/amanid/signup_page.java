@@ -83,13 +83,13 @@ public class signup_page extends AppCompatActivity {
 
 
 
-                if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty() && (idnum.length() < 10)){
+                if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty()) {
                     Toast.makeText(signup_page.this, "Please fill all fields", Toast.LENGTH_LONG).show();
-
                 } else if (!pass.equals(pass2)) {
                     Toast.makeText(signup_page.this, "Passwords are not matching", Toast.LENGTH_LONG).show();
-
-                } else {
+                } else if (pass.length() < 6 || !pass.matches(".*[a-zA-Z]+.*")) {
+                    Toast.makeText(signup_page.this, "Password should be at least 6 characters long and contain letters", Toast.LENGTH_LONG).show();
+            } else {
                     reference.child(idnum).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
