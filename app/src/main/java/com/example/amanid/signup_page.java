@@ -28,7 +28,6 @@ public class signup_page extends AppCompatActivity {
     TextView  textView29;
     Button button9 ;
     EditText hintAnswerEditText;
-
     String selectedHintQuestion;
     FirebaseDatabase database;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
@@ -80,9 +79,6 @@ public class signup_page extends AppCompatActivity {
                 String pass = editTextpass.getText().toString();
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = hintAnswerEditText.getText().toString();
-
-
-
                 if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty()) {
                     Toast.makeText(signup_page.this, "Please fill all fields", Toast.LENGTH_LONG).show();
                 } else if (!pass.equals(pass2)) {
@@ -98,9 +94,6 @@ public class signup_page extends AppCompatActivity {
                                 Toast.makeText(signup_page.this, " ID number is already signup", Toast.LENGTH_LONG).show();
                             }else{
                                 // sending data
-
-//                                reference.child("users").child(idnum).child("pass").setValue(pass);
-//                                reference.child("users").child(idnum).child("idnum").setValue(idnum);
                                 HelperClass helperClass = new HelperClass(idnum, pass, pass2,qhint);
                                 reference.child(idnum).setValue(helperClass);
                                 new UserSession(signup_page.this).setUserID(idnum);
@@ -110,38 +103,12 @@ public class signup_page extends AppCompatActivity {
                                 Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
                                 finish();
                                 Intent intent = new Intent(signup_page.this, fingerPrint_page7_later.class);
-                                startActivity(intent);
-
-                            }
-                        }
+                                startActivity(intent);}}
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-                    // sending data
-                    //  reference.child("users").child(idnum).child("qhint").setValue(qhint);
-                    //  reference.child("users").child(idnum).child("pass").setValue(pass);
-                    //  Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
-                    //  finish();
-
+                        }});
                 }
-
-                //Toast.makeText(signup_page.this, "you have signup successfully!", Toast.LENGTH_LONG).show();
-                // Intent intent = new Intent(signup_page.this, login_page.class);
-                // startActivity(intent);
             }});
-
-      //  btn.setOnClickListener(new View.OnClickListener() {
-       //     @Override
-        //    public void onClick(View v) {
-         //       Intent intent = new Intent(signup_page.this, home_page_8.class);
-         //       String idnum = editTextid_signup.getText().toString();
-         //       intent.putExtra("idnum", idnum);
-         //       startActivity(intent);
-         //   }
-
-      //  });
 
     }
 }

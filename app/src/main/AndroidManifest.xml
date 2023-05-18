@@ -28,15 +28,6 @@
             android:name=".privacy_1"
             android:exported="false" />
         <activity
-            android:name=".New_Forget_pass"
-            android:exported="false" />
-        <activity
-            android:name=".New_Change_pass"
-            android:exported="false" />
-        <activity
-            android:name=".new_SIGNIN"
-            android:exported="false" />
-        <activity
             android:name=".Terms_Conditions"
             android:exported="false" />
         <activity
