@@ -115,6 +115,7 @@ public class HelperClass {
         public void loginUser(String email, String password) {
             firebaseAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
+
                         if (task.isSuccessful()) {
                             // User login successful
                             FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -125,6 +126,7 @@ public class HelperClass {
                         }
                     });
         }
+
 
         public void resetPassword(String email) {
             firebaseAuth.sendPasswordResetEmail(email)
