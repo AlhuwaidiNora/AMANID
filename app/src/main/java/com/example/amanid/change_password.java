@@ -115,36 +115,7 @@ public class change_password extends AppCompatActivity {
                     }
                 });
 
-                // Update the password using Firebase Authentication
-//                user.updatePassword(pass)
-//                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//                                if (task.isSuccessful()) {
-//                                    // Password updated successfully
-//                                    Toast.makeText(change_password.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
-//
-//                                    // Reauthenticate the user with the new password
-//                                    AuthCredential credential = EmailAuthProvider.getCredential(user.getEmail(), pass);
-//                                    user.reauthenticate(credential)
-//                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                                                @Override
-//                                                public void onComplete(@NonNull Task<Void> task) {
-//                                                    if (task.isSuccessful()) {
-//                                                        // User reauthenticated successfully
-//                                                        // Proceed with further actions if needed
-//                                                    } else {
-//                                                        // Failed to reauthenticate the user
-//                                                        // Handle the failure or prompt the user to sign in again
-//                                                    }
-//                                                }
-//                                            });
-//                                } else {
-//                                    // An error occurred while updating the password
-//                                    Toast.makeText(change_password.this, "Failed to update password", Toast.LENGTH_SHORT).show();
-//                                }
-//                            }
-//                        });
+
             }
         });
 

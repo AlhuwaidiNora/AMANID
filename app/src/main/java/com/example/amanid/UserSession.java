@@ -20,11 +20,6 @@ public class UserSession {
 
 
 
-
-
-
-
-
     public void setUserID(String id){
         editor.putString("id",id).commit();
     }
