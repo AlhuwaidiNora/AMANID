@@ -10,3 +10,4 @@ public interface MyApiService {
     @GET("/users")
     Call<List<DocumentSnapshot>> getUsers();
 }
+
