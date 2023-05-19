@@ -1,0 +1,28 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_AMANID,,,,2023-05-20 01:31:05,2023-05-20 01:31:48,43.720s,FAILED
+,,,,,,,
+Test Cases/TC7_FORGET_PASSWORD,,,,2023-05-20 01:31:05,2023-05-20 01:31:14,9.516s,FAILED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:31:05,2023-05-20 01:31:14,8.724s,PASSED
+"tap(findTestObject(""Object Repository/Test Cases/android.widget.ImageView""), 0)",,,,2023-05-20 01:31:14,2023-05-20 01:31:14,0.526s,FAILED
+,,,,,,,
+Test Cases/TC3_LOGIN,,,,2023-05-20 01:31:14,2023-05-20 01:31:21,7.036s,FAILED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:31:15,2023-05-20 01:31:21,6.421s,PASSED
+"tap(findTestObject(""Object Repository/btn LOG IN""), 0)",,,,2023-05-20 01:31:21,2023-05-20 01:31:21,0.377s,FAILED
+,,,,,,,
+Test Cases/TC1_SIGN_UP,,,,2023-05-20 01:31:21,2023-05-20 01:31:48,26.959s,PASSED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:31:22,2023-05-20 01:31:28,6.337s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.ImageView (4)""), 0)",,,,2023-05-20 01:31:28,2023-05-20 01:31:29,1.065s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.ImageView (5)""), 0)",,,,2023-05-20 01:31:29,2023-05-20 01:31:30,0.820s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.ImageView (6)""), 0)",,,,2023-05-20 01:31:30,2023-05-20 01:31:31,0.815s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.ImageView (7)""), 0)",,,,2023-05-20 01:31:31,2023-05-20 01:31:31,0.736s,PASSED
+"setText(findTestObject(""Object Repository/android.widget.EditText - Enter your Digital ID provided by bank (1)""), ""1104194368"", 0)",,,,2023-05-20 01:31:31,2023-05-20 01:31:33,1.505s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/android.widget.EditText -  Enter your password (1)""), ""ZGMICzUoDAg="", 0)",,,,2023-05-20 01:31:33,2023-05-20 01:31:34,1.166s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/android.widget.EditText -  Confirm your password (1)""), ""ZGMICzUoDAg="", 0)",,,,2023-05-20 01:31:34,2023-05-20 01:31:36,1.604s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.Spinner (1)""), 0)",,,,2023-05-20 01:31:36,2023-05-20 01:31:36,0.616s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.CheckedTextView - What is the city where you were born (1)""), 0)",,,,2023-05-20 01:31:36,2023-05-20 01:31:38,1.606s,PASSED
+"setText(findTestObject(""Object Repository/android.widget.EditText - Enter your answer (1)""), ""kharj"", 0)",,,,2023-05-20 01:31:38,2023-05-20 01:31:39,1.205s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.CheckBox -  I have read and agree to the (1)""), 0)",,,,2023-05-20 01:31:39,2023-05-20 01:31:40,0.607s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.Button - VERIFY AND PROCEED (1)""), 0)",,,,2023-05-20 01:31:40,2023-05-20 01:31:40,0.610s,PASSED
+closeApplication(),,,,2023-05-20 01:31:40,2023-05-20 01:31:41,0.274s,PASSED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:31:41,2023-05-20 01:31:48,7.542s,PASSED
+closeApplication(),,,,2023-05-20 01:31:48,2023-05-20 01:31:48,0.210s,PASSED

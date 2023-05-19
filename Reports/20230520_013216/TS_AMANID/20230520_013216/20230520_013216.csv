@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_AMANID,,,,2023-05-20 01:32:18,2023-05-20 01:33:12,54.033s,FAILED
+,,,,,,,
+Test Cases/TC7_FORGET_PASSWORD,,,,2023-05-20 01:32:18,2023-05-20 01:32:28,9.947s,FAILED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:32:18,2023-05-20 01:32:28,9.207s,PASSED
+"tap(findTestObject(""Object Repository/Test Cases/android.widget.ImageView""), 0)",,,,2023-05-20 01:32:28,2023-05-20 01:32:28,0.454s,FAILED
+,,,,,,,
+Test Cases/TC3_LOGIN,,,,2023-05-20 01:32:28,2023-05-20 01:32:35,6.932s,FAILED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:32:28,2023-05-20 01:32:35,6.268s,PASSED
+"tap(findTestObject(""Object Repository/btn LOG IN""), 0)",,,,2023-05-20 01:32:35,2023-05-20 01:32:35,0.419s,FAILED
+,,,,,,,
+Test Cases/TC1_SIGN_UP,,,,2023-05-20 01:32:35,2023-05-20 01:33:12,36.951s,FAILED
+"startExistingApplication(""com.example.amanid"")",,,,2023-05-20 01:32:35,2023-05-20 01:32:42,6.278s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.ImageView (4)""), 0)",,,,2023-05-20 01:32:42,2023-05-20 01:33:12,30.416s,FAILED
