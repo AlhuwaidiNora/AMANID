@@ -52,7 +52,6 @@ public class home_page_8 extends AppCompatActivity {
 
         button28_confirm=findViewById(R.id.button28_confirm);
         imageview201 = findViewById(R.id.imageView201);
-        imageview164 = findViewById(R.id.imageView164);
         //  imageView77 = findViewById(R.id.imageView77);
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
