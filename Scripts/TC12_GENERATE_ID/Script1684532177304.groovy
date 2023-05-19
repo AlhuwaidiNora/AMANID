@@ -19,8 +19,6 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startExistingApplication('com.example.basicbankingapp')
 
-Mobile.tap(findTestObject('Object Repository/android.widget.ImageView (8)'), 0)
-
 Mobile.tap(findTestObject('Object Repository/android.widget.Button - GENERATE'), 0)
 
 Mobile.getText(findTestObject('Object Repository/android.widget.TextView - 3639263337'), 0)

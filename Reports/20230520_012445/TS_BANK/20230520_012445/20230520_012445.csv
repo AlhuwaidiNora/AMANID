@@ -1,0 +1,15 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_BANK,,,,2023-05-20 01:24:47,2023-05-20 01:25:43,56.197s,FAILED
+,,,,,,,
+Test Cases/TC10_AUTHENTICATE_PROCESS,,,,2023-05-20 01:24:47,2023-05-20 01:25:05,17.701s,PASSED
+"startExistingApplication(""com.example.basicbankingapp"")",,,,2023-05-20 01:24:48,2023-05-20 01:24:57,8.972s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.TextView - Ratul Dutta""), 0)",,,,2023-05-20 01:24:57,2023-05-20 01:25:02,4.981s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.TextView - Select a beneficiary (1)""), 0)",,,,2023-05-20 01:25:02,2023-05-20 01:25:02,0.186s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.CheckedTextView - Veer Nanda""), 0)",,,,2023-05-20 01:25:02,2023-05-20 01:25:04,1.710s,PASSED
+"setText(findTestObject(""Object Repository/android.widget.EditText (1)""), ""600"", 0)",,,,2023-05-20 01:25:04,2023-05-20 01:25:04,0.674s,PASSED
+"getText(findTestObject(""Object Repository/android.widget.Button - TRANSACT BY AMANID (1)""), 0)",,,,2023-05-20 01:25:04,2023-05-20 01:25:05,0.577s,PASSED
+closeApplication(),,,,2023-05-20 01:25:05,2023-05-20 01:25:05,0.325s,PASSED
+,,,,,,,
+Test Cases/TC12_GENERATE_ID,,,,2023-05-20 01:25:05,2023-05-20 01:25:43,38.293s,FAILED
+"startExistingApplication(""com.example.basicbankingapp"")",,,,2023-05-20 01:25:05,2023-05-20 01:25:13,7.558s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.Button - GENERATE""), 0)",,,,2023-05-20 01:25:13,2023-05-20 01:25:43,30.482s,FAILED

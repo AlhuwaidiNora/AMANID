@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_BANK,,,,2023-05-20 01:13:34,2023-05-20 01:14:56,1m - 21.772s,FAILED
+,,,,,,,
+Test Cases/TC12_GENERATE_ID,,,,2023-05-20 01:13:34,2023-05-20 01:14:19,44.787s,FAILED
+"startExistingApplication(""com.example.basicbankingapp"")",,,,2023-05-20 01:13:35,2023-05-20 01:13:44,8.889s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.ImageView (8)""), 0)",,,,2023-05-20 01:13:44,2023-05-20 01:13:48,4.054s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.Button - GENERATE""), 0)",,,,2023-05-20 01:13:48,2023-05-20 01:13:49,1.108s,PASSED
+"getText(findTestObject(""Object Repository/android.widget.TextView - 3639263337""), 0)",,,,2023-05-20 01:13:49,2023-05-20 01:14:19,30.464s,FAILED
+,,,,,,,
+Test Cases/TC10_AUTHENTICATE_PROCESS,,,,2023-05-20 01:14:19,2023-05-20 01:14:56,36.781s,FAILED
+"startExistingApplication(""com.example.basicbankingapp"")",,,,2023-05-20 01:14:19,2023-05-20 01:14:26,6.157s,PASSED
+"tap(findTestObject(""Object Repository/android.widget.TextView - Ratul Dutta""), 0)",,,,2023-05-20 01:14:26,2023-05-20 01:14:56,30.391s,FAILED
