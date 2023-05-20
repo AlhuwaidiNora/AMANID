@@ -1,7 +1,4 @@
 package com.example.amanid.api;
-
-
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
