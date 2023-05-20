@@ -4,19 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.amanid.api.Operation;
+import com.example.amanid.api.RetrofitClient;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class home_page_8 extends AppCompatActivity {
     ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
-    TextView textView_spec1, greetings ;
-    Button button28_confirm;
+    TextView textView_spec1, greetings   ;
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
     private String receiver;
@@ -27,31 +31,55 @@ public class home_page_8 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page7);
         Bundle b = getIntent().getExtras();
-        if (b != null) {
-          //  Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
-            String idnum = getIntent().getStringExtra("idnum");
-            TextView greetingTextView = findViewById(R.id.b);
-            greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
-        } else {
+    /*   if (b != null) {
+          Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
+   String idnum = getIntent().getStringExtra("idnum");
+         TextView greetingTextView = findViewById(R.id.greetings);
+          greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
+     } else {
             // handle the case where the bundle is null
-        }
+        }*/
         String idnum=new UserSession(this).gtUserID();
-        TextView greetingTextView = findViewById(R.id.b);
+        TextView greetingTextView = findViewById(R.id.greetings);
         greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
-        if(getIntent().hasExtra("amount")&& getIntent().hasExtra("receiver")){
+        if(getIntent().hasExtra("receiver")){
             receiver=getIntent().getStringExtra("receiver");
-            amount=getIntent().getDoubleExtra("amount",0);
-            TextView amountText=findViewById(R.id.textView47);
-            TextView receiverName=findViewById(R.id.textView48);
-            amountText.setText(String.valueOf(amount)+" SAR");
-            receiverName.setText(receiver);
+            DialogHelper dialogHelper=new DialogHelper(home_page_8.this);
+            dialogHelper.show("Please wait");
+            RetrofitClient.getApi().getOpertion(receiver).enqueue(new Callback<Operation>() {
+                @Override
+                public void onResponse(Call<Operation> call, Response<Operation> response) {
+                    dialogHelper.hide();
+                    Operation operation=response.body();
+                    if(operation!=null){
+                        if(operation.getId().equals("-1")){
+                            Toast.makeText(home_page_8.this, "Error in get Data", Toast.LENGTH_SHORT).show();
+                        }else {
+                            TextView amountText=findViewById(R.id.textView47);
+                            TextView receiverName=findViewById(R.id.textView48);
+                            amountText.setText(String.valueOf(operation.getAmount())+" SAR");
+                            receiverName.setText(operation.getName());
+                        }
+                    }else{
+                        Toast.makeText(home_page_8.this, "Error in get Data", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Operation> call, Throwable t) {
+                    dialogHelper.hide();
+                    Toast.makeText(home_page_8.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+
         }
 
 
 
 
-        button28_confirm=findViewById(R.id.button28_confirm);
+
         imageview201 = findViewById(R.id.imageView201);
+      //  imageview164 = findViewById(R.id.imageView164);
         //  imageView77 = findViewById(R.id.imageView77);
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
@@ -90,13 +118,7 @@ public class home_page_8 extends AppCompatActivity {
         //     startActivity(intent);
         //    }
         //   });
-        button28_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home_page_8.this, done_transfer.class);
-                startActivity(intent);
-            }
-        });
+
 
 
         FirebaseApp.initializeApp(this);
@@ -168,4 +190,7 @@ public class home_page_8 extends AppCompatActivity {
     // Rest of your code here...
     // ...
 }
+
+
+
 

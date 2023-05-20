@@ -122,6 +122,7 @@
         android:background="@drawable/edit_text"
         android:drawableLeft="@drawable/baseline_perm_identity_24"
         android:ems="10"
+
         android:hint="Enter your Digital ID provided by bank"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
