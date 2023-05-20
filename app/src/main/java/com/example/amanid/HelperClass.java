@@ -5,7 +5,6 @@ import android.content.Intent;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-
 public class HelperClass {
     String indium;
     String pass;
@@ -116,6 +115,7 @@ public class HelperClass {
         public void loginUser(String email, String password) {
             firebaseAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(task -> {
+
                         if (task.isSuccessful()) {
                             // User login successful
                             FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -126,6 +126,7 @@ public class HelperClass {
                         }
                     });
         }
+
 
         public void resetPassword(String email) {
             firebaseAuth.sendPasswordResetEmail(email)
@@ -149,3 +150,4 @@ public class HelperClass {
 }
 
 
+// last update

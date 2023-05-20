@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/pasted_graphic_12" />
+        app:srcCompat="@drawable/card2" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -46,33 +46,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView251">
 
-        <ImageView
-            android:id="@+id/imageView164"
-            android:layout_width="54dp"
-            android:layout_height="57dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/add_7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="129dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="78dp"
-        android:text="Add Wallet"
-        android:textColor="#0057FF"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.166" />
 
     <ImageView
         android:id="@+id/imageView15"
