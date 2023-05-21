@@ -24,18 +24,12 @@
         <activity
             android:name=".Terms_Conditions"
             android:exported="false" />
-        <!--<activity
-            android:name=".know_more_about_qhint"
-            android:exported="true" />-->
 
         <activity
             android:name=".change_password"
             android:exported="true" />
         <activity
             android:name=".help_support"
-            android:exported="false" />
-        <activity
-            android:name=".know_more_about_qhint"
             android:exported="false" />
         <activity
             android:name=".About_Amanid"
@@ -89,6 +83,9 @@
             android:exported="false" />
         <activity
             android:name=".fingerPrint_page7_later"
+            android:exported="false" />
+        <activity
+            android:name=".privacy_1"
             android:exported="false" />
         <activity
             android:name=".getStarted_page4"
