@@ -21,7 +21,7 @@ import retrofit2.Response;
 
 public class home_page_8 extends AppCompatActivity {
     ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
-    TextView textView_spec1, greetings   ;
+    TextView textView_spec1, greetings ,button28_confirm   ;
 
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
@@ -84,9 +84,18 @@ public class home_page_8 extends AppCompatActivity {
         imageview201 = findViewById(R.id.imageView201);
       //  imageview164 = findViewById(R.id.imageView164);
         //  imageView77 = findViewById(R.id.imageView77);
+        button28_confirm = findViewById(R.id.button28_confirm);
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
         transfer_icon = findViewById(R.id.transfer_icon);
+
+        button28_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home_page_8.this, done_transfer.class);
+                startActivity(intent);
+            }
+        });
         // imageView77.setOnClickListener(new View.OnClickListener() {
         //  @Override
         //   public void onClick(View v) {
