@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ import retrofit2.Response;
 public class home_page_8 extends AppCompatActivity {
     ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
     TextView textView_spec1, greetings   ;
+
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
     private String receiver;
@@ -31,6 +33,7 @@ public class home_page_8 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page7);
         Bundle b = getIntent().getExtras();
+
     /*   if (b != null) {
           Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
    String idnum = getIntent().getStringExtra("idnum");
