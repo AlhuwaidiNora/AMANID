@@ -33,14 +33,6 @@ public class history extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         imageView19 =findViewById(R.id.imageView19);
         recyclerView=findViewById(R.id.recyclerView);
-
-
-
-
-
-
-
-
         imageView19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

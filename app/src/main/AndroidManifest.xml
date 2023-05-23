@@ -73,6 +73,9 @@
             android:name=".done_page"
             android:exported="false" />
         <activity
+            android:name=".done_transfer"
+            android:exported="false" />
+        <activity
             android:name=".signup_page"
             android:exported="true" />
         <activity

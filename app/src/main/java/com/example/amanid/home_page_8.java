@@ -22,9 +22,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class home_page_8 extends AppCompatActivity {
-    ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
+    ImageView imageview201, imageview164, imageView50, imageView214, imageView219;
     TextView textView_spec1, greetings;
-    Button button28_confirm;
+
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
     private String receiver;
@@ -79,12 +79,19 @@ public class home_page_8 extends AppCompatActivity {
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
         transfer_icon = findViewById(R.id.transfer_icon);
-        button28_confirm = findViewById(R.id.button28_confirm);
+        imageView50 = findViewById(R.id.imageView50);
 
 
 
         FirebaseApp.initializeApp(this);
         firebaseAuth = FirebaseAuth.getInstance();
+        imageView50.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home_page_8.this, done_transfer.class);
+                startActivity(intent);
+            }
+        });
         imageView219.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,13 +116,7 @@ public class home_page_8 extends AppCompatActivity {
             }
         });
 
-        button28_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home_page_8.this, done_transfer.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
 
