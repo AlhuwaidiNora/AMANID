@@ -8,71 +8,63 @@
 
     <TextView
         android:id="@+id/textView52"
-        android:layout_width="315dp"
-        android:layout_height="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:layout_marginBottom="208dp"
         android:text="activies"
         android:textColor="@color/purple_200"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="141dp"
-        android:layout_marginBottom="100dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView54"
-        android:layout_width="210dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="84dp"
-        android:text="History"
-        android:textAlignment="center"
-        android:textColor="#0057FF"
-        android:textSize="45sp"
-
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView52"
+        app:layout_constraintVertical_bias="0.37" />
 
     <ImageView
         android:id="@+id/imageView19"
-        android:layout_width="88dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="530dp"
+        android:layout_height="324dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pasted_graphic_1_2" />
+        app:srcCompat="@drawable/pasted_graphic_27"
+        tools:layout_editor_absoluteY="-78dp" />
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="333dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="76dp"
-        android:background="@drawable/custom_button"
-        android:drawableStart="@android:drawable/ic_menu_search"
-        android:ems="10"
-        android:hint="  Search ..........."
-        android:inputType="text"
-        android:textColorHint="#ffff"
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="45dp"
+        android:layout_height="57dp"
+        android:background="#001937FD"
+        android:backgroundTint="#1937FD"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="187dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="72dp"
+        android:text="History"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView54" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
