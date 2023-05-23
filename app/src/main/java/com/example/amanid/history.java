@@ -1,15 +1,21 @@
 package com.example.amanid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
- import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.List;
 
 /**
  * Z Specification:
@@ -18,21 +24,14 @@ import android.widget.ImageView;
  */
 
 public class history extends AppCompatActivity {
- ImageView imageView19 ;
-
+    Button button18 ;
     private RecyclerView recyclerView;
-
-
-    EditText editTextText2 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        imageView19 =findViewById(R.id.imageView19);
-        editTextText2=findViewById(R.id.editTextText2);
-        recyclerView = findViewById(R.id.recyclerView);
-        recyclerView.hasFixedSize();
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        button18 =findViewById(R.id.button18);
+        recyclerView=findViewById(R.id.recyclerView);
 
 
 
@@ -41,18 +40,7 @@ public class history extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        imageView19.setOnClickListener(new View.OnClickListener() {
+        button18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(history.this, home_page_8.class);
@@ -60,5 +48,28 @@ public class history extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseFirestore.getInstance().collection("history")
+                .whereEqualTo("idnum",new UserSession(this).gtUserID()).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            List<HistoryModel> historyModels=task.getResult().toObjects(HistoryModel.class);
+                            if(historyModels.isEmpty()){
+                                Toast.makeText(history.this, "No History", Toast.LENGTH_SHORT).show();
+                            }else {
+                                HistoryAdapter adapter=new HistoryAdapter();
+                                adapter.submitList(historyModels);
+                                recyclerView.setAdapter(adapter);
+                            }
+                        }else {
+                            Toast.makeText(history.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 }
