@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,13 +25,13 @@ import java.util.List;
  */
 
 public class history extends AppCompatActivity {
-    Button button18 ;
+   ImageView imageView19 ;
     private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        button18 =findViewById(R.id.button18);
+        imageView19 =findViewById(R.id.imageView19);
         recyclerView=findViewById(R.id.recyclerView);
 
 
@@ -40,7 +41,7 @@ public class history extends AppCompatActivity {
 
 
 
-        button18.setOnClickListener(new View.OnClickListener() {
+        imageView19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(history.this, home_page_8.class);
