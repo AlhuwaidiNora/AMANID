@@ -1,19 +1,20 @@
 package com.example.amanid;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.amanid.api.Operation;
 import com.example.amanid.api.RetrofitClient;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,8 +22,7 @@ import retrofit2.Response;
 
 public class home_page_8 extends AppCompatActivity {
     ImageView imageview201, imageview164, imageView77, imageView214, imageView219;
-    TextView textView_spec1, greetings ,button28_confirm   ;
-
+    TextView textView_spec1, greetings;
     FloatingActionButton transfer_icon;
     FirebaseAuth firebaseAuth;
     private String receiver;
@@ -33,15 +33,14 @@ public class home_page_8 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page7);
         Bundle b = getIntent().getExtras();
-
-    /*   if (b != null) {
-          Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
-   String idnum = getIntent().getStringExtra("idnum");
-         TextView greetingTextView = findViewById(R.id.greetings);
-          greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
-     } else {
-            // handle the case where the bundle is null
-        }*/
+//       if (b != null) {
+//          Toast.makeText(this, b.getString("name"), Toast.LENGTH_LONG).show();
+//   String idnum = getIntent().getStringExtra("idnum");
+//         TextView greetingTextView = findViewById(R.id.greetings);
+//          greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
+//     } else {
+//            // handle the case where the bundle is null
+//        }
         String idnum=new UserSession(this).gtUserID();
         TextView greetingTextView = findViewById(R.id.greetings);
         greetingTextView.setText("Hello " + (idnum != null ? idnum : "") + "!");
@@ -62,6 +61,11 @@ public class home_page_8 extends AppCompatActivity {
                             TextView receiverName=findViewById(R.id.textView48);
                             amountText.setText(String.valueOf(operation.getAmount())+" SAR");
                             receiverName.setText(operation.getName());
+                            String id= FirebaseFirestore.getInstance().collection("history").document().getId();
+                            HistoryModel model=new HistoryModel(id,operation.getName(),String.valueOf(operation.getAmount()),
+                                    idnum);
+                            FirebaseFirestore.getInstance().collection("history").document().set(model);
+
                         }
                     }else{
                         Toast.makeText(home_page_8.this, "Error in get Data", Toast.LENGTH_SHORT).show();
@@ -84,18 +88,9 @@ public class home_page_8 extends AppCompatActivity {
         imageview201 = findViewById(R.id.imageView201);
       //  imageview164 = findViewById(R.id.imageView164);
         //  imageView77 = findViewById(R.id.imageView77);
-        button28_confirm = findViewById(R.id.button28_confirm);
         imageView214 = findViewById(R.id.imageView214);
         imageView219 = findViewById(R.id.imageView219);
         transfer_icon = findViewById(R.id.transfer_icon);
-
-        button28_confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home_page_8.this, done_transfer.class);
-                startActivity(intent);
-            }
-        });
         // imageView77.setOnClickListener(new View.OnClickListener() {
         //  @Override
         //   public void onClick(View v) {
@@ -202,6 +197,9 @@ public class home_page_8 extends AppCompatActivity {
     // Rest of your code here...
     // ...
 }
+
+
+
 
 
 
