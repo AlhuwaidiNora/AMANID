@@ -97,23 +97,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView34"
                     app:layout_constraintVertical_bias="0.0"></LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="73dp"
-                    android:layout_height="69dp"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="@+id/button28_confirm"
-                    app:layout_constraintEnd_toEndOf="@+id/button28_confirm"
-                    app:layout_constraintStart_toStartOf="@+id/button28_confirm"
-                    app:layout_constraintTop_toTopOf="@+id/button28_confirm">
-
-
-                    <LinearLayout
-                        android:layout_width="96dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-
-                </LinearLayout>
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout4"
                     android:layout_width="352dp"
@@ -219,19 +202,16 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <Button
-                    android:id="@+id/button28_confirm"
-                    android:layout_width="66dp"
-                    android:layout_height="64dp"
-                    android:background="@drawable/logo"
-                    android:textColor="@color/purple_200"
-                    android:textSize="10dp"
+                <ImageView
+                    android:id="@+id/imageView50"
+                    android:layout_width="87dp"
+                    android:layout_height="80dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.512"
+                    app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-                    app:layout_constraintVertical_bias="0.657" />
+                    app:srcCompat="@drawable/logo2_3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

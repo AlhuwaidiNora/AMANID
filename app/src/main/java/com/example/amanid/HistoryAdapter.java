@@ -11,8 +11,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.amanid.databinding.HistoryItemBinding;
 
-public class HistoryAdapter extends ListAdapter<HistoryModel,HistoryAdapter.HistoryViewHolder> {
+import java.util.ArrayList;
+import java.util.List;
 
+public class HistoryAdapter extends ListAdapter<HistoryModel,HistoryAdapter.HistoryViewHolder> {
+    private List<HistoryModel> originalList;
+    public void setOriginalList(List<HistoryModel> originalList) {
+        this.originalList = originalList;
+    }
+
+    // Create a filter method to perform search
+    public void filter(String searchText) {
+        List<HistoryModel> filteredList = new ArrayList<>();
+        if (originalList != null) {
+            for (HistoryModel model : originalList) {
+                if (model.getName().toLowerCase().contains(searchText.toLowerCase())) {
+                    filteredList.add(model);
+                }
+            }
+        }
+        submitList(filteredList);
+    }
     public static final DiffUtil.ItemCallback<HistoryModel> CALLBACK=new DiffUtil.ItemCallback<HistoryModel>() {
         @Override
         public boolean areItemsTheSame(@NonNull HistoryModel oldItem, @NonNull HistoryModel newItem) {
