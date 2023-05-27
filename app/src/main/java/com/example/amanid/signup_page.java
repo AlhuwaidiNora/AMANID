@@ -20,19 +20,20 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-/*
-original code
- */
+
 public class signup_page extends AppCompatActivity {
-    EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
-    TextView  textView29;
+    EditText editTextid_signup, editTextpass, editTextpass2, editTextid_qhint;
+    TextView textView29;
     CheckBox checkBox3;
     private String editTextValue;
-    Button button9 ;
+    Button button9;
     EditText hintAnswerEditText;
     String selectedHintQuestion;
     FirebaseDatabase database;
     DatabaseReference reference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://amanid-e0318-default-rtdb.firebaseio.com/");
+
+    private static final int REQUEST_TERMS_CONDITIONS = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,22 +57,22 @@ public class signup_page extends AppCompatActivity {
             }
         });
 
-        //   TextView btn=findViewById(R.id.textView30);
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         textView29 = findViewById(R.id.textView29);
         editTextpass2 = findViewById(R.id.editTextpass2);
-        // editTextid_qhint = findViewById(R.id. hintAnswerEditText);
         hintAnswerEditText = findViewById(R.id.hintAnswerEditText);
         button9 = findViewById(R.id.button9);
-          checkBox3 = findViewById(R.id.checkBox3);
+        checkBox3 = findViewById(R.id.checkBox3);
+
         textView29.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(signup_page.this, Terms_Conditions.class);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_TERMS_CONDITIONS);
             }
         });
+
         button9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (!checkBox3.isChecked()) {
@@ -122,10 +123,17 @@ public class signup_page extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_TERMS_CONDITIONS) {
+            if (resultCode == RESULT_OK) {
+                // Do nothing since the user clicked "Undo"
+            }
+        }
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
