@@ -1,5 +1,4 @@
 package com.example.amanid;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,22 +10,24 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+ /*
+ original code
+  */
 
 public class signup_page extends AppCompatActivity {
-    EditText editTextid_signup, editTextpass, editTextpass2, editTextid_qhint;
-    TextView textView29;
+    EditText editTextid_signup , editTextpass ,editTextpass2 ,editTextid_qhint;
+    TextView  textView29;
+
     CheckBox checkBox3;
     private String editTextValue;
-    Button button9;
+    Button button9 ;
     EditText hintAnswerEditText;
     String selectedHintQuestion;
     FirebaseDatabase database;
@@ -42,25 +43,23 @@ public class signup_page extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.hint_questions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         hintQuestionsSpinner.setAdapter(adapter);
-
         hintAnswerEditText = findViewById(R.id.hintAnswerEditText);
-
         hintQuestionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedHintQuestion = adapterView.getItemAtPosition(i).toString();
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
 
+        //   TextView btn=findViewById(R.id.textView30);
         editTextid_signup = findViewById(R.id.editTextid_signup);
         editTextpass = findViewById(R.id.editTextpass);
         textView29 = findViewById(R.id.textView29);
         editTextpass2 = findViewById(R.id.editTextpass2);
+        // editTextid_qhint = findViewById(R.id. hintAnswerEditText);
         hintAnswerEditText = findViewById(R.id.hintAnswerEditText);
         button9 = findViewById(R.id.button9);
         checkBox3 = findViewById(R.id.checkBox3);
@@ -69,9 +68,10 @@ public class signup_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(signup_page.this, Terms_Conditions.class);
-                startActivityForResult(intent, REQUEST_TERMS_CONDITIONS);
+                startActivity(intent);
             }
         });
+
 
         button9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -79,15 +79,12 @@ public class signup_page extends AppCompatActivity {
                     Toast.makeText(signup_page.this, "Agreement not checked", Toast.LENGTH_LONG).show();
                     return; // Exit the method if checkbox is not checked
                 }
-
                 database = FirebaseDatabase.getInstance();
                 reference = database.getReference("users");
-
                 String idnum = editTextid_signup.getText().toString();
                 String pass = editTextpass.getText().toString();
                 String pass2 = editTextpass2.getText().toString();
                 String qhint = hintAnswerEditText.getText().toString();
-
                 if (idnum.isEmpty() || qhint.isEmpty() || pass.isEmpty() || pass2.isEmpty()) {
                     Toast.makeText(signup_page.this, "Please fill all fields", Toast.LENGTH_LONG).show();
                 } else if (!pass.equals(pass2)) {
@@ -108,14 +105,12 @@ public class signup_page extends AppCompatActivity {
                                 new UserSession(signup_page.this).setUserID(idnum);
                                 reference.child(idnum).child("idnum").setValue(idnum);
                                 reference.child("users").child(idnum).child("hint").setValue(qhint);
-
                                 Toast.makeText(signup_page.this, "You have signed up successfully!", Toast.LENGTH_LONG).show();
                                 finish();
                                 Intent intent = new Intent(signup_page.this, fingerPrint_page7_later.class);
                                 startActivity(intent);
                             }
                         }
-
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
                         }
@@ -123,6 +118,8 @@ public class signup_page extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 
     @Override
@@ -140,7 +137,6 @@ public class signup_page extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putString("editTextValue", editTextid_signup.getText().toString());
     }
-
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
